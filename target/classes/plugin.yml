@@ -1,0 +1,9 @@
+main: studio.resonos.nano.NanoArenas
+name: NanoArenas
+version: 1.0-SNAPSHOT
+api-version: 1.20
+authors:
+  - Athishh
+depend:
+  - FastAsyncWorldEdit
+description: Fast asynchronous arena system. Developed by Resonos Studios.
