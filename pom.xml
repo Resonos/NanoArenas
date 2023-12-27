@@ -28,6 +28,35 @@
                     <target>${java.version}</target>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>3.6.1</version>
+                <executions>
+                    <execution>
+                        <id>copy</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>copy</goal>
+                        </goals>
+                        <configuration>
+                            <artifactItems>
+                                <artifactItem>
+                                    <groupId>[ groupId ]</groupId>
+                                    <artifactId>[ artifactId ]</artifactId>
+                                    <version>[ version ]</version>
+                                    <type>[ packaging ]</type>
+                                    <classifier> [classifier - optional] </classifier>
+                                    <overWrite>[ true or false ]</overWrite>
+                                    <outputDirectory>[ output directory ]</outputDirectory>
+                                    <destFileName>[ filename ]</destFileName>
+                                </artifactItem>
+                            </artifactItems>
+                            <!-- other configurations here -->
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
         <resources>
             <resource>
@@ -108,10 +137,10 @@
         </dependency>
         <dependency>
             <groupId>org.spigotmc</groupId>
-            <artifactId>spigot</artifactId>
+            <artifactId>spigot-api</artifactId>
             <version>${remapped.version}</version>
             <scope>provided</scope>
-            <classifier>remapped-mojang</classifier>
+            <!--<classifier>remapped-mojang</classifier>-->
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
