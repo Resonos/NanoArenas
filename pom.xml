@@ -39,7 +39,7 @@
                                     <type>jar</type>
                                     <overWrite>true</overWrite>
                                     <outputDirectory>libs</outputDirectory>
-                                    <destFileName>Nano</destFileName>
+                                    <destFileName>Nano.jar</destFileName>
                                 </artifactItem>
                             </artifactItems>
                             <!-- other configurations here -->
