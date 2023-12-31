@@ -34,7 +34,8 @@ public class NanoArenas extends JavaPlugin {
     public static SpiGUI spiGUI;
     private static NanoArenas nanoArenas;
     @Getter
-    private BasicConfigurationFile arenasConfig;
+    private BasicConfigurationFile arenasConfig,mainConfig;
+
 
     public static NanoArenas get() {
         return nanoArenas;
@@ -42,9 +43,10 @@ public class NanoArenas extends JavaPlugin {
 
     @Override
     public void onEnable() {
+        mainConfig=new BasicConfigurationFile(this,"config");
+        String licenseKey=mainConfig.getString("CONFIG.LICENSE_KEY");
         final String apiURL = "http://license.java.api.resonos.studio:3000/api/client";
         final String apiKey = "hjVfr{J&M2q{gRtdytnHvs-Sd#voJe;d%Jl(yLbjbhK~F~4C&6";
-        final String licenseKey = "X76P-6KR4-4IE2-EMXI";
         final String product = "NanoArenas";
 
         try {
@@ -97,19 +99,35 @@ public class NanoArenas extends JavaPlugin {
                     }.runTaskTimer(this, 0, 8400);
                 }
                 else{
-                    Bukkit.getConsoleSender().sendMessage(CC.CHAT_BAR);
-                    Bukkit.getConsoleSender().sendMessage(CC.translate(" &b&lNano Arenas"));
-                    Bukkit.getConsoleSender().sendMessage(CC.translate(" "));
-                    Bukkit.getConsoleSender().sendMessage(CC.translate(" &4ERROR: &cYour license key is invalid!"));
-                    Bukkit.getConsoleSender().sendMessage(CC.translate(" &4ERROR: &CPlease check your license key and try again!"));
-                    Bukkit.getConsoleSender().sendMessage(CC.CHAT_BAR);
-                    Bukkit.getPluginManager().disablePlugin(this);
-                    System.exit(-1);
+
+                    pluginLicenseFail();
                 }
             }
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public void pluginLicenseFail(){
+        Bukkit.getConsoleSender().sendMessage(CC.CHAT_BAR);
+        Bukkit.getConsoleSender().sendMessage(CC.translate(" &b&lNano Arenas"));
+        Bukkit.getConsoleSender().sendMessage(CC.translate(" "));
+        Bukkit.getConsoleSender().sendMessage(CC.translate(" &4ERROR: &cYour license key is invalid!"));
+        Bukkit.getConsoleSender().sendMessage(CC.translate(" &4ERROR: &CPlease check your license key and try again!"));
+        Bukkit.getConsoleSender().sendMessage(CC.CHAT_BAR);
+        Bukkit.getPluginManager().disablePlugin(this);
+    }
+
+    public void pluginLicenseKeyDefault(){
+        Bukkit.getConsoleSender().sendMessage(CC.CHAT_BAR);
+        Bukkit.getConsoleSender().sendMessage(CC.translate(" &b&lNano Arenas"));
+        Bukkit.getConsoleSender().sendMessage(CC.translate(" "));
+        Bukkit.getConsoleSender().sendMessage(CC.translate(" &4ERROR: &cYour license key seems like it is the default license in the config."));
+        Bukkit.getConsoleSender().sendMessage(CC.translate(" &4ERROR: &CPlease check your license key and try again!"));
+        Bukkit.getConsoleSender().sendMessage(CC.translate("&4If you have not purchased the plugin, please purchase it at https://discord.gg/G3BSFvsdZ5"));
+        Bukkit.getConsoleSender().sendMessage(CC.CHAT_BAR);
+        Bukkit.getPluginManager().disablePlugin(this);
+        System.exit(-1);
     }
 
     @Override
