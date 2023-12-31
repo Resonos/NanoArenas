@@ -1,0 +1,1209 @@
+{
+  "md5": "dd83accb899363c32b07d7a1b2e4ce40",
+  "sha2": "25ea2e8b0c338a877313bd4672d3fe056ea78f0d",
+  "sha256": "766ad2a0783f2687962c8ad74ceecc38a28b9f72a2d085ee438b7813e928d0c7",
+  "contents": {
+    "classes": {
+      "javax/annotation/RegEx.class": {
+        "ver": 49,
+        "acc": 9729,
+        "nme": "javax/annotation/RegEx",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "when",
+            "acc": 1025,
+            "dsc": "()Ljavax/annotation/meta/When;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          },
+          {
+            "dsc": "Ljavax/annotation/Syntax;",
+            "vals": [
+              "value",
+              "RegEx"
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "RUNTIME"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Ljavax/annotation/meta/TypeQualifierNickname;"
+          }
+        ]
+      },
+      "javax/annotation/concurrent/Immutable.class": {
+        "ver": 49,
+        "acc": 9729,
+        "nme": "javax/annotation/concurrent/Immutable",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "CLASS"
+              ]
+            ]
+          }
+        ]
+      },
+      "javax/annotation/meta/TypeQualifierDefault.class": {
+        "ver": 49,
+        "acc": 9729,
+        "nme": "javax/annotation/meta/TypeQualifierDefault",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "value",
+            "acc": 1025,
+            "dsc": "()[Ljava/lang/annotation/ElementType;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "ANNOTATION_TYPE"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "RUNTIME"
+              ]
+            ]
+          }
+        ]
+      },
+      "javax/annotation/meta/TypeQualifier.class": {
+        "ver": 49,
+        "acc": 9729,
+        "nme": "javax/annotation/meta/TypeQualifier",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "applicableTo",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/Class;",
+            "sig": "()Ljava/lang/Class<*>;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "ANNOTATION_TYPE"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "RUNTIME"
+              ]
+            ]
+          }
+        ]
+      },
+      "javax/annotation/Syntax.class": {
+        "ver": 49,
+        "acc": 9729,
+        "nme": "javax/annotation/Syntax",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "value",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "when",
+            "acc": 1025,
+            "dsc": "()Ljavax/annotation/meta/When;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          },
+          {
+            "dsc": "Ljavax/annotation/meta/TypeQualifier;",
+            "vals": [
+              "applicableTo",
+              {
+                "itrlNme": "java/lang/CharSequence"
+              }
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "RUNTIME"
+              ]
+            ]
+          }
+        ]
+      },
+      "javax/annotation/CheckForNull.class": {
+        "ver": 49,
+        "acc": 9729,
+        "nme": "javax/annotation/CheckForNull",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          },
+          {
+            "dsc": "Ljavax/annotation/Nonnull;",
+            "vals": [
+              "when",
+              [
+                "Ljavax/annotation/meta/When;",
+                "MAYBE"
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "RUNTIME"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Ljavax/annotation/meta/TypeQualifierNickname;"
+          }
+        ]
+      },
+      "javax/annotation/CheckReturnValue.class": {
+        "ver": 49,
+        "acc": 9729,
+        "nme": "javax/annotation/CheckReturnValue",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "when",
+            "acc": 1025,
+            "dsc": "()Ljavax/annotation/meta/When;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "CONSTRUCTOR"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "PACKAGE"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "RUNTIME"
+              ]
+            ]
+          }
+        ]
+      },
+      "javax/annotation/Nonnull.class": {
+        "ver": 49,
+        "acc": 9729,
+        "nme": "javax/annotation/Nonnull",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "when",
+            "acc": 1025,
+            "dsc": "()Ljavax/annotation/meta/When;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          },
+          {
+            "dsc": "Ljavax/annotation/meta/TypeQualifier;"
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "RUNTIME"
+              ]
+            ]
+          }
+        ]
+      },
+      "javax/annotation/meta/TypeQualifierNickname.class": {
+        "ver": 49,
+        "acc": 9729,
+        "nme": "javax/annotation/meta/TypeQualifierNickname",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "ANNOTATION_TYPE"
+                ]
+              ]
+            ]
+          }
+        ]
+      },
+      "javax/annotation/MatchesPattern.class": {
+        "ver": 49,
+        "acc": 9729,
+        "nme": "javax/annotation/MatchesPattern",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "value",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/RegEx;"
+              }
+            ]
+          },
+          {
+            "nme": "flags",
+            "acc": 1025,
+            "dsc": "()I"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          },
+          {
+            "dsc": "Ljavax/annotation/meta/TypeQualifier;",
+            "vals": [
+              "applicableTo",
+              {
+                "itrlNme": "java/lang/String"
+              }
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "RUNTIME"
+              ]
+            ]
+          }
+        ]
+      },
+      "javax/annotation/concurrent/GuardedBy.class": {
+        "ver": 49,
+        "acc": 9729,
+        "nme": "javax/annotation/concurrent/GuardedBy",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "value",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "FIELD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "CLASS"
+              ]
+            ]
+          }
+        ]
+      },
+      "javax/annotation/concurrent/NotThreadSafe.class": {
+        "ver": 49,
+        "acc": 9729,
+        "nme": "javax/annotation/concurrent/NotThreadSafe",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "CLASS"
+              ]
+            ]
+          }
+        ]
+      },
+      "javax/annotation/MatchesPattern$Checker.class": {
+        "ver": 49,
+        "acc": 33,
+        "nme": "javax/annotation/MatchesPattern$Checker",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "forConstantValue",
+            "acc": 1,
+            "dsc": "(Ljavax/annotation/MatchesPattern;Ljava/lang/Object;)Ljavax/annotation/meta/When;"
+          },
+          {
+            "nme": "forConstantValue",
+            "acc": 4161,
+            "dsc": "(Ljava/lang/annotation/Annotation;Ljava/lang/Object;)Ljavax/annotation/meta/When;"
+          }
+        ],
+        "flds": []
+      },
+      "javax/annotation/meta/Exhaustive.class": {
+        "ver": 49,
+        "acc": 9729,
+        "nme": "javax/annotation/meta/Exhaustive",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "RUNTIME"
+              ]
+            ]
+          }
+        ]
+      },
+      "javax/annotation/ParametersAreNullableByDefault.class": {
+        "ver": 49,
+        "acc": 9729,
+        "nme": "javax/annotation/ParametersAreNullableByDefault",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          },
+          {
+            "dsc": "Ljavax/annotation/Nullable;"
+          },
+          {
+            "dsc": "Ljavax/annotation/meta/TypeQualifierDefault;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "PARAMETER"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "RUNTIME"
+              ]
+            ]
+          }
+        ]
+      },
+      "javax/annotation/Nullable.class": {
+        "ver": 49,
+        "acc": 9729,
+        "nme": "javax/annotation/Nullable",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          },
+          {
+            "dsc": "Ljavax/annotation/Nonnull;",
+            "vals": [
+              "when",
+              [
+                "Ljavax/annotation/meta/When;",
+                "UNKNOWN"
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "RUNTIME"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Ljavax/annotation/meta/TypeQualifierNickname;"
+          }
+        ]
+      },
+      "javax/annotation/meta/When.class": {
+        "ver": 49,
+        "acc": 16433,
+        "nme": "javax/annotation/meta/When",
+        "super": "java/lang/Enum",
+        "mthds": [
+          {
+            "nme": "values",
+            "acc": 9,
+            "dsc": "()[Ljavax/annotation/meta/When;"
+          },
+          {
+            "nme": "valueOf",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Ljavax/annotation/meta/When;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;I)V",
+            "sig": "()V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 16409,
+            "nme": "ALWAYS",
+            "dsc": "Ljavax/annotation/meta/When;"
+          },
+          {
+            "acc": 16409,
+            "nme": "UNKNOWN",
+            "dsc": "Ljavax/annotation/meta/When;"
+          },
+          {
+            "acc": 16409,
+            "nme": "MAYBE",
+            "dsc": "Ljavax/annotation/meta/When;"
+          },
+          {
+            "acc": 16409,
+            "nme": "NEVER",
+            "dsc": "Ljavax/annotation/meta/When;"
+          },
+          {
+            "acc": 4122,
+            "nme": "$VALUES",
+            "dsc": "[Ljavax/annotation/meta/When;"
+          }
+        ]
+      },
+      "javax/annotation/CheckForSigned.class": {
+        "ver": 49,
+        "acc": 9729,
+        "nme": "javax/annotation/CheckForSigned",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          },
+          {
+            "dsc": "Ljavax/annotation/Nonnegative;",
+            "vals": [
+              "when",
+              [
+                "Ljavax/annotation/meta/When;",
+                "MAYBE"
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "RUNTIME"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Ljavax/annotation/meta/TypeQualifierNickname;"
+          }
+        ]
+      },
+      "javax/annotation/WillNotClose.class": {
+        "ver": 49,
+        "acc": 9729,
+        "nme": "javax/annotation/WillNotClose",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "RUNTIME"
+              ]
+            ]
+          }
+        ]
+      },
+      "javax/annotation/OverridingMethodsMustInvokeSuper.class": {
+        "ver": 49,
+        "acc": 9729,
+        "nme": "javax/annotation/OverridingMethodsMustInvokeSuper",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "RUNTIME"
+              ]
+            ]
+          }
+        ]
+      },
+      "javax/annotation/Tainted.class": {
+        "ver": 49,
+        "acc": 9729,
+        "nme": "javax/annotation/Tainted",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          },
+          {
+            "dsc": "Ljavax/annotation/Untainted;",
+            "vals": [
+              "when",
+              [
+                "Ljavax/annotation/meta/When;",
+                "MAYBE"
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "RUNTIME"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Ljavax/annotation/meta/TypeQualifierNickname;"
+          }
+        ]
+      },
+      "javax/annotation/Nonnull$Checker.class": {
+        "ver": 49,
+        "acc": 33,
+        "nme": "javax/annotation/Nonnull$Checker",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "forConstantValue",
+            "acc": 1,
+            "dsc": "(Ljavax/annotation/Nonnull;Ljava/lang/Object;)Ljavax/annotation/meta/When;"
+          },
+          {
+            "nme": "forConstantValue",
+            "acc": 4161,
+            "dsc": "(Ljava/lang/annotation/Annotation;Ljava/lang/Object;)Ljavax/annotation/meta/When;"
+          }
+        ],
+        "flds": []
+      },
+      "javax/annotation/PropertyKey.class": {
+        "ver": 49,
+        "acc": 9729,
+        "nme": "javax/annotation/PropertyKey",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "when",
+            "acc": 1025,
+            "dsc": "()Ljavax/annotation/meta/When;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          },
+          {
+            "dsc": "Ljavax/annotation/meta/TypeQualifier;"
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "RUNTIME"
+              ]
+            ]
+          }
+        ]
+      },
+      "javax/annotation/WillCloseWhenClosed.class": {
+        "ver": 49,
+        "acc": 9729,
+        "nme": "javax/annotation/WillCloseWhenClosed",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "RUNTIME"
+              ]
+            ]
+          }
+        ]
+      },
+      "javax/annotation/meta/TypeQualifierValidator.class": {
+        "ver": 49,
+        "acc": 1537,
+        "nme": "javax/annotation/meta/TypeQualifierValidator",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "forConstantValue",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/annotation/Annotation;Ljava/lang/Object;)Ljavax/annotation/meta/When;",
+            "sig": "(TA;Ljava/lang/Object;)Ljavax/annotation/meta/When;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nonnull;"
+              }
+            ]
+          }
+        ],
+        "flds": []
+      },
+      "javax/annotation/RegEx$Checker.class": {
+        "ver": 49,
+        "acc": 33,
+        "nme": "javax/annotation/RegEx$Checker",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "forConstantValue",
+            "acc": 1,
+            "dsc": "(Ljavax/annotation/RegEx;Ljava/lang/Object;)Ljavax/annotation/meta/When;"
+          },
+          {
+            "nme": "forConstantValue",
+            "acc": 4161,
+            "dsc": "(Ljava/lang/annotation/Annotation;Ljava/lang/Object;)Ljavax/annotation/meta/When;"
+          }
+        ],
+        "flds": []
+      },
+      "javax/annotation/meta/Exclusive.class": {
+        "ver": 49,
+        "acc": 9729,
+        "nme": "javax/annotation/meta/Exclusive",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "RUNTIME"
+              ]
+            ]
+          }
+        ]
+      },
+      "javax/annotation/Signed.class": {
+        "ver": 49,
+        "acc": 9729,
+        "nme": "javax/annotation/Signed",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          },
+          {
+            "dsc": "Ljavax/annotation/Nonnegative;",
+            "vals": [
+              "when",
+              [
+                "Ljavax/annotation/meta/When;",
+                "UNKNOWN"
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "RUNTIME"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Ljavax/annotation/meta/TypeQualifierNickname;"
+          }
+        ]
+      },
+      "javax/annotation/concurrent/ThreadSafe.class": {
+        "ver": 49,
+        "acc": 9729,
+        "nme": "javax/annotation/concurrent/ThreadSafe",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "CLASS"
+              ]
+            ]
+          }
+        ]
+      },
+      "javax/annotation/Untainted.class": {
+        "ver": 49,
+        "acc": 9729,
+        "nme": "javax/annotation/Untainted",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "when",
+            "acc": 1025,
+            "dsc": "()Ljavax/annotation/meta/When;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          },
+          {
+            "dsc": "Ljavax/annotation/meta/TypeQualifier;"
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "RUNTIME"
+              ]
+            ]
+          }
+        ]
+      },
+      "javax/annotation/Nonnegative.class": {
+        "ver": 49,
+        "acc": 9729,
+        "nme": "javax/annotation/Nonnegative",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "when",
+            "acc": 1025,
+            "dsc": "()Ljavax/annotation/meta/When;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          },
+          {
+            "dsc": "Ljavax/annotation/meta/TypeQualifier;",
+            "vals": [
+              "applicableTo",
+              {
+                "itrlNme": "java/lang/Number"
+              }
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "RUNTIME"
+              ]
+            ]
+          }
+        ]
+      },
+      "javax/annotation/WillClose.class": {
+        "ver": 49,
+        "acc": 9729,
+        "nme": "javax/annotation/WillClose",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "RUNTIME"
+              ]
+            ]
+          }
+        ]
+      },
+      "javax/annotation/Detainted.class": {
+        "ver": 49,
+        "acc": 9729,
+        "nme": "javax/annotation/Detainted",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          },
+          {
+            "dsc": "Ljavax/annotation/Untainted;",
+            "vals": [
+              "when",
+              [
+                "Ljavax/annotation/meta/When;",
+                "ALWAYS"
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "RUNTIME"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Ljavax/annotation/meta/TypeQualifierNickname;"
+          }
+        ]
+      },
+      "javax/annotation/ParametersAreNonnullByDefault.class": {
+        "ver": 49,
+        "acc": 9729,
+        "nme": "javax/annotation/ParametersAreNonnullByDefault",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          },
+          {
+            "dsc": "Ljavax/annotation/Nonnull;"
+          },
+          {
+            "dsc": "Ljavax/annotation/meta/TypeQualifierDefault;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "PARAMETER"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "RUNTIME"
+              ]
+            ]
+          }
+        ]
+      },
+      "javax/annotation/Nonnegative$Checker.class": {
+        "ver": 49,
+        "acc": 33,
+        "nme": "javax/annotation/Nonnegative$Checker",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "forConstantValue",
+            "acc": 1,
+            "dsc": "(Ljavax/annotation/Nonnegative;Ljava/lang/Object;)Ljavax/annotation/meta/When;"
+          },
+          {
+            "nme": "forConstantValue",
+            "acc": 4161,
+            "dsc": "(Ljava/lang/annotation/Annotation;Ljava/lang/Object;)Ljavax/annotation/meta/When;"
+          }
+        ],
+        "flds": []
+      }
+    }
+  }
+}

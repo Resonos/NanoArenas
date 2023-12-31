@@ -1,0 +1,74 @@
+{
+  "md5": "9b5e1b8d01089255d1da3a85b8076369",
+  "sha2": "b422263152e7c0fd419a5592b20e91a088c2e326",
+  "sha256": "7278435aad5a1743337e61f5154e710d1c405509dd2a891ed6f602dee81eb250",
+  "contents": {
+    "classes": {
+      "org/bstats/bukkit/Metrics.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "org/bstats/bukkit/Metrics",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lorg/bukkit/plugin/java/JavaPlugin;I)V"
+          },
+          {
+            "nme": "shutdown",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "addCustomChart",
+            "acc": 1,
+            "dsc": "(Lorg/bstats/charts/CustomChart;)V"
+          },
+          {
+            "nme": "appendPlatformData",
+            "acc": 2,
+            "dsc": "(Lorg/bstats/json/JsonObjectBuilder;)V"
+          },
+          {
+            "nme": "appendServiceData",
+            "acc": 2,
+            "dsc": "(Lorg/bstats/json/JsonObjectBuilder;)V"
+          },
+          {
+            "nme": "getPlayerAmount",
+            "acc": 2,
+            "dsc": "()I"
+          },
+          {
+            "nme": "lambda$new$2",
+            "acc": 4098,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "lambda$new$1",
+            "acc": 4098,
+            "dsc": "(Ljava/lang/String;Ljava/lang/Throwable;)V"
+          },
+          {
+            "nme": "lambda$new$0",
+            "acc": 4106,
+            "dsc": "(Lorg/bukkit/plugin/java/JavaPlugin;Ljava/lang/Runnable;)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "plugin",
+            "dsc": "Lorg/bukkit/plugin/Plugin;"
+          },
+          {
+            "acc": 18,
+            "nme": "metricsBase",
+            "dsc": "Lorg/bstats/MetricsBase;"
+          }
+        ]
+      }
+    }
+  }
+}

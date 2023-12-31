@@ -1,0 +1,1218 @@
+{
+  "md5": "fbe27bb4c05e8719b7fff5aa71a57364",
+  "sha2": "533eac055afe3d5f614ea95e333afd6c2bde8f26",
+  "sha256": "f76b85adb0c00721ae267b7cfde4da7f71d3121cc2160c9fc00c0c89f8c53c8a",
+  "contents": {
+    "classes": {
+      "com/zaxxer/sparsebits/SparseBitSet$FlipStrategy.class": {
+        "ver": 50,
+        "acc": 33,
+        "nme": "com/zaxxer/sparsebits/SparseBitSet$FlipStrategy",
+        "super": "com/zaxxer/sparsebits/SparseBitSet$AbstractStrategy",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 4,
+            "dsc": "()V"
+          },
+          {
+            "nme": "properties",
+            "acc": 4,
+            "dsc": "()I"
+          },
+          {
+            "nme": "start",
+            "acc": 4,
+            "dsc": "(Lcom/zaxxer/sparsebits/SparseBitSet;)Z"
+          },
+          {
+            "nme": "word",
+            "acc": 4,
+            "dsc": "(II[J[JJ)Z"
+          },
+          {
+            "nme": "block",
+            "acc": 4,
+            "dsc": "(III[J[J)Z"
+          }
+        ],
+        "flds": []
+      },
+      "com/zaxxer/sparsebits/SparseBitSet$IntersectsStrategy.class": {
+        "ver": 50,
+        "acc": 33,
+        "nme": "com/zaxxer/sparsebits/SparseBitSet$IntersectsStrategy",
+        "super": "com/zaxxer/sparsebits/SparseBitSet$AbstractStrategy",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 4,
+            "dsc": "()V"
+          },
+          {
+            "nme": "properties",
+            "acc": 4,
+            "dsc": "()I"
+          },
+          {
+            "nme": "start",
+            "acc": 4,
+            "dsc": "(Lcom/zaxxer/sparsebits/SparseBitSet;)Z"
+          },
+          {
+            "nme": "word",
+            "acc": 4,
+            "dsc": "(II[J[JJ)Z"
+          },
+          {
+            "nme": "block",
+            "acc": 4,
+            "dsc": "(III[J[J)Z"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 4,
+            "nme": "result",
+            "dsc": "Z"
+          }
+        ]
+      },
+      "com/zaxxer/sparsebits/SparseBitSet$ClearStrategy.class": {
+        "ver": 50,
+        "acc": 33,
+        "nme": "com/zaxxer/sparsebits/SparseBitSet$ClearStrategy",
+        "super": "com/zaxxer/sparsebits/SparseBitSet$AbstractStrategy",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 4,
+            "dsc": "()V"
+          },
+          {
+            "nme": "properties",
+            "acc": 4,
+            "dsc": "()I"
+          },
+          {
+            "nme": "start",
+            "acc": 4,
+            "dsc": "(Lcom/zaxxer/sparsebits/SparseBitSet;)Z"
+          },
+          {
+            "nme": "word",
+            "acc": 4,
+            "dsc": "(II[J[JJ)Z"
+          },
+          {
+            "nme": "block",
+            "acc": 4,
+            "dsc": "(III[J[J)Z"
+          }
+        ],
+        "flds": []
+      },
+      "com/zaxxer/sparsebits/SparseBitSet$AndNotStrategy.class": {
+        "ver": 50,
+        "acc": 33,
+        "nme": "com/zaxxer/sparsebits/SparseBitSet$AndNotStrategy",
+        "super": "com/zaxxer/sparsebits/SparseBitSet$AbstractStrategy",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 4,
+            "dsc": "()V"
+          },
+          {
+            "nme": "properties",
+            "acc": 4,
+            "dsc": "()I"
+          },
+          {
+            "nme": "start",
+            "acc": 4,
+            "dsc": "(Lcom/zaxxer/sparsebits/SparseBitSet;)Z"
+          },
+          {
+            "nme": "word",
+            "acc": 4,
+            "dsc": "(II[J[JJ)Z"
+          },
+          {
+            "nme": "block",
+            "acc": 4,
+            "dsc": "(III[J[J)Z"
+          }
+        ],
+        "flds": []
+      },
+      "com/zaxxer/sparsebits/SparseBitSet$XorStrategy.class": {
+        "ver": 50,
+        "acc": 33,
+        "nme": "com/zaxxer/sparsebits/SparseBitSet$XorStrategy",
+        "super": "com/zaxxer/sparsebits/SparseBitSet$AbstractStrategy",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 4,
+            "dsc": "()V"
+          },
+          {
+            "nme": "properties",
+            "acc": 4,
+            "dsc": "()I"
+          },
+          {
+            "nme": "start",
+            "acc": 4,
+            "dsc": "(Lcom/zaxxer/sparsebits/SparseBitSet;)Z"
+          },
+          {
+            "nme": "word",
+            "acc": 4,
+            "dsc": "(II[J[JJ)Z"
+          },
+          {
+            "nme": "block",
+            "acc": 4,
+            "dsc": "(III[J[J)Z"
+          }
+        ],
+        "flds": []
+      },
+      "com/zaxxer/sparsebits/SparseBitSet$EqualsStrategy.class": {
+        "ver": 50,
+        "acc": 33,
+        "nme": "com/zaxxer/sparsebits/SparseBitSet$EqualsStrategy",
+        "super": "com/zaxxer/sparsebits/SparseBitSet$AbstractStrategy",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 4,
+            "dsc": "()V"
+          },
+          {
+            "nme": "properties",
+            "acc": 4,
+            "dsc": "()I"
+          },
+          {
+            "nme": "start",
+            "acc": 4,
+            "dsc": "(Lcom/zaxxer/sparsebits/SparseBitSet;)Z"
+          },
+          {
+            "nme": "word",
+            "acc": 4,
+            "dsc": "(II[J[JJ)Z"
+          },
+          {
+            "nme": "block",
+            "acc": 4,
+            "dsc": "(III[J[J)Z"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 0,
+            "nme": "result",
+            "dsc": "Z"
+          }
+        ]
+      },
+      "com/zaxxer/sparsebits/SparseBitSet$Cache.class": {
+        "ver": 50,
+        "acc": 33,
+        "nme": "com/zaxxer/sparsebits/SparseBitSet$Cache",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 4,
+            "dsc": "(Lcom/zaxxer/sparsebits/SparseBitSet;)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 132,
+            "nme": "hash",
+            "dsc": "I"
+          },
+          {
+            "acc": 132,
+            "nme": "size",
+            "dsc": "I"
+          },
+          {
+            "acc": 132,
+            "nme": "cardinality",
+            "dsc": "I"
+          },
+          {
+            "acc": 132,
+            "nme": "length",
+            "dsc": "I"
+          },
+          {
+            "acc": 132,
+            "nme": "count",
+            "dsc": "I"
+          },
+          {
+            "acc": 132,
+            "nme": "a2Count",
+            "dsc": "I"
+          },
+          {
+            "acc": 132,
+            "nme": "a3Count",
+            "dsc": "I"
+          },
+          {
+            "acc": 4112,
+            "nme": "this$0",
+            "dsc": "Lcom/zaxxer/sparsebits/SparseBitSet;"
+          }
+        ]
+      },
+      "com/zaxxer/sparsebits/SparseBitSet$AbstractStrategy.class": {
+        "ver": 50,
+        "acc": 1057,
+        "nme": "com/zaxxer/sparsebits/SparseBitSet$AbstractStrategy",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 4,
+            "dsc": "()V"
+          },
+          {
+            "nme": "properties",
+            "acc": 1028,
+            "dsc": "()I"
+          },
+          {
+            "nme": "start",
+            "acc": 1028,
+            "dsc": "(Lcom/zaxxer/sparsebits/SparseBitSet;)Z"
+          },
+          {
+            "nme": "word",
+            "acc": 1028,
+            "dsc": "(II[J[JJ)Z"
+          },
+          {
+            "nme": "block",
+            "acc": 1028,
+            "dsc": "(III[J[J)Z"
+          },
+          {
+            "nme": "finish",
+            "acc": 4,
+            "dsc": "(II)V"
+          },
+          {
+            "nme": "isZeroBlock",
+            "acc": 20,
+            "dsc": "([J)Z"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 24,
+            "nme": "F_OP_F_EQ_F",
+            "dsc": "I",
+            "val": 1
+          },
+          {
+            "acc": 24,
+            "nme": "F_OP_X_EQ_F",
+            "dsc": "I",
+            "val": 2
+          },
+          {
+            "acc": 24,
+            "nme": "X_OP_F_EQ_F",
+            "dsc": "I",
+            "val": 4
+          },
+          {
+            "acc": 24,
+            "nme": "X_OP_F_EQ_X",
+            "dsc": "I",
+            "val": 8
+          }
+        ]
+      },
+      "com/zaxxer/sparsebits/SparseBitSet.class": {
+        "ver": 50,
+        "acc": 33,
+        "nme": "com/zaxxer/sparsebits/SparseBitSet",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 4,
+            "dsc": "(II)V",
+            "exs": [
+              "java/lang/NegativeArraySizeException"
+            ]
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(I)V",
+            "exs": [
+              "java/lang/NegativeArraySizeException"
+            ]
+          },
+          {
+            "nme": "and",
+            "acc": 1,
+            "dsc": "(IZ)V",
+            "exs": [
+              "java/lang/IndexOutOfBoundsException"
+            ]
+          },
+          {
+            "nme": "and",
+            "acc": 1,
+            "dsc": "(IILcom/zaxxer/sparsebits/SparseBitSet;)V",
+            "exs": [
+              "java/lang/IndexOutOfBoundsException"
+            ]
+          },
+          {
+            "nme": "and",
+            "acc": 1,
+            "dsc": "(Lcom/zaxxer/sparsebits/SparseBitSet;)V"
+          },
+          {
+            "nme": "and",
+            "acc": 9,
+            "dsc": "(Lcom/zaxxer/sparsebits/SparseBitSet;Lcom/zaxxer/sparsebits/SparseBitSet;)Lcom/zaxxer/sparsebits/SparseBitSet;"
+          },
+          {
+            "nme": "andNot",
+            "acc": 1,
+            "dsc": "(IZ)V"
+          },
+          {
+            "nme": "andNot",
+            "acc": 1,
+            "dsc": "(IILcom/zaxxer/sparsebits/SparseBitSet;)V",
+            "exs": [
+              "java/lang/IndexOutOfBoundsException"
+            ]
+          },
+          {
+            "nme": "andNot",
+            "acc": 1,
+            "dsc": "(Lcom/zaxxer/sparsebits/SparseBitSet;)V"
+          },
+          {
+            "nme": "andNot",
+            "acc": 9,
+            "dsc": "(Lcom/zaxxer/sparsebits/SparseBitSet;Lcom/zaxxer/sparsebits/SparseBitSet;)Lcom/zaxxer/sparsebits/SparseBitSet;"
+          },
+          {
+            "nme": "cardinality",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "clear",
+            "acc": 1,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "clear",
+            "acc": 1,
+            "dsc": "(II)V",
+            "exs": [
+              "java/lang/IndexOutOfBoundsException"
+            ]
+          },
+          {
+            "nme": "clear",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "clone",
+            "acc": 1,
+            "dsc": "()Lcom/zaxxer/sparsebits/SparseBitSet;"
+          },
+          {
+            "nme": "equals",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)Z"
+          },
+          {
+            "nme": "flip",
+            "acc": 1,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "flip",
+            "acc": 1,
+            "dsc": "(II)V",
+            "exs": [
+              "java/lang/IndexOutOfBoundsException"
+            ]
+          },
+          {
+            "nme": "get",
+            "acc": 1,
+            "dsc": "(I)Z"
+          },
+          {
+            "nme": "get",
+            "acc": 1,
+            "dsc": "(II)Lcom/zaxxer/sparsebits/SparseBitSet;",
+            "exs": [
+              "java/lang/IndexOutOfBoundsException"
+            ]
+          },
+          {
+            "nme": "hashCode",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "intersects",
+            "acc": 1,
+            "dsc": "(IILcom/zaxxer/sparsebits/SparseBitSet;)Z",
+            "exs": [
+              "java/lang/IndexOutOfBoundsException"
+            ]
+          },
+          {
+            "nme": "intersects",
+            "acc": 1,
+            "dsc": "(Lcom/zaxxer/sparsebits/SparseBitSet;)Z"
+          },
+          {
+            "nme": "isEmpty",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "length",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "nextClearBit",
+            "acc": 1,
+            "dsc": "(I)I"
+          },
+          {
+            "nme": "nextSetBit",
+            "acc": 1,
+            "dsc": "(I)I"
+          },
+          {
+            "nme": "previousClearBit",
+            "acc": 1,
+            "dsc": "(I)I"
+          },
+          {
+            "nme": "previousSetBit",
+            "acc": 1,
+            "dsc": "(I)I"
+          },
+          {
+            "nme": "or",
+            "acc": 1,
+            "dsc": "(IZ)V"
+          },
+          {
+            "nme": "or",
+            "acc": 1,
+            "dsc": "(IILcom/zaxxer/sparsebits/SparseBitSet;)V",
+            "exs": [
+              "java/lang/IndexOutOfBoundsException"
+            ]
+          },
+          {
+            "nme": "or",
+            "acc": 1,
+            "dsc": "(Lcom/zaxxer/sparsebits/SparseBitSet;)V"
+          },
+          {
+            "nme": "or",
+            "acc": 9,
+            "dsc": "(Lcom/zaxxer/sparsebits/SparseBitSet;Lcom/zaxxer/sparsebits/SparseBitSet;)Lcom/zaxxer/sparsebits/SparseBitSet;"
+          },
+          {
+            "nme": "set",
+            "acc": 1,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "set",
+            "acc": 1,
+            "dsc": "(IZ)V"
+          },
+          {
+            "nme": "set",
+            "acc": 1,
+            "dsc": "(II)V",
+            "exs": [
+              "java/lang/IndexOutOfBoundsException"
+            ]
+          },
+          {
+            "nme": "set",
+            "acc": 1,
+            "dsc": "(IIZ)V"
+          },
+          {
+            "nme": "size",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "statistics",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "statistics",
+            "acc": 1,
+            "dsc": "([Ljava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "nme": "toString",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "toStringCompaction",
+            "acc": 1,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "toStringCompaction",
+            "acc": 1,
+            "dsc": "(Z)V"
+          },
+          {
+            "nme": "xor",
+            "acc": 1,
+            "dsc": "(IZ)V"
+          },
+          {
+            "nme": "xor",
+            "acc": 1,
+            "dsc": "(IILcom/zaxxer/sparsebits/SparseBitSet;)V",
+            "exs": [
+              "java/lang/IndexOutOfBoundsException"
+            ]
+          },
+          {
+            "nme": "xor",
+            "acc": 1,
+            "dsc": "(Lcom/zaxxer/sparsebits/SparseBitSet;)V"
+          },
+          {
+            "nme": "xor",
+            "acc": 9,
+            "dsc": "(Lcom/zaxxer/sparsebits/SparseBitSet;Lcom/zaxxer/sparsebits/SparseBitSet;)Lcom/zaxxer/sparsebits/SparseBitSet;"
+          },
+          {
+            "nme": "throwIndexOutOfBoundsException",
+            "acc": 12,
+            "dsc": "(II)V",
+            "exs": [
+              "java/lang/IndexOutOfBoundsException"
+            ]
+          },
+          {
+            "nme": "constructorHelper",
+            "acc": 20,
+            "dsc": "()V"
+          },
+          {
+            "nme": "nullify",
+            "acc": 20,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "resize",
+            "acc": 20,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "setScanner",
+            "acc": 20,
+            "dsc": "(IILcom/zaxxer/sparsebits/SparseBitSet;Lcom/zaxxer/sparsebits/SparseBitSet$AbstractStrategy;)V",
+            "exs": [
+              "java/lang/IndexOutOfBoundsException"
+            ]
+          },
+          {
+            "nme": "statisticsUpdate",
+            "acc": 20,
+            "dsc": "()V"
+          },
+          {
+            "nme": "writeObject",
+            "acc": 2,
+            "dsc": "(Ljava/io/ObjectOutputStream;)V",
+            "exs": [
+              "java/io/IOException",
+              "java/lang/InternalError"
+            ]
+          },
+          {
+            "nme": "readObject",
+            "acc": 2,
+            "dsc": "(Ljava/io/ObjectInputStream;)V",
+            "exs": [
+              "java/io/IOException",
+              "java/lang/ClassNotFoundException"
+            ]
+          },
+          {
+            "nme": "clone",
+            "acc": 4161,
+            "dsc": "()Ljava/lang/Object;",
+            "exs": [
+              "java/lang/CloneNotSupportedException"
+            ]
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 132,
+            "nme": "compactionCount",
+            "dsc": "I"
+          },
+          {
+            "acc": 8,
+            "nme": "compactionCountDefault",
+            "dsc": "I"
+          },
+          {
+            "acc": 132,
+            "nme": "bits",
+            "dsc": "[[[J"
+          },
+          {
+            "acc": 132,
+            "nme": "bitsLength",
+            "dsc": "I"
+          },
+          {
+            "acc": 28,
+            "nme": "LENGTH4",
+            "dsc": "I",
+            "val": 64
+          },
+          {
+            "acc": 28,
+            "nme": "INDEX_SIZE",
+            "dsc": "I",
+            "val": 31
+          },
+          {
+            "acc": 28,
+            "nme": "LEVEL4",
+            "dsc": "I",
+            "val": 6
+          },
+          {
+            "acc": 28,
+            "nme": "LEVEL3",
+            "dsc": "I",
+            "val": 5
+          },
+          {
+            "acc": 28,
+            "nme": "LEVEL2",
+            "dsc": "I",
+            "val": 5
+          },
+          {
+            "acc": 28,
+            "nme": "LEVEL1",
+            "dsc": "I",
+            "val": 15
+          },
+          {
+            "acc": 28,
+            "nme": "MAX_LENGTH1",
+            "dsc": "I",
+            "val": 32768
+          },
+          {
+            "acc": 28,
+            "nme": "LENGTH2",
+            "dsc": "I",
+            "val": 32
+          },
+          {
+            "acc": 28,
+            "nme": "LENGTH3",
+            "dsc": "I",
+            "val": 32
+          },
+          {
+            "acc": 28,
+            "nme": "SHIFT3",
+            "dsc": "I",
+            "val": 6
+          },
+          {
+            "acc": 28,
+            "nme": "MASK3",
+            "dsc": "I",
+            "val": 31
+          },
+          {
+            "acc": 28,
+            "nme": "SHIFT2",
+            "dsc": "I",
+            "val": 5
+          },
+          {
+            "acc": 28,
+            "nme": "UNIT",
+            "dsc": "I",
+            "val": 65536
+          },
+          {
+            "acc": 28,
+            "nme": "MASK2",
+            "dsc": "I",
+            "val": 31
+          },
+          {
+            "acc": 28,
+            "nme": "SHIFT1",
+            "dsc": "I",
+            "val": 10
+          },
+          {
+            "acc": 28,
+            "nme": "LENGTH2_SIZE",
+            "dsc": "I",
+            "val": 31
+          },
+          {
+            "acc": 28,
+            "nme": "LENGTH3_SIZE",
+            "dsc": "I",
+            "val": 31
+          },
+          {
+            "acc": 28,
+            "nme": "LENGTH4_SIZE",
+            "dsc": "I",
+            "val": 63
+          },
+          {
+            "acc": 132,
+            "nme": "cache",
+            "dsc": "Lcom/zaxxer/sparsebits/SparseBitSet$Cache;"
+          },
+          {
+            "acc": 132,
+            "nme": "spare",
+            "dsc": "[J"
+          },
+          {
+            "acc": 24,
+            "nme": "ZERO_BLOCK",
+            "dsc": "[J"
+          },
+          {
+            "acc": 26,
+            "nme": "serialVersionUID",
+            "dsc": "J",
+            "val": -6663013367427929992
+          },
+          {
+            "acc": 156,
+            "nme": "andStrategy",
+            "dsc": "Lcom/zaxxer/sparsebits/SparseBitSet$AndStrategy;"
+          },
+          {
+            "acc": 156,
+            "nme": "andNotStrategy",
+            "dsc": "Lcom/zaxxer/sparsebits/SparseBitSet$AndNotStrategy;"
+          },
+          {
+            "acc": 156,
+            "nme": "clearStrategy",
+            "dsc": "Lcom/zaxxer/sparsebits/SparseBitSet$ClearStrategy;"
+          },
+          {
+            "acc": 156,
+            "nme": "copyStrategy",
+            "dsc": "Lcom/zaxxer/sparsebits/SparseBitSet$CopyStrategy;"
+          },
+          {
+            "acc": 132,
+            "nme": "equalsStrategy",
+            "dsc": "Lcom/zaxxer/sparsebits/SparseBitSet$EqualsStrategy;"
+          },
+          {
+            "acc": 156,
+            "nme": "flipStrategy",
+            "dsc": "Lcom/zaxxer/sparsebits/SparseBitSet$FlipStrategy;"
+          },
+          {
+            "acc": 140,
+            "nme": "intersectsStrategy",
+            "dsc": "Lcom/zaxxer/sparsebits/SparseBitSet$IntersectsStrategy;"
+          },
+          {
+            "acc": 156,
+            "nme": "orStrategy",
+            "dsc": "Lcom/zaxxer/sparsebits/SparseBitSet$OrStrategy;"
+          },
+          {
+            "acc": 156,
+            "nme": "setStrategy",
+            "dsc": "Lcom/zaxxer/sparsebits/SparseBitSet$SetStrategy;"
+          },
+          {
+            "acc": 132,
+            "nme": "updateStrategy",
+            "dsc": "Lcom/zaxxer/sparsebits/SparseBitSet$UpdateStrategy;"
+          },
+          {
+            "acc": 156,
+            "nme": "xorStrategy",
+            "dsc": "Lcom/zaxxer/sparsebits/SparseBitSet$XorStrategy;"
+          }
+        ]
+      },
+      "com/zaxxer/sparsebits/SparseBitSet$UpdateStrategy.class": {
+        "ver": 50,
+        "acc": 33,
+        "nme": "com/zaxxer/sparsebits/SparseBitSet$UpdateStrategy",
+        "super": "com/zaxxer/sparsebits/SparseBitSet$AbstractStrategy",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 4,
+            "dsc": "(Lcom/zaxxer/sparsebits/SparseBitSet;)V"
+          },
+          {
+            "nme": "properties",
+            "acc": 4,
+            "dsc": "()I"
+          },
+          {
+            "nme": "start",
+            "acc": 4,
+            "dsc": "(Lcom/zaxxer/sparsebits/SparseBitSet;)Z"
+          },
+          {
+            "nme": "word",
+            "acc": 4,
+            "dsc": "(II[J[JJ)Z"
+          },
+          {
+            "nme": "block",
+            "acc": 4,
+            "dsc": "(III[J[J)Z"
+          },
+          {
+            "nme": "finish",
+            "acc": 4,
+            "dsc": "(II)V"
+          },
+          {
+            "nme": "compute",
+            "acc": 2,
+            "dsc": "(IJ)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 132,
+            "nme": "wMin",
+            "dsc": "I"
+          },
+          {
+            "acc": 132,
+            "nme": "wordMin",
+            "dsc": "J"
+          },
+          {
+            "acc": 132,
+            "nme": "wMax",
+            "dsc": "I"
+          },
+          {
+            "acc": 132,
+            "nme": "wordMax",
+            "dsc": "J"
+          },
+          {
+            "acc": 132,
+            "nme": "hash",
+            "dsc": "J"
+          },
+          {
+            "acc": 132,
+            "nme": "count",
+            "dsc": "I"
+          },
+          {
+            "acc": 132,
+            "nme": "cardinality",
+            "dsc": "I"
+          },
+          {
+            "acc": 4112,
+            "nme": "this$0",
+            "dsc": "Lcom/zaxxer/sparsebits/SparseBitSet;"
+          }
+        ]
+      },
+      "com/zaxxer/sparsebits/SparseBitSet$OrStrategy.class": {
+        "ver": 50,
+        "acc": 33,
+        "nme": "com/zaxxer/sparsebits/SparseBitSet$OrStrategy",
+        "super": "com/zaxxer/sparsebits/SparseBitSet$AbstractStrategy",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 4,
+            "dsc": "()V"
+          },
+          {
+            "nme": "properties",
+            "acc": 4,
+            "dsc": "()I"
+          },
+          {
+            "nme": "start",
+            "acc": 4,
+            "dsc": "(Lcom/zaxxer/sparsebits/SparseBitSet;)Z"
+          },
+          {
+            "nme": "word",
+            "acc": 4,
+            "dsc": "(II[J[JJ)Z"
+          },
+          {
+            "nme": "block",
+            "acc": 4,
+            "dsc": "(III[J[J)Z"
+          }
+        ],
+        "flds": []
+      },
+      "com/zaxxer/sparsebits/SparseBitSet$SetStrategy.class": {
+        "ver": 50,
+        "acc": 33,
+        "nme": "com/zaxxer/sparsebits/SparseBitSet$SetStrategy",
+        "super": "com/zaxxer/sparsebits/SparseBitSet$AbstractStrategy",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 4,
+            "dsc": "()V"
+          },
+          {
+            "nme": "properties",
+            "acc": 4,
+            "dsc": "()I"
+          },
+          {
+            "nme": "start",
+            "acc": 4,
+            "dsc": "(Lcom/zaxxer/sparsebits/SparseBitSet;)Z"
+          },
+          {
+            "nme": "word",
+            "acc": 4,
+            "dsc": "(II[J[JJ)Z"
+          },
+          {
+            "nme": "block",
+            "acc": 4,
+            "dsc": "(III[J[J)Z"
+          }
+        ],
+        "flds": []
+      },
+      "com/zaxxer/sparsebits/SparseBitSet$AndStrategy.class": {
+        "ver": 50,
+        "acc": 33,
+        "nme": "com/zaxxer/sparsebits/SparseBitSet$AndStrategy",
+        "super": "com/zaxxer/sparsebits/SparseBitSet$AbstractStrategy",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 4,
+            "dsc": "()V"
+          },
+          {
+            "nme": "properties",
+            "acc": 4,
+            "dsc": "()I"
+          },
+          {
+            "nme": "start",
+            "acc": 4,
+            "dsc": "(Lcom/zaxxer/sparsebits/SparseBitSet;)Z"
+          },
+          {
+            "nme": "word",
+            "acc": 4,
+            "dsc": "(II[J[JJ)Z"
+          },
+          {
+            "nme": "block",
+            "acc": 4,
+            "dsc": "(III[J[J)Z"
+          }
+        ],
+        "flds": []
+      },
+      "com/zaxxer/sparsebits/SparseBitSet$Statistics.class": {
+        "ver": 50,
+        "acc": 16433,
+        "nme": "com/zaxxer/sparsebits/SparseBitSet$Statistics",
+        "super": "java/lang/Enum",
+        "mthds": [
+          {
+            "nme": "values",
+            "acc": 9,
+            "dsc": "()[Lcom/zaxxer/sparsebits/SparseBitSet$Statistics;"
+          },
+          {
+            "nme": "valueOf",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Lcom/zaxxer/sparsebits/SparseBitSet$Statistics;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;I)V",
+            "sig": "()V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 16409,
+            "nme": "Size",
+            "dsc": "Lcom/zaxxer/sparsebits/SparseBitSet$Statistics;"
+          },
+          {
+            "acc": 16409,
+            "nme": "Length",
+            "dsc": "Lcom/zaxxer/sparsebits/SparseBitSet$Statistics;"
+          },
+          {
+            "acc": 16409,
+            "nme": "Cardinality",
+            "dsc": "Lcom/zaxxer/sparsebits/SparseBitSet$Statistics;"
+          },
+          {
+            "acc": 16409,
+            "nme": "Total_words",
+            "dsc": "Lcom/zaxxer/sparsebits/SparseBitSet$Statistics;"
+          },
+          {
+            "acc": 16409,
+            "nme": "Set_array_length",
+            "dsc": "Lcom/zaxxer/sparsebits/SparseBitSet$Statistics;"
+          },
+          {
+            "acc": 16409,
+            "nme": "Set_array_max_length",
+            "dsc": "Lcom/zaxxer/sparsebits/SparseBitSet$Statistics;"
+          },
+          {
+            "acc": 16409,
+            "nme": "Level2_areas",
+            "dsc": "Lcom/zaxxer/sparsebits/SparseBitSet$Statistics;"
+          },
+          {
+            "acc": 16409,
+            "nme": "Level2_area_length",
+            "dsc": "Lcom/zaxxer/sparsebits/SparseBitSet$Statistics;"
+          },
+          {
+            "acc": 16409,
+            "nme": "Level3_blocks",
+            "dsc": "Lcom/zaxxer/sparsebits/SparseBitSet$Statistics;"
+          },
+          {
+            "acc": 16409,
+            "nme": "Level3_block_length",
+            "dsc": "Lcom/zaxxer/sparsebits/SparseBitSet$Statistics;"
+          },
+          {
+            "acc": 16409,
+            "nme": "Compaction_count_value",
+            "dsc": "Lcom/zaxxer/sparsebits/SparseBitSet$Statistics;"
+          },
+          {
+            "acc": 4122,
+            "nme": "$VALUES",
+            "dsc": "[Lcom/zaxxer/sparsebits/SparseBitSet$Statistics;"
+          }
+        ]
+      },
+      "com/zaxxer/sparsebits/SparseBitSet$CopyStrategy.class": {
+        "ver": 50,
+        "acc": 33,
+        "nme": "com/zaxxer/sparsebits/SparseBitSet$CopyStrategy",
+        "super": "com/zaxxer/sparsebits/SparseBitSet$AbstractStrategy",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 4,
+            "dsc": "()V"
+          },
+          {
+            "nme": "properties",
+            "acc": 4,
+            "dsc": "()I"
+          },
+          {
+            "nme": "start",
+            "acc": 4,
+            "dsc": "(Lcom/zaxxer/sparsebits/SparseBitSet;)Z"
+          },
+          {
+            "nme": "word",
+            "acc": 4,
+            "dsc": "(II[J[JJ)Z"
+          },
+          {
+            "nme": "block",
+            "acc": 4,
+            "dsc": "(III[J[J)Z"
+          }
+        ],
+        "flds": []
+      }
+    }
+  }
+}

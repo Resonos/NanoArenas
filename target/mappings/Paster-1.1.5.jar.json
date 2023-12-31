@@ -1,0 +1,152 @@
+{
+  "md5": "144cbafa0f07cba781374a9a11aa624c",
+  "sha2": "8730931d9e24b4673212d55b60ba4c610e517147",
+  "sha256": "788b644a919e3296e6289f1ad7bf3a247c976c1662442f782c88418d3da5ce18",
+  "contents": {
+    "classes": {
+      "com/intellectualsites/paster/IncendoPaster.class": {
+        "ver": 55,
+        "acc": 33,
+        "nme": "com/intellectualsites/paster/IncendoPaster",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "debugPaste",
+            "acc": 137,
+            "dsc": "(Ljava/io/File;Ljava/lang/String;[Ljava/io/File;)Ljava/lang/String;",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "debugPaste",
+            "acc": 9,
+            "dsc": "(Ljava/io/File;Ljava/lang/String;Ljava/util/List;)Ljava/lang/String;",
+            "sig": "(Ljava/io/File;Ljava/lang/String;Ljava/util/List<Ljava/io/File;>;)Ljava/lang/String;",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "readFile",
+            "acc": 10,
+            "dsc": "(Ljava/io/File;Z)Ljava/lang/String;",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "getFiles",
+            "acc": 17,
+            "dsc": "()Ljava/util/Collection;",
+            "sig": "()Ljava/util/Collection<Lcom/intellectualsites/paster/IncendoPaster$PasteFile;>;"
+          },
+          {
+            "nme": "addFile",
+            "acc": 1,
+            "dsc": "(Ljava/io/File;)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "addFile",
+            "acc": 1,
+            "dsc": "(Ljava/io/File;Ljava/lang/String;)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "addFile",
+            "acc": 1,
+            "dsc": "(Lcom/intellectualsites/paster/IncendoPaster$PasteFile;)V"
+          },
+          {
+            "nme": "toJsonString",
+            "acc": 2,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "upload",
+            "acc": 17,
+            "dsc": "()Ljava/lang/String;",
+            "exs": [
+              "java/lang/Throwable"
+            ]
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "UPLOAD_PATH",
+            "dsc": "Ljava/lang/String;",
+            "val": "https://athion.net/ISPaster/paste/upload"
+          },
+          {
+            "acc": 25,
+            "nme": "VALID_APPLICATIONS",
+            "dsc": "Ljava/util/Collection;",
+            "sig": "Ljava/util/Collection<Ljava/lang/String;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "files",
+            "dsc": "Ljava/util/Collection;",
+            "sig": "Ljava/util/Collection<Lcom/intellectualsites/paster/IncendoPaster$PasteFile;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "pasteApplication",
+            "dsc": "Ljava/lang/String;"
+          }
+        ]
+      },
+      "com/intellectualsites/paster/IncendoPaster$PasteFile.class": {
+        "ver": 55,
+        "acc": 33,
+        "nme": "com/intellectualsites/paster/IncendoPaster$PasteFile",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "getFileName",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "getContent",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "fileName",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 18,
+            "nme": "content",
+            "dsc": "Ljava/lang/String;"
+          }
+        ]
+      }
+    }
+  }
+}

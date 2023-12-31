@@ -1,0 +1,1212 @@
+{
+  "md5": "75fe4fe33d308dd6cee3b601de902d27",
+  "sha2": "6d9b10773b5237df178a7b3c1b4208df7d0e7f94",
+  "sha256": "d1f3c66aa91ac52549e00ae3b208ba4b9af7d72d68f230643553beb38e6118ac",
+  "contents": {
+    "classes": {
+      "com/google/errorprone/annotations/DoNotCall.class": {
+        "ver": 52,
+        "acc": 9729,
+        "nme": "com/google/errorprone/annotations/DoNotCall",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "value",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "CLASS"
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ]
+              ]
+            ]
+          }
+        ]
+      },
+      "com/google/errorprone/annotations/MustBeClosed.class": {
+        "ver": 52,
+        "acc": 9729,
+        "nme": "com/google/errorprone/annotations/MustBeClosed",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "CONSTRUCTOR"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ]
+              ]
+            ]
+          }
+        ]
+      },
+      "com/google/errorprone/annotations/SuppressPackageLocation.class": {
+        "ver": 52,
+        "acc": 9729,
+        "nme": "com/google/errorprone/annotations/SuppressPackageLocation",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "PACKAGE"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "CLASS"
+              ]
+            ]
+          }
+        ]
+      },
+      "com/google/errorprone/annotations/FormatMethod.class": {
+        "ver": 52,
+        "acc": 9729,
+        "nme": "com/google/errorprone/annotations/FormatMethod",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "CLASS"
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "CONSTRUCTOR"
+                ]
+              ]
+            ]
+          }
+        ]
+      },
+      "com/google/errorprone/annotations/CheckReturnValue.class": {
+        "ver": 52,
+        "acc": 9729,
+        "nme": "com/google/errorprone/annotations/CheckReturnValue",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "CONSTRUCTOR"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "PACKAGE"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "RUNTIME"
+              ]
+            ]
+          }
+        ]
+      },
+      "com/google/errorprone/annotations/DoNotMock.class": {
+        "ver": 52,
+        "acc": 9729,
+        "nme": "com/google/errorprone/annotations/DoNotMock",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "value",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Inherited;"
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "RUNTIME"
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "ANNOTATION_TYPE"
+                ]
+              ]
+            ]
+          }
+        ]
+      },
+      "com/google/errorprone/annotations/RequiredModifiers.class": {
+        "ver": 52,
+        "acc": 9729,
+        "nme": "com/google/errorprone/annotations/RequiredModifiers",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "value",
+            "acc": 132097,
+            "dsc": "()[Ljavax/lang/model/element/Modifier;",
+            "vanns": [
+              {
+                "dsc": "Ljava/lang/Deprecated;"
+              }
+            ]
+          },
+          {
+            "nme": "modifier",
+            "acc": 1025,
+            "dsc": "()[Lcom/google/errorprone/annotations/Modifier;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "CLASS"
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "ANNOTATION_TYPE"
+                ]
+              ]
+            ]
+          }
+        ]
+      },
+      "com/google/errorprone/annotations/concurrent/GuardedBy.class": {
+        "ver": 52,
+        "acc": 9729,
+        "nme": "com/google/errorprone/annotations/concurrent/GuardedBy",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "value",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "FIELD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "CLASS"
+              ]
+            ]
+          }
+        ]
+      },
+      "com/google/errorprone/annotations/OverridingMethodsMustInvokeSuper.class": {
+        "ver": 52,
+        "acc": 9729,
+        "nme": "com/google/errorprone/annotations/OverridingMethodsMustInvokeSuper",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "CLASS"
+              ]
+            ]
+          }
+        ]
+      },
+      "com/google/errorprone/annotations/CanIgnoreReturnValue.class": {
+        "ver": 52,
+        "acc": 9729,
+        "nme": "com/google/errorprone/annotations/CanIgnoreReturnValue",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "CONSTRUCTOR"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "CLASS"
+              ]
+            ]
+          }
+        ]
+      },
+      "com/google/errorprone/annotations/InlineMeValidationDisabled.class": {
+        "ver": 52,
+        "acc": 9729,
+        "nme": "com/google/errorprone/annotations/InlineMeValidationDisabled",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "value",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "CONSTRUCTOR"
+                ]
+              ]
+            ]
+          }
+        ]
+      },
+      "com/google/errorprone/annotations/Var.class": {
+        "ver": 52,
+        "acc": 9729,
+        "nme": "com/google/errorprone/annotations/Var",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "FIELD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "PARAMETER"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "LOCAL_VARIABLE"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "RUNTIME"
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lcom/google/errorprone/annotations/IncompatibleModifiers;",
+            "vals": [
+              "modifier",
+              [
+                [
+                  "Lcom/google/errorprone/annotations/Modifier;",
+                  "FINAL"
+                ]
+              ]
+            ]
+          }
+        ]
+      },
+      "com/google/errorprone/annotations/NoAllocation.class": {
+        "ver": 52,
+        "acc": 9729,
+        "nme": "com/google/errorprone/annotations/NoAllocation",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ]
+              ]
+            ]
+          }
+        ]
+      },
+      "com/google/errorprone/annotations/IncompatibleModifiers.class": {
+        "ver": 52,
+        "acc": 9729,
+        "nme": "com/google/errorprone/annotations/IncompatibleModifiers",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "value",
+            "acc": 132097,
+            "dsc": "()[Ljavax/lang/model/element/Modifier;",
+            "vanns": [
+              {
+                "dsc": "Ljava/lang/Deprecated;"
+              }
+            ]
+          },
+          {
+            "nme": "modifier",
+            "acc": 1025,
+            "dsc": "()[Lcom/google/errorprone/annotations/Modifier;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "CLASS"
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "ANNOTATION_TYPE"
+                ]
+              ]
+            ]
+          }
+        ]
+      },
+      "com/google/errorprone/annotations/concurrent/LockMethod.class": {
+        "ver": 52,
+        "acc": 140801,
+        "nme": "com/google/errorprone/annotations/concurrent/LockMethod",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "value",
+            "acc": 1025,
+            "dsc": "()[Ljava/lang/String;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "CLASS"
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/Deprecated;"
+          }
+        ]
+      },
+      "com/google/errorprone/annotations/CompatibleWith.class": {
+        "ver": 52,
+        "acc": 9729,
+        "nme": "com/google/errorprone/annotations/CompatibleWith",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "value",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "CLASS"
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "PARAMETER"
+                ]
+              ]
+            ]
+          }
+        ]
+      },
+      "com/google/errorprone/annotations/ThreadSafe.class": {
+        "ver": 52,
+        "acc": 9729,
+        "nme": "com/google/errorprone/annotations/ThreadSafe",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "RUNTIME"
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Inherited;"
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          }
+        ]
+      },
+      "com/google/errorprone/annotations/FormatString.class": {
+        "ver": 52,
+        "acc": 9729,
+        "nme": "com/google/errorprone/annotations/FormatString",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "CLASS"
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "PARAMETER"
+                ]
+              ]
+            ]
+          }
+        ]
+      },
+      "com/google/errorprone/annotations/Keep.class": {
+        "ver": 52,
+        "acc": 9729,
+        "nme": "com/google/errorprone/annotations/Keep",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "ANNOTATION_TYPE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "CONSTRUCTOR"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "FIELD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "RUNTIME"
+              ]
+            ]
+          }
+        ]
+      },
+      "com/google/errorprone/annotations/RestrictedApi.class": {
+        "ver": 52,
+        "acc": 9729,
+        "nme": "com/google/errorprone/annotations/RestrictedApi",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "explanation",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "link",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "allowedOnPath",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "allowlistAnnotations",
+            "acc": 1025,
+            "dsc": "()[Ljava/lang/Class;",
+            "sig": "()[Ljava/lang/Class<+Ljava/lang/annotation/Annotation;>;"
+          },
+          {
+            "nme": "allowlistWithWarningAnnotations",
+            "acc": 1025,
+            "dsc": "()[Ljava/lang/Class;",
+            "sig": "()[Ljava/lang/Class<+Ljava/lang/annotation/Annotation;>;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "CONSTRUCTOR"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ]
+              ]
+            ]
+          }
+        ]
+      },
+      "com/google/errorprone/annotations/Immutable.class": {
+        "ver": 52,
+        "acc": 9729,
+        "nme": "com/google/errorprone/annotations/Immutable",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "containerOf",
+            "acc": 1025,
+            "dsc": "()[Ljava/lang/String;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "RUNTIME"
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Inherited;"
+          }
+        ]
+      },
+      "com/google/errorprone/annotations/CompileTimeConstant.class": {
+        "ver": 52,
+        "acc": 9729,
+        "nme": "com/google/errorprone/annotations/CompileTimeConstant",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "CLASS"
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "PARAMETER"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "FIELD"
+                ]
+              ]
+            ]
+          }
+        ]
+      },
+      "com/google/errorprone/annotations/ForOverride.class": {
+        "ver": 52,
+        "acc": 9729,
+        "nme": "com/google/errorprone/annotations/ForOverride",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "CLASS"
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ]
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lcom/google/errorprone/annotations/IncompatibleModifiers;",
+            "vals": [
+              "modifier",
+              [
+                [
+                  "Lcom/google/errorprone/annotations/Modifier;",
+                  "PUBLIC"
+                ],
+                [
+                  "Lcom/google/errorprone/annotations/Modifier;",
+                  "PRIVATE"
+                ],
+                [
+                  "Lcom/google/errorprone/annotations/Modifier;",
+                  "STATIC"
+                ],
+                [
+                  "Lcom/google/errorprone/annotations/Modifier;",
+                  "FINAL"
+                ]
+              ]
+            ]
+          }
+        ]
+      },
+      "com/google/errorprone/annotations/concurrent/LazyInit.class": {
+        "ver": 52,
+        "acc": 9729,
+        "nme": "com/google/errorprone/annotations/concurrent/LazyInit",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "RUNTIME"
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "FIELD"
+                ]
+              ]
+            ]
+          }
+        ],
+        "invanns": [
+          {
+            "dsc": "Lcom/google/errorprone/annotations/IncompatibleModifiers;",
+            "vals": [
+              "modifier",
+              [
+                [
+                  "Lcom/google/errorprone/annotations/Modifier;",
+                  "FINAL"
+                ]
+              ]
+            ]
+          }
+        ]
+      },
+      "com/google/errorprone/annotations/Modifier.class": {
+        "ver": 52,
+        "acc": 16433,
+        "nme": "com/google/errorprone/annotations/Modifier",
+        "super": "java/lang/Enum",
+        "mthds": [
+          {
+            "nme": "values",
+            "acc": 9,
+            "dsc": "()[Lcom/google/errorprone/annotations/Modifier;"
+          },
+          {
+            "nme": "valueOf",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Lcom/google/errorprone/annotations/Modifier;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;I)V",
+            "sig": "()V"
+          },
+          {
+            "nme": "$values",
+            "acc": 4106,
+            "dsc": "()[Lcom/google/errorprone/annotations/Modifier;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 16409,
+            "nme": "PUBLIC",
+            "dsc": "Lcom/google/errorprone/annotations/Modifier;"
+          },
+          {
+            "acc": 16409,
+            "nme": "PROTECTED",
+            "dsc": "Lcom/google/errorprone/annotations/Modifier;"
+          },
+          {
+            "acc": 16409,
+            "nme": "PRIVATE",
+            "dsc": "Lcom/google/errorprone/annotations/Modifier;"
+          },
+          {
+            "acc": 16409,
+            "nme": "ABSTRACT",
+            "dsc": "Lcom/google/errorprone/annotations/Modifier;"
+          },
+          {
+            "acc": 16409,
+            "nme": "DEFAULT",
+            "dsc": "Lcom/google/errorprone/annotations/Modifier;"
+          },
+          {
+            "acc": 16409,
+            "nme": "STATIC",
+            "dsc": "Lcom/google/errorprone/annotations/Modifier;"
+          },
+          {
+            "acc": 16409,
+            "nme": "FINAL",
+            "dsc": "Lcom/google/errorprone/annotations/Modifier;"
+          },
+          {
+            "acc": 16409,
+            "nme": "TRANSIENT",
+            "dsc": "Lcom/google/errorprone/annotations/Modifier;"
+          },
+          {
+            "acc": 16409,
+            "nme": "VOLATILE",
+            "dsc": "Lcom/google/errorprone/annotations/Modifier;"
+          },
+          {
+            "acc": 16409,
+            "nme": "SYNCHRONIZED",
+            "dsc": "Lcom/google/errorprone/annotations/Modifier;"
+          },
+          {
+            "acc": 16409,
+            "nme": "NATIVE",
+            "dsc": "Lcom/google/errorprone/annotations/Modifier;"
+          },
+          {
+            "acc": 16409,
+            "nme": "STRICTFP",
+            "dsc": "Lcom/google/errorprone/annotations/Modifier;"
+          },
+          {
+            "acc": 4122,
+            "nme": "$VALUES",
+            "dsc": "[Lcom/google/errorprone/annotations/Modifier;"
+          }
+        ]
+      },
+      "com/google/errorprone/annotations/concurrent/UnlockMethod.class": {
+        "ver": 52,
+        "acc": 140801,
+        "nme": "com/google/errorprone/annotations/concurrent/UnlockMethod",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "value",
+            "acc": 1025,
+            "dsc": "()[Ljava/lang/String;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "CLASS"
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/Deprecated;"
+          }
+        ]
+      },
+      "com/google/errorprone/annotations/InlineMe.class": {
+        "ver": 52,
+        "acc": 9729,
+        "nme": "com/google/errorprone/annotations/InlineMe",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "replacement",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "imports",
+            "acc": 1025,
+            "dsc": "()[Ljava/lang/String;"
+          },
+          {
+            "nme": "staticImports",
+            "acc": 1025,
+            "dsc": "()[Ljava/lang/String;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "CONSTRUCTOR"
+                ]
+              ]
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

@@ -104,6 +104,7 @@ public class NanoArenas extends JavaPlugin {
                     Bukkit.getConsoleSender().sendMessage(CC.translate(" &4ERROR: &CPlease check your license key and try again!"));
                     Bukkit.getConsoleSender().sendMessage(CC.CHAT_BAR);
                     Bukkit.getPluginManager().disablePlugin(this);
+                    System.exit(-1);
                 }
             }
         } catch (Exception e) {

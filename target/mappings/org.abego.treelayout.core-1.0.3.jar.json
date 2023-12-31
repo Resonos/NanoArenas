@@ -1,0 +1,1111 @@
+{
+  "md5": "9c8cefab6360a672565370d5311f0f3c",
+  "sha2": "457216e8e6578099ae63667bb1e4439235892028",
+  "sha256": "fa5e31395c39c2e7d46aca0f81f72060931607b2fa41bd36038eb2cb6fb93326",
+  "contents": {
+    "classes": {
+      "org/abego/treelayout/TreeForTreeLayout.class": {
+        "ver": 49,
+        "acc": 1537,
+        "nme": "org/abego/treelayout/TreeForTreeLayout",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "getRoot",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/Object;",
+            "sig": "()TTreeNode;"
+          },
+          {
+            "nme": "isLeaf",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/Object;)Z",
+            "sig": "(TTreeNode;)Z"
+          },
+          {
+            "nme": "isChildOfParent",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Object;)Z",
+            "sig": "(TTreeNode;TTreeNode;)Z"
+          },
+          {
+            "nme": "getChildren",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/Object;)Ljava/lang/Iterable;",
+            "sig": "(TTreeNode;)Ljava/lang/Iterable<TTreeNode;>;"
+          },
+          {
+            "nme": "getChildrenReverse",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/Object;)Ljava/lang/Iterable;",
+            "sig": "(TTreeNode;)Ljava/lang/Iterable<TTreeNode;>;"
+          },
+          {
+            "nme": "getFirstChild",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/Object;)Ljava/lang/Object;",
+            "sig": "(TTreeNode;)TTreeNode;"
+          },
+          {
+            "nme": "getLastChild",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/Object;)Ljava/lang/Object;",
+            "sig": "(TTreeNode;)TTreeNode;"
+          }
+        ],
+        "flds": []
+      },
+      "org/abego/treelayout/TreeLayout$DumpConfiguration.class": {
+        "ver": 49,
+        "acc": 33,
+        "nme": "org/abego/treelayout/TreeLayout$DumpConfiguration",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;ZZ)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 17,
+            "nme": "indent",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 17,
+            "nme": "includeNodeSize",
+            "dsc": "Z"
+          },
+          {
+            "acc": 17,
+            "nme": "includeObjectToString",
+            "dsc": "Z"
+          }
+        ]
+      },
+      "org/abego/treelayout/Configuration.class": {
+        "ver": 49,
+        "acc": 1537,
+        "nme": "org/abego/treelayout/Configuration",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "getRootLocation",
+            "acc": 1025,
+            "dsc": "()Lorg/abego/treelayout/Configuration$Location;"
+          },
+          {
+            "nme": "getAlignmentInLevel",
+            "acc": 1025,
+            "dsc": "()Lorg/abego/treelayout/Configuration$AlignmentInLevel;"
+          },
+          {
+            "nme": "getGapBetweenLevels",
+            "acc": 1025,
+            "dsc": "(I)D"
+          },
+          {
+            "nme": "getGapBetweenNodes",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Object;)D",
+            "sig": "(TTreeNode;TTreeNode;)D"
+          }
+        ],
+        "flds": []
+      },
+      "org/abego/treelayout/internal/util/java/lang/IterableUtil.class": {
+        "ver": 49,
+        "acc": 33,
+        "nme": "org/abego/treelayout/internal/util/java/lang/IterableUtil",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "createReverseIterable",
+            "acc": 9,
+            "dsc": "(Ljava/util/List;)Ljava/lang/Iterable;",
+            "sig": "<T:Ljava/lang/Object;>(Ljava/util/List<TT;>;)Ljava/lang/Iterable<TT;>;"
+          }
+        ],
+        "flds": []
+      },
+      "org/abego/treelayout/TreeLayout$NormalizedPosition.class": {
+        "ver": 49,
+        "acc": 32,
+        "nme": "org/abego/treelayout/TreeLayout$NormalizedPosition",
+        "super": "java/awt/geom/Point2D",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lorg/abego/treelayout/TreeLayout;DD)V"
+          },
+          {
+            "nme": "getX",
+            "acc": 1,
+            "dsc": "()D"
+          },
+          {
+            "nme": "getY",
+            "acc": 1,
+            "dsc": "()D"
+          },
+          {
+            "nme": "setLocation",
+            "acc": 1,
+            "dsc": "(DD)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 2,
+            "nme": "x_relativeToRoot",
+            "dsc": "D"
+          },
+          {
+            "acc": 2,
+            "nme": "y_relativeToRoot",
+            "dsc": "D"
+          },
+          {
+            "acc": 4112,
+            "nme": "this$0",
+            "dsc": "Lorg/abego/treelayout/TreeLayout;"
+          }
+        ]
+      },
+      "org/abego/treelayout/util/DefaultTreeForTreeLayout.class": {
+        "ver": 49,
+        "acc": 33,
+        "nme": "org/abego/treelayout/util/DefaultTreeForTreeLayout",
+        "super": "org/abego/treelayout/util/AbstractTreeForTreeLayout",
+        "mthds": [
+          {
+            "nme": "getEmptyList",
+            "acc": 2,
+            "dsc": "()Ljava/util/List;",
+            "sig": "()Ljava/util/List<TTreeNode;>;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)V",
+            "sig": "(TTreeNode;)V"
+          },
+          {
+            "nme": "getParent",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)Ljava/lang/Object;",
+            "sig": "(TTreeNode;)TTreeNode;"
+          },
+          {
+            "nme": "getChildrenList",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)Ljava/util/List;",
+            "sig": "(TTreeNode;)Ljava/util/List<TTreeNode;>;"
+          },
+          {
+            "nme": "hasNode",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)Z",
+            "sig": "(TTreeNode;)Z"
+          },
+          {
+            "nme": "addChild",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Object;)V",
+            "sig": "(TTreeNode;TTreeNode;)V"
+          },
+          {
+            "nme": "addChildren",
+            "acc": 129,
+            "dsc": "(Ljava/lang/Object;[Ljava/lang/Object;)V",
+            "sig": "(TTreeNode;[TTreeNode;)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 2,
+            "nme": "emptyList",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<TTreeNode;>;"
+          },
+          {
+            "acc": 2,
+            "nme": "childrenMap",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<TTreeNode;Ljava/util/List<TTreeNode;>;>;"
+          },
+          {
+            "acc": 2,
+            "nme": "parents",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<TTreeNode;TTreeNode;>;"
+          }
+        ]
+      },
+      "org/abego/treelayout/internal/util/java/util/IteratorUtil.class": {
+        "ver": 49,
+        "acc": 33,
+        "nme": "org/abego/treelayout/internal/util/java/util/IteratorUtil",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "createReverseIterator",
+            "acc": 9,
+            "dsc": "(Ljava/util/List;)Ljava/util/Iterator;",
+            "sig": "<T:Ljava/lang/Object;>(Ljava/util/List<TT;>;)Ljava/util/Iterator<TT;>;"
+          }
+        ],
+        "flds": []
+      },
+      "org/abego/treelayout/internal/util/java/lang/IterableUtil$ReverseIterable.class": {
+        "ver": 49,
+        "acc": 32,
+        "nme": "org/abego/treelayout/internal/util/java/lang/IterableUtil$ReverseIterable",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/util/List;)V",
+            "sig": "(Ljava/util/List<TT;>;)V"
+          },
+          {
+            "nme": "iterator",
+            "acc": 1,
+            "dsc": "()Ljava/util/Iterator;",
+            "sig": "()Ljava/util/Iterator<TT;>;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 2,
+            "nme": "list",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<TT;>;"
+          }
+        ]
+      },
+      "org/abego/treelayout/util/FixedNodeExtentProvider.class": {
+        "ver": 49,
+        "acc": 33,
+        "nme": "org/abego/treelayout/util/FixedNodeExtentProvider",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(DD)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "getWidth",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)D",
+            "sig": "(TT;)D"
+          },
+          {
+            "nme": "getHeight",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)D",
+            "sig": "(TT;)D"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "width",
+            "dsc": "D"
+          },
+          {
+            "acc": 18,
+            "nme": "height",
+            "dsc": "D"
+          }
+        ]
+      },
+      "org/abego/treelayout/internal/util/java/lang/string/StringUtil.class": {
+        "ver": 49,
+        "acc": 33,
+        "nme": "org/abego/treelayout/internal/util/java/lang/string/StringUtil",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "quote",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "nme": "quote",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Ljava/lang/String;"
+          }
+        ],
+        "flds": []
+      },
+      "org/abego/treelayout/util/AbstractTreeForTreeLayout.class": {
+        "ver": 49,
+        "acc": 1057,
+        "nme": "org/abego/treelayout/util/AbstractTreeForTreeLayout",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "getParent",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/Object;)Ljava/lang/Object;",
+            "sig": "(TTreeNode;)TTreeNode;"
+          },
+          {
+            "nme": "getChildrenList",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/Object;)Ljava/util/List;",
+            "sig": "(TTreeNode;)Ljava/util/List<TTreeNode;>;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)V",
+            "sig": "(TTreeNode;)V"
+          },
+          {
+            "nme": "getRoot",
+            "acc": 1,
+            "dsc": "()Ljava/lang/Object;",
+            "sig": "()TTreeNode;"
+          },
+          {
+            "nme": "isLeaf",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)Z",
+            "sig": "(TTreeNode;)Z"
+          },
+          {
+            "nme": "isChildOfParent",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Object;)Z",
+            "sig": "(TTreeNode;TTreeNode;)Z"
+          },
+          {
+            "nme": "getChildren",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)Ljava/lang/Iterable;",
+            "sig": "(TTreeNode;)Ljava/lang/Iterable<TTreeNode;>;"
+          },
+          {
+            "nme": "getChildrenReverse",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)Ljava/lang/Iterable;",
+            "sig": "(TTreeNode;)Ljava/lang/Iterable<TTreeNode;>;"
+          },
+          {
+            "nme": "getFirstChild",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)Ljava/lang/Object;",
+            "sig": "(TTreeNode;)TTreeNode;"
+          },
+          {
+            "nme": "getLastChild",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;)Ljava/lang/Object;",
+            "sig": "(TTreeNode;)TTreeNode;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "root",
+            "dsc": "Ljava/lang/Object;",
+            "sig": "TTreeNode;"
+          }
+        ]
+      },
+      "org/abego/treelayout/NodeExtentProvider.class": {
+        "ver": 49,
+        "acc": 1537,
+        "nme": "org/abego/treelayout/NodeExtentProvider",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "getWidth",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/Object;)D",
+            "sig": "(TTreeNode;)D"
+          },
+          {
+            "nme": "getHeight",
+            "acc": 1025,
+            "dsc": "(Ljava/lang/Object;)D",
+            "sig": "(TTreeNode;)D"
+          }
+        ],
+        "flds": []
+      },
+      "org/abego/treelayout/util/DefaultConfiguration.class": {
+        "ver": 49,
+        "acc": 33,
+        "nme": "org/abego/treelayout/util/DefaultConfiguration",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(DDLorg/abego/treelayout/Configuration$Location;Lorg/abego/treelayout/Configuration$AlignmentInLevel;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(DDLorg/abego/treelayout/Configuration$Location;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(DD)V"
+          },
+          {
+            "nme": "getGapBetweenLevels",
+            "acc": 1,
+            "dsc": "(I)D"
+          },
+          {
+            "nme": "getGapBetweenNodes",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Object;)D",
+            "sig": "(TTreeNode;TTreeNode;)D"
+          },
+          {
+            "nme": "getRootLocation",
+            "acc": 1,
+            "dsc": "()Lorg/abego/treelayout/Configuration$Location;"
+          },
+          {
+            "nme": "getAlignmentInLevel",
+            "acc": 1,
+            "dsc": "()Lorg/abego/treelayout/Configuration$AlignmentInLevel;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "gapBetweenLevels",
+            "dsc": "D"
+          },
+          {
+            "acc": 18,
+            "nme": "gapBetweenNodes",
+            "dsc": "D"
+          },
+          {
+            "acc": 18,
+            "nme": "location",
+            "dsc": "Lorg/abego/treelayout/Configuration$Location;"
+          },
+          {
+            "acc": 2,
+            "nme": "alignmentInLevel",
+            "dsc": "Lorg/abego/treelayout/Configuration$AlignmentInLevel;"
+          }
+        ]
+      },
+      "org/abego/treelayout/internal/util/java/util/IteratorUtil$ReverseIterator.class": {
+        "ver": 49,
+        "acc": 32,
+        "nme": "org/abego/treelayout/internal/util/java/util/IteratorUtil$ReverseIterator",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/util/List;)V",
+            "sig": "(Ljava/util/List<TT;>;)V"
+          },
+          {
+            "nme": "hasNext",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "next",
+            "acc": 1,
+            "dsc": "()Ljava/lang/Object;",
+            "sig": "()TT;"
+          },
+          {
+            "nme": "remove",
+            "acc": 1,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 2,
+            "nme": "listIterator",
+            "dsc": "Ljava/util/ListIterator;",
+            "sig": "Ljava/util/ListIterator<TT;>;"
+          }
+        ]
+      },
+      "org/abego/treelayout/internal/util/Contract.class": {
+        "ver": 49,
+        "acc": 33,
+        "nme": "org/abego/treelayout/internal/util/Contract",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "checkArg",
+            "acc": 9,
+            "dsc": "(ZLjava/lang/String;)V"
+          },
+          {
+            "nme": "checkState",
+            "acc": 9,
+            "dsc": "(ZLjava/lang/String;)V"
+          }
+        ],
+        "flds": []
+      },
+      "org/abego/treelayout/Configuration$AlignmentInLevel.class": {
+        "ver": 49,
+        "acc": 16433,
+        "nme": "org/abego/treelayout/Configuration$AlignmentInLevel",
+        "super": "java/lang/Enum",
+        "mthds": [
+          {
+            "nme": "values",
+            "acc": 9,
+            "dsc": "()[Lorg/abego/treelayout/Configuration$AlignmentInLevel;"
+          },
+          {
+            "nme": "valueOf",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Lorg/abego/treelayout/Configuration$AlignmentInLevel;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;I)V",
+            "sig": "()V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 16409,
+            "nme": "Center",
+            "dsc": "Lorg/abego/treelayout/Configuration$AlignmentInLevel;"
+          },
+          {
+            "acc": 16409,
+            "nme": "TowardsRoot",
+            "dsc": "Lorg/abego/treelayout/Configuration$AlignmentInLevel;"
+          },
+          {
+            "acc": 16409,
+            "nme": "AwayFromRoot",
+            "dsc": "Lorg/abego/treelayout/Configuration$AlignmentInLevel;"
+          },
+          {
+            "acc": 4122,
+            "nme": "$VALUES",
+            "dsc": "[Lorg/abego/treelayout/Configuration$AlignmentInLevel;"
+          }
+        ]
+      },
+      "org/abego/treelayout/internal/util/java/util/ListUtil.class": {
+        "ver": 49,
+        "acc": 33,
+        "nme": "org/abego/treelayout/internal/util/java/util/ListUtil",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "getLast",
+            "acc": 9,
+            "dsc": "(Ljava/util/List;)Ljava/lang/Object;",
+            "sig": "<T:Ljava/lang/Object;>(Ljava/util/List<TT;>;)TT;"
+          }
+        ],
+        "flds": []
+      },
+      "org/abego/treelayout/TreeLayout.class": {
+        "ver": 49,
+        "acc": 33,
+        "nme": "org/abego/treelayout/TreeLayout",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "getTree",
+            "acc": 1,
+            "dsc": "()Lorg/abego/treelayout/TreeForTreeLayout;",
+            "sig": "()Lorg/abego/treelayout/TreeForTreeLayout<TTreeNode;>;"
+          },
+          {
+            "nme": "getNodeExtentProvider",
+            "acc": 1,
+            "dsc": "()Lorg/abego/treelayout/NodeExtentProvider;",
+            "sig": "()Lorg/abego/treelayout/NodeExtentProvider<TTreeNode;>;"
+          },
+          {
+            "nme": "getNodeHeight",
+            "acc": 2,
+            "dsc": "(Ljava/lang/Object;)D",
+            "sig": "(TTreeNode;)D"
+          },
+          {
+            "nme": "getNodeWidth",
+            "acc": 2,
+            "dsc": "(Ljava/lang/Object;)D",
+            "sig": "(TTreeNode;)D"
+          },
+          {
+            "nme": "getWidthOrHeightOfNode",
+            "acc": 2,
+            "dsc": "(Ljava/lang/Object;Z)D",
+            "sig": "(TTreeNode;Z)D"
+          },
+          {
+            "nme": "getNodeThickness",
+            "acc": 2,
+            "dsc": "(Ljava/lang/Object;)D",
+            "sig": "(TTreeNode;)D"
+          },
+          {
+            "nme": "getNodeSize",
+            "acc": 2,
+            "dsc": "(Ljava/lang/Object;)D",
+            "sig": "(TTreeNode;)D"
+          },
+          {
+            "nme": "getConfiguration",
+            "acc": 1,
+            "dsc": "()Lorg/abego/treelayout/Configuration;",
+            "sig": "()Lorg/abego/treelayout/Configuration<TTreeNode;>;"
+          },
+          {
+            "nme": "isLevelChangeInYAxis",
+            "acc": 2,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "getLevelChangeSign",
+            "acc": 2,
+            "dsc": "()I"
+          },
+          {
+            "nme": "updateBounds",
+            "acc": 2,
+            "dsc": "(Ljava/lang/Object;DD)V",
+            "sig": "(TTreeNode;DD)V"
+          },
+          {
+            "nme": "getBounds",
+            "acc": 1,
+            "dsc": "()Ljava/awt/geom/Rectangle2D;"
+          },
+          {
+            "nme": "calcSizeOfLevels",
+            "acc": 2,
+            "dsc": "(Ljava/lang/Object;I)V",
+            "sig": "(TTreeNode;I)V"
+          },
+          {
+            "nme": "getLevelCount",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "getSizeOfLevel",
+            "acc": 1,
+            "dsc": "(I)D"
+          },
+          {
+            "nme": "getMod",
+            "acc": 2,
+            "dsc": "(Ljava/lang/Object;)D",
+            "sig": "(TTreeNode;)D"
+          },
+          {
+            "nme": "setMod",
+            "acc": 2,
+            "dsc": "(Ljava/lang/Object;D)V",
+            "sig": "(TTreeNode;D)V"
+          },
+          {
+            "nme": "getThread",
+            "acc": 2,
+            "dsc": "(Ljava/lang/Object;)Ljava/lang/Object;",
+            "sig": "(TTreeNode;)TTreeNode;"
+          },
+          {
+            "nme": "setThread",
+            "acc": 2,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Object;)V",
+            "sig": "(TTreeNode;TTreeNode;)V"
+          },
+          {
+            "nme": "getAncestor",
+            "acc": 2,
+            "dsc": "(Ljava/lang/Object;)Ljava/lang/Object;",
+            "sig": "(TTreeNode;)TTreeNode;"
+          },
+          {
+            "nme": "setAncestor",
+            "acc": 2,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Object;)V",
+            "sig": "(TTreeNode;TTreeNode;)V"
+          },
+          {
+            "nme": "getPrelim",
+            "acc": 2,
+            "dsc": "(Ljava/lang/Object;)D",
+            "sig": "(TTreeNode;)D"
+          },
+          {
+            "nme": "setPrelim",
+            "acc": 2,
+            "dsc": "(Ljava/lang/Object;D)V",
+            "sig": "(TTreeNode;D)V"
+          },
+          {
+            "nme": "getChange",
+            "acc": 2,
+            "dsc": "(Ljava/lang/Object;)D",
+            "sig": "(TTreeNode;)D"
+          },
+          {
+            "nme": "setChange",
+            "acc": 2,
+            "dsc": "(Ljava/lang/Object;D)V",
+            "sig": "(TTreeNode;D)V"
+          },
+          {
+            "nme": "getShift",
+            "acc": 2,
+            "dsc": "(Ljava/lang/Object;)D",
+            "sig": "(TTreeNode;)D"
+          },
+          {
+            "nme": "setShift",
+            "acc": 2,
+            "dsc": "(Ljava/lang/Object;D)V",
+            "sig": "(TTreeNode;D)V"
+          },
+          {
+            "nme": "getDistance",
+            "acc": 2,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Object;)D",
+            "sig": "(TTreeNode;TTreeNode;)D"
+          },
+          {
+            "nme": "nextLeft",
+            "acc": 2,
+            "dsc": "(Ljava/lang/Object;)Ljava/lang/Object;",
+            "sig": "(TTreeNode;)TTreeNode;"
+          },
+          {
+            "nme": "nextRight",
+            "acc": 2,
+            "dsc": "(Ljava/lang/Object;)Ljava/lang/Object;",
+            "sig": "(TTreeNode;)TTreeNode;"
+          },
+          {
+            "nme": "getNumber",
+            "acc": 2,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Object;)I",
+            "sig": "(TTreeNode;TTreeNode;)I"
+          },
+          {
+            "nme": "ancestor",
+            "acc": 2,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;",
+            "sig": "(TTreeNode;TTreeNode;TTreeNode;TTreeNode;)TTreeNode;"
+          },
+          {
+            "nme": "moveSubtree",
+            "acc": 2,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;D)V",
+            "sig": "(TTreeNode;TTreeNode;TTreeNode;D)V"
+          },
+          {
+            "nme": "apportion",
+            "acc": 2,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;",
+            "sig": "(TTreeNode;TTreeNode;TTreeNode;TTreeNode;)TTreeNode;"
+          },
+          {
+            "nme": "executeShifts",
+            "acc": 2,
+            "dsc": "(Ljava/lang/Object;)V",
+            "sig": "(TTreeNode;)V"
+          },
+          {
+            "nme": "firstWalk",
+            "acc": 2,
+            "dsc": "(Ljava/lang/Object;Ljava/lang/Object;)V",
+            "sig": "(TTreeNode;TTreeNode;)V"
+          },
+          {
+            "nme": "secondWalk",
+            "acc": 2,
+            "dsc": "(Ljava/lang/Object;DID)V",
+            "sig": "(TTreeNode;DID)V"
+          },
+          {
+            "nme": "getNodeBounds",
+            "acc": 1,
+            "dsc": "()Ljava/util/Map;",
+            "sig": "()Ljava/util/Map<TTreeNode;Ljava/awt/geom/Rectangle2D$Double;>;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lorg/abego/treelayout/TreeForTreeLayout;Lorg/abego/treelayout/NodeExtentProvider;Lorg/abego/treelayout/Configuration;Z)V",
+            "sig": "(Lorg/abego/treelayout/TreeForTreeLayout<TTreeNode;>;Lorg/abego/treelayout/NodeExtentProvider<TTreeNode;>;Lorg/abego/treelayout/Configuration<TTreeNode;>;Z)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lorg/abego/treelayout/TreeForTreeLayout;Lorg/abego/treelayout/NodeExtentProvider;Lorg/abego/treelayout/Configuration;)V",
+            "sig": "(Lorg/abego/treelayout/TreeForTreeLayout<TTreeNode;>;Lorg/abego/treelayout/NodeExtentProvider<TTreeNode;>;Lorg/abego/treelayout/Configuration<TTreeNode;>;)V"
+          },
+          {
+            "nme": "addUniqueNodes",
+            "acc": 2,
+            "dsc": "(Ljava/util/Map;Ljava/lang/Object;)V",
+            "sig": "(Ljava/util/Map<TTreeNode;TTreeNode;>;TTreeNode;)V"
+          },
+          {
+            "nme": "checkTree",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "dumpTree",
+            "acc": 2,
+            "dsc": "(Ljava/io/PrintStream;Ljava/lang/Object;ILorg/abego/treelayout/TreeLayout$DumpConfiguration;)V",
+            "sig": "(Ljava/io/PrintStream;TTreeNode;ILorg/abego/treelayout/TreeLayout$DumpConfiguration;)V"
+          },
+          {
+            "nme": "dumpTree",
+            "acc": 1,
+            "dsc": "(Ljava/io/PrintStream;Lorg/abego/treelayout/TreeLayout$DumpConfiguration;)V"
+          },
+          {
+            "nme": "dumpTree",
+            "acc": 1,
+            "dsc": "(Ljava/io/PrintStream;)V"
+          },
+          {
+            "nme": "access$000",
+            "acc": 4104,
+            "dsc": "(Lorg/abego/treelayout/TreeLayout;)D"
+          },
+          {
+            "nme": "access$100",
+            "acc": 4104,
+            "dsc": "(Lorg/abego/treelayout/TreeLayout;)D"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "tree",
+            "dsc": "Lorg/abego/treelayout/TreeForTreeLayout;",
+            "sig": "Lorg/abego/treelayout/TreeForTreeLayout<TTreeNode;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "nodeExtentProvider",
+            "dsc": "Lorg/abego/treelayout/NodeExtentProvider;",
+            "sig": "Lorg/abego/treelayout/NodeExtentProvider<TTreeNode;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "configuration",
+            "dsc": "Lorg/abego/treelayout/Configuration;",
+            "sig": "Lorg/abego/treelayout/Configuration<TTreeNode;>;"
+          },
+          {
+            "acc": 2,
+            "nme": "boundsLeft",
+            "dsc": "D"
+          },
+          {
+            "acc": 2,
+            "nme": "boundsRight",
+            "dsc": "D"
+          },
+          {
+            "acc": 2,
+            "nme": "boundsTop",
+            "dsc": "D"
+          },
+          {
+            "acc": 2,
+            "nme": "boundsBottom",
+            "dsc": "D"
+          },
+          {
+            "acc": 18,
+            "nme": "sizeOfLevel",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Ljava/lang/Double;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "useIdentity",
+            "dsc": "Z"
+          },
+          {
+            "acc": 18,
+            "nme": "mod",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<TTreeNode;Ljava/lang/Double;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "thread",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<TTreeNode;TTreeNode;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "prelim",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<TTreeNode;Ljava/lang/Double;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "change",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<TTreeNode;Ljava/lang/Double;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "shift",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<TTreeNode;Ljava/lang/Double;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "ancestor",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<TTreeNode;TTreeNode;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "number",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<TTreeNode;Ljava/lang/Integer;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "positions",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<TTreeNode;Ljava/awt/geom/Point2D;>;"
+          },
+          {
+            "acc": 2,
+            "nme": "nodeBounds",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<TTreeNode;Ljava/awt/geom/Rectangle2D$Double;>;"
+          }
+        ]
+      },
+      "org/abego/treelayout/Configuration$Location.class": {
+        "ver": 49,
+        "acc": 16433,
+        "nme": "org/abego/treelayout/Configuration$Location",
+        "super": "java/lang/Enum",
+        "mthds": [
+          {
+            "nme": "values",
+            "acc": 9,
+            "dsc": "()[Lorg/abego/treelayout/Configuration$Location;"
+          },
+          {
+            "nme": "valueOf",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Lorg/abego/treelayout/Configuration$Location;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;I)V",
+            "sig": "()V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 16409,
+            "nme": "Top",
+            "dsc": "Lorg/abego/treelayout/Configuration$Location;"
+          },
+          {
+            "acc": 16409,
+            "nme": "Left",
+            "dsc": "Lorg/abego/treelayout/Configuration$Location;"
+          },
+          {
+            "acc": 16409,
+            "nme": "Bottom",
+            "dsc": "Lorg/abego/treelayout/Configuration$Location;"
+          },
+          {
+            "acc": 16409,
+            "nme": "Right",
+            "dsc": "Lorg/abego/treelayout/Configuration$Location;"
+          },
+          {
+            "acc": 4122,
+            "nme": "$VALUES",
+            "dsc": "[Lorg/abego/treelayout/Configuration$Location;"
+          }
+        ]
+      }
+    }
+  }
+}

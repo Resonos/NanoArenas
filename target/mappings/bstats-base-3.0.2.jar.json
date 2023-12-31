@@ -1,0 +1,693 @@
+{
+  "md5": "ea2d361074779144c651715539d1b479",
+  "sha2": "3124aa1e52325a73506a045d39166be8a94c080b",
+  "sha256": "af8a0bd988cbf99bc85d42da4c04abb7d5f8b3df9ffc90b976ea7e76198466b9",
+  "contents": {
+    "classes": {
+      "org/bstats/json/JsonObjectBuilder.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "org/bstats/json/JsonObjectBuilder",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "appendNull",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;)Lorg/bstats/json/JsonObjectBuilder;"
+          },
+          {
+            "nme": "appendField",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)Lorg/bstats/json/JsonObjectBuilder;"
+          },
+          {
+            "nme": "appendField",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;I)Lorg/bstats/json/JsonObjectBuilder;"
+          },
+          {
+            "nme": "appendField",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Lorg/bstats/json/JsonObjectBuilder$JsonObject;)Lorg/bstats/json/JsonObjectBuilder;"
+          },
+          {
+            "nme": "appendField",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;[Ljava/lang/String;)Lorg/bstats/json/JsonObjectBuilder;"
+          },
+          {
+            "nme": "appendField",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;[I)Lorg/bstats/json/JsonObjectBuilder;"
+          },
+          {
+            "nme": "appendField",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;[Lorg/bstats/json/JsonObjectBuilder$JsonObject;)Lorg/bstats/json/JsonObjectBuilder;"
+          },
+          {
+            "nme": "appendFieldUnescaped",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "build",
+            "acc": 1,
+            "dsc": "()Lorg/bstats/json/JsonObjectBuilder$JsonObject;"
+          },
+          {
+            "nme": "escape",
+            "acc": 10,
+            "dsc": "(Ljava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "nme": "lambda$appendField$0",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/String;)Ljava/lang/String;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 2,
+            "nme": "builder",
+            "dsc": "Ljava/lang/StringBuilder;"
+          },
+          {
+            "acc": 2,
+            "nme": "hasAtLeastOneField",
+            "dsc": "Z"
+          }
+        ]
+      },
+      "org/bstats/MetricsBase.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "org/bstats/MetricsBase",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;IZLjava/util/function/Consumer;Ljava/util/function/Consumer;Ljava/util/function/Consumer;Ljava/util/function/Supplier;Ljava/util/function/BiConsumer;Ljava/util/function/Consumer;ZZZ)V",
+            "sig": "(Ljava/lang/String;Ljava/lang/String;IZLjava/util/function/Consumer<Lorg/bstats/json/JsonObjectBuilder;>;Ljava/util/function/Consumer<Lorg/bstats/json/JsonObjectBuilder;>;Ljava/util/function/Consumer<Ljava/lang/Runnable;>;Ljava/util/function/Supplier<Ljava/lang/Boolean;>;Ljava/util/function/BiConsumer<Ljava/lang/String;Ljava/lang/Throwable;>;Ljava/util/function/Consumer<Ljava/lang/String;>;ZZZ)V"
+          },
+          {
+            "nme": "addCustomChart",
+            "acc": 1,
+            "dsc": "(Lorg/bstats/charts/CustomChart;)V"
+          },
+          {
+            "nme": "shutdown",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "startSubmitting",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "submitData",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "sendData",
+            "acc": 2,
+            "dsc": "(Lorg/bstats/json/JsonObjectBuilder$JsonObject;)V",
+            "exs": [
+              "java/lang/Exception"
+            ]
+          },
+          {
+            "nme": "checkRelocation",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "compress",
+            "acc": 10,
+            "dsc": "(Ljava/lang/String;)[B",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "lambda$submitData$4",
+            "acc": 4098,
+            "dsc": "(Lorg/bstats/json/JsonObjectBuilder$JsonObject;)V"
+          },
+          {
+            "nme": "lambda$submitData$3",
+            "acc": 4106,
+            "dsc": "(I)[Lorg/bstats/json/JsonObjectBuilder$JsonObject;"
+          },
+          {
+            "nme": "lambda$submitData$2",
+            "acc": 4098,
+            "dsc": "(Lorg/bstats/charts/CustomChart;)Lorg/bstats/json/JsonObjectBuilder$JsonObject;"
+          },
+          {
+            "nme": "lambda$startSubmitting$1",
+            "acc": 4098,
+            "dsc": "()V"
+          },
+          {
+            "nme": "lambda$new$0",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/Runnable;)Ljava/lang/Thread;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "METRICS_VERSION",
+            "dsc": "Ljava/lang/String;",
+            "val": "3.0.2"
+          },
+          {
+            "acc": 26,
+            "nme": "REPORT_URL",
+            "dsc": "Ljava/lang/String;",
+            "val": "https://bStats.org/api/v2/data/%s"
+          },
+          {
+            "acc": 18,
+            "nme": "scheduler",
+            "dsc": "Ljava/util/concurrent/ScheduledExecutorService;"
+          },
+          {
+            "acc": 18,
+            "nme": "platform",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 18,
+            "nme": "serverUuid",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 18,
+            "nme": "serviceId",
+            "dsc": "I"
+          },
+          {
+            "acc": 18,
+            "nme": "appendPlatformDataConsumer",
+            "dsc": "Ljava/util/function/Consumer;",
+            "sig": "Ljava/util/function/Consumer<Lorg/bstats/json/JsonObjectBuilder;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "appendServiceDataConsumer",
+            "dsc": "Ljava/util/function/Consumer;",
+            "sig": "Ljava/util/function/Consumer<Lorg/bstats/json/JsonObjectBuilder;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "submitTaskConsumer",
+            "dsc": "Ljava/util/function/Consumer;",
+            "sig": "Ljava/util/function/Consumer<Ljava/lang/Runnable;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "checkServiceEnabledSupplier",
+            "dsc": "Ljava/util/function/Supplier;",
+            "sig": "Ljava/util/function/Supplier<Ljava/lang/Boolean;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "errorLogger",
+            "dsc": "Ljava/util/function/BiConsumer;",
+            "sig": "Ljava/util/function/BiConsumer<Ljava/lang/String;Ljava/lang/Throwable;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "infoLogger",
+            "dsc": "Ljava/util/function/Consumer;",
+            "sig": "Ljava/util/function/Consumer<Ljava/lang/String;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "logErrors",
+            "dsc": "Z"
+          },
+          {
+            "acc": 18,
+            "nme": "logSentData",
+            "dsc": "Z"
+          },
+          {
+            "acc": 18,
+            "nme": "logResponseStatusText",
+            "dsc": "Z"
+          },
+          {
+            "acc": 18,
+            "nme": "customCharts",
+            "dsc": "Ljava/util/Set;",
+            "sig": "Ljava/util/Set<Lorg/bstats/charts/CustomChart;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "enabled",
+            "dsc": "Z"
+          }
+        ]
+      },
+      "org/bstats/charts/CustomChart.class": {
+        "ver": 52,
+        "acc": 1057,
+        "nme": "org/bstats/charts/CustomChart",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 4,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "getRequestJsonObject",
+            "acc": 1,
+            "dsc": "(Ljava/util/function/BiConsumer;Z)Lorg/bstats/json/JsonObjectBuilder$JsonObject;",
+            "sig": "(Ljava/util/function/BiConsumer<Ljava/lang/String;Ljava/lang/Throwable;>;Z)Lorg/bstats/json/JsonObjectBuilder$JsonObject;"
+          },
+          {
+            "nme": "getChartData",
+            "acc": 1028,
+            "dsc": "()Lorg/bstats/json/JsonObjectBuilder$JsonObject;",
+            "exs": [
+              "java/lang/Exception"
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "chartId",
+            "dsc": "Ljava/lang/String;"
+          }
+        ]
+      },
+      "org/bstats/charts/DrilldownPie.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "org/bstats/charts/DrilldownPie",
+        "super": "org/bstats/charts/CustomChart",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/util/concurrent/Callable;)V",
+            "sig": "(Ljava/lang/String;Ljava/util/concurrent/Callable<Ljava/util/Map<Ljava/lang/String;Ljava/util/Map<Ljava/lang/String;Ljava/lang/Integer;>;>;>;)V"
+          },
+          {
+            "nme": "getChartData",
+            "acc": 1,
+            "dsc": "()Lorg/bstats/json/JsonObjectBuilder$JsonObject;",
+            "exs": [
+              "java/lang/Exception"
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "callable",
+            "dsc": "Ljava/util/concurrent/Callable;",
+            "sig": "Ljava/util/concurrent/Callable<Ljava/util/Map<Ljava/lang/String;Ljava/util/Map<Ljava/lang/String;Ljava/lang/Integer;>;>;>;"
+          }
+        ]
+      },
+      "org/bstats/config/MetricsConfig.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "org/bstats/config/MetricsConfig",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/io/File;Z)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "getServerUUID",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "isEnabled",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "isLogErrorsEnabled",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "isLogSentDataEnabled",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "isLogResponseStatusTextEnabled",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "didExistBefore",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "setupConfig",
+            "acc": 2,
+            "dsc": "()V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "writeConfig",
+            "acc": 2,
+            "dsc": "()V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "readConfig",
+            "acc": 2,
+            "dsc": "()V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "getConfigValue",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;Ljava/util/List;)Ljava/util/Optional;",
+            "sig": "(Ljava/lang/String;Ljava/util/List<Ljava/lang/String;>;)Ljava/util/Optional<Ljava/lang/String;>;"
+          },
+          {
+            "nme": "readFile",
+            "acc": 2,
+            "dsc": "(Ljava/io/File;)Ljava/util/List;",
+            "sig": "(Ljava/io/File;)Ljava/util/List<Ljava/lang/String;>;",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "writeFile",
+            "acc": 2,
+            "dsc": "(Ljava/io/File;Ljava/util/List;)V",
+            "sig": "(Ljava/io/File;Ljava/util/List<Ljava/lang/String;>;)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "lambda$getConfigValue$1",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"
+          },
+          {
+            "nme": "lambda$getConfigValue$0",
+            "acc": 4106,
+            "dsc": "(Ljava/lang/String;Ljava/lang/String;)Z"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "file",
+            "dsc": "Ljava/io/File;"
+          },
+          {
+            "acc": 18,
+            "nme": "defaultEnabled",
+            "dsc": "Z"
+          },
+          {
+            "acc": 2,
+            "nme": "serverUUID",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 2,
+            "nme": "enabled",
+            "dsc": "Z"
+          },
+          {
+            "acc": 2,
+            "nme": "logErrors",
+            "dsc": "Z"
+          },
+          {
+            "acc": 2,
+            "nme": "logSentData",
+            "dsc": "Z"
+          },
+          {
+            "acc": 2,
+            "nme": "logResponseStatusText",
+            "dsc": "Z"
+          },
+          {
+            "acc": 2,
+            "nme": "didExistBefore",
+            "dsc": "Z"
+          }
+        ]
+      },
+      "org/bstats/json/JsonObjectBuilder$1.class": {
+        "ver": 52,
+        "acc": 4128,
+        "nme": "org/bstats/json/JsonObjectBuilder$1",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": []
+      },
+      "org/bstats/charts/AdvancedPie.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "org/bstats/charts/AdvancedPie",
+        "super": "org/bstats/charts/CustomChart",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/util/concurrent/Callable;)V",
+            "sig": "(Ljava/lang/String;Ljava/util/concurrent/Callable<Ljava/util/Map<Ljava/lang/String;Ljava/lang/Integer;>;>;)V"
+          },
+          {
+            "nme": "getChartData",
+            "acc": 4,
+            "dsc": "()Lorg/bstats/json/JsonObjectBuilder$JsonObject;",
+            "exs": [
+              "java/lang/Exception"
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "callable",
+            "dsc": "Ljava/util/concurrent/Callable;",
+            "sig": "Ljava/util/concurrent/Callable<Ljava/util/Map<Ljava/lang/String;Ljava/lang/Integer;>;>;"
+          }
+        ]
+      },
+      "org/bstats/charts/SingleLineChart.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "org/bstats/charts/SingleLineChart",
+        "super": "org/bstats/charts/CustomChart",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/util/concurrent/Callable;)V",
+            "sig": "(Ljava/lang/String;Ljava/util/concurrent/Callable<Ljava/lang/Integer;>;)V"
+          },
+          {
+            "nme": "getChartData",
+            "acc": 4,
+            "dsc": "()Lorg/bstats/json/JsonObjectBuilder$JsonObject;",
+            "exs": [
+              "java/lang/Exception"
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "callable",
+            "dsc": "Ljava/util/concurrent/Callable;",
+            "sig": "Ljava/util/concurrent/Callable<Ljava/lang/Integer;>;"
+          }
+        ]
+      },
+      "org/bstats/charts/SimpleBarChart.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "org/bstats/charts/SimpleBarChart",
+        "super": "org/bstats/charts/CustomChart",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/util/concurrent/Callable;)V",
+            "sig": "(Ljava/lang/String;Ljava/util/concurrent/Callable<Ljava/util/Map<Ljava/lang/String;Ljava/lang/Integer;>;>;)V"
+          },
+          {
+            "nme": "getChartData",
+            "acc": 4,
+            "dsc": "()Lorg/bstats/json/JsonObjectBuilder$JsonObject;",
+            "exs": [
+              "java/lang/Exception"
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "callable",
+            "dsc": "Ljava/util/concurrent/Callable;",
+            "sig": "Ljava/util/concurrent/Callable<Ljava/util/Map<Ljava/lang/String;Ljava/lang/Integer;>;>;"
+          }
+        ]
+      },
+      "org/bstats/charts/AdvancedBarChart.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "org/bstats/charts/AdvancedBarChart",
+        "super": "org/bstats/charts/CustomChart",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/util/concurrent/Callable;)V",
+            "sig": "(Ljava/lang/String;Ljava/util/concurrent/Callable<Ljava/util/Map<Ljava/lang/String;[I>;>;)V"
+          },
+          {
+            "nme": "getChartData",
+            "acc": 4,
+            "dsc": "()Lorg/bstats/json/JsonObjectBuilder$JsonObject;",
+            "exs": [
+              "java/lang/Exception"
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "callable",
+            "dsc": "Ljava/util/concurrent/Callable;",
+            "sig": "Ljava/util/concurrent/Callable<Ljava/util/Map<Ljava/lang/String;[I>;>;"
+          }
+        ]
+      },
+      "org/bstats/charts/SimplePie.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "org/bstats/charts/SimplePie",
+        "super": "org/bstats/charts/CustomChart",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/util/concurrent/Callable;)V",
+            "sig": "(Ljava/lang/String;Ljava/util/concurrent/Callable<Ljava/lang/String;>;)V"
+          },
+          {
+            "nme": "getChartData",
+            "acc": 4,
+            "dsc": "()Lorg/bstats/json/JsonObjectBuilder$JsonObject;",
+            "exs": [
+              "java/lang/Exception"
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "callable",
+            "dsc": "Ljava/util/concurrent/Callable;",
+            "sig": "Ljava/util/concurrent/Callable<Ljava/lang/String;>;"
+          }
+        ]
+      },
+      "org/bstats/json/JsonObjectBuilder$JsonObject.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "org/bstats/json/JsonObjectBuilder$JsonObject",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "toString",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 4096,
+            "dsc": "(Ljava/lang/String;Lorg/bstats/json/JsonObjectBuilder$1;)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "value",
+            "dsc": "Ljava/lang/String;"
+          }
+        ]
+      },
+      "org/bstats/charts/MultiLineChart.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "org/bstats/charts/MultiLineChart",
+        "super": "org/bstats/charts/CustomChart",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/lang/String;Ljava/util/concurrent/Callable;)V",
+            "sig": "(Ljava/lang/String;Ljava/util/concurrent/Callable<Ljava/util/Map<Ljava/lang/String;Ljava/lang/Integer;>;>;)V"
+          },
+          {
+            "nme": "getChartData",
+            "acc": 4,
+            "dsc": "()Lorg/bstats/json/JsonObjectBuilder$JsonObject;",
+            "exs": [
+              "java/lang/Exception"
+            ]
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "callable",
+            "dsc": "Ljava/util/concurrent/Callable;",
+            "sig": "Ljava/util/concurrent/Callable<Ljava/util/Map<Ljava/lang/String;Ljava/lang/Integer;>;>;"
+          }
+        ]
+      }
+    }
+  }
+}

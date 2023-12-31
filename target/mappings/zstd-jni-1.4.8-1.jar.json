@@ -1,0 +1,2253 @@
+{
+  "md5": "aa7876657b7eddb2dd69b9caff4a499c",
+  "sha2": "51ed57df50a022a9541541813340618d43d3d57f",
+  "sha256": "0b5d99aaa42ba669d4f729cfaffe1e87d7a6581c7b779a4e72d95548ae1803c9",
+  "contents": {
+    "classes": {
+      "com/github/luben/zstd/BufferPool.class": {
+        "ver": 50,
+        "acc": 1537,
+        "nme": "com/github/luben/zstd/BufferPool",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "get",
+            "acc": 1025,
+            "dsc": "(I)Ljava/nio/ByteBuffer;"
+          },
+          {
+            "nme": "release",
+            "acc": 1025,
+            "dsc": "(Ljava/nio/ByteBuffer;)V"
+          }
+        ],
+        "flds": []
+      },
+      "com/github/luben/zstd/ZstdDirectBufferDecompressingStream.class": {
+        "ver": 50,
+        "acc": 33,
+        "nme": "com/github/luben/zstd/ZstdDirectBufferDecompressingStream",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "refill",
+            "acc": 4,
+            "dsc": "(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;"
+          },
+          {
+            "nme": "recommendedDOutSize",
+            "acc": 266,
+            "dsc": "()I"
+          },
+          {
+            "nme": "createDStream",
+            "acc": 266,
+            "dsc": "()J"
+          },
+          {
+            "nme": "freeDStream",
+            "acc": 266,
+            "dsc": "(J)I"
+          },
+          {
+            "nme": "initDStream",
+            "acc": 258,
+            "dsc": "(J)I"
+          },
+          {
+            "nme": "decompressStream",
+            "acc": 258,
+            "dsc": "(JLjava/nio/ByteBuffer;IILjava/nio/ByteBuffer;II)J"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/nio/ByteBuffer;)V"
+          },
+          {
+            "nme": "setFinalize",
+            "acc": 1,
+            "dsc": "(Z)V"
+          },
+          {
+            "nme": "hasRemaining",
+            "acc": 33,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "recommendedTargetBufferSize",
+            "acc": 9,
+            "dsc": "()I"
+          },
+          {
+            "nme": "setDict",
+            "acc": 33,
+            "dsc": "([B)Lcom/github/luben/zstd/ZstdDirectBufferDecompressingStream;",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "setDict",
+            "acc": 33,
+            "dsc": "(Lcom/github/luben/zstd/ZstdDictDecompress;)Lcom/github/luben/zstd/ZstdDirectBufferDecompressingStream;",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "read",
+            "acc": 33,
+            "dsc": "(Ljava/nio/ByteBuffer;)I",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "close",
+            "acc": 33,
+            "dsc": "()V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "finalize",
+            "acc": 4,
+            "dsc": "()V",
+            "exs": [
+              "java/lang/Throwable"
+            ]
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 2,
+            "nme": "source",
+            "dsc": "Ljava/nio/ByteBuffer;"
+          },
+          {
+            "acc": 18,
+            "nme": "stream",
+            "dsc": "J"
+          },
+          {
+            "acc": 2,
+            "nme": "finishedFrame",
+            "dsc": "Z"
+          },
+          {
+            "acc": 2,
+            "nme": "closed",
+            "dsc": "Z"
+          },
+          {
+            "acc": 2,
+            "nme": "streamEnd",
+            "dsc": "Z"
+          },
+          {
+            "acc": 2,
+            "nme": "finalize",
+            "dsc": "Z"
+          },
+          {
+            "acc": 2,
+            "nme": "consumed",
+            "dsc": "I"
+          },
+          {
+            "acc": 2,
+            "nme": "produced",
+            "dsc": "I"
+          }
+        ]
+      },
+      "com/github/luben/zstd/ZstdCompressCtx.class": {
+        "ver": 50,
+        "acc": 33,
+        "nme": "com/github/luben/zstd/ZstdCompressCtx",
+        "super": "com/github/luben/zstd/AutoCloseBase",
+        "mthds": [
+          {
+            "nme": "init",
+            "acc": 258,
+            "dsc": "()V"
+          },
+          {
+            "nme": "free",
+            "acc": 258,
+            "dsc": "()V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "doClose",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "setLevel",
+            "acc": 1,
+            "dsc": "(I)Lcom/github/luben/zstd/ZstdCompressCtx;"
+          },
+          {
+            "nme": "setLevel0",
+            "acc": 258,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "setChecksum",
+            "acc": 1,
+            "dsc": "(Z)Lcom/github/luben/zstd/ZstdCompressCtx;"
+          },
+          {
+            "nme": "setChecksum0",
+            "acc": 258,
+            "dsc": "(Z)V"
+          },
+          {
+            "nme": "setContentSize",
+            "acc": 1,
+            "dsc": "(Z)Lcom/github/luben/zstd/ZstdCompressCtx;"
+          },
+          {
+            "nme": "setContentSize0",
+            "acc": 258,
+            "dsc": "(Z)V"
+          },
+          {
+            "nme": "setDictID",
+            "acc": 1,
+            "dsc": "(Z)Lcom/github/luben/zstd/ZstdCompressCtx;"
+          },
+          {
+            "nme": "setDictID0",
+            "acc": 258,
+            "dsc": "(Z)V"
+          },
+          {
+            "nme": "loadDict",
+            "acc": 1,
+            "dsc": "(Lcom/github/luben/zstd/ZstdDictCompress;)Lcom/github/luben/zstd/ZstdCompressCtx;"
+          },
+          {
+            "nme": "loadCDictFast0",
+            "acc": 258,
+            "dsc": "(Lcom/github/luben/zstd/ZstdDictCompress;)J"
+          },
+          {
+            "nme": "loadDict",
+            "acc": 1,
+            "dsc": "([B)Lcom/github/luben/zstd/ZstdCompressCtx;"
+          },
+          {
+            "nme": "loadCDict0",
+            "acc": 258,
+            "dsc": "([B)J"
+          },
+          {
+            "nme": "compressDirectByteBuffer",
+            "acc": 1,
+            "dsc": "(Ljava/nio/ByteBuffer;IILjava/nio/ByteBuffer;II)I"
+          },
+          {
+            "nme": "compressDirectByteBuffer0",
+            "acc": 258,
+            "dsc": "(Ljava/nio/ByteBuffer;IILjava/nio/ByteBuffer;II)J"
+          },
+          {
+            "nme": "compressByteArray",
+            "acc": 1,
+            "dsc": "([BII[BII)I"
+          },
+          {
+            "nme": "compressByteArray0",
+            "acc": 258,
+            "dsc": "([BII[BII)J"
+          },
+          {
+            "nme": "compress",
+            "acc": 1,
+            "dsc": "(Ljava/nio/ByteBuffer;Ljava/nio/ByteBuffer;)I"
+          },
+          {
+            "nme": "compress",
+            "acc": 1,
+            "dsc": "(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;",
+            "exs": [
+              "com/github/luben/zstd/ZstdException"
+            ]
+          },
+          {
+            "nme": "compress",
+            "acc": 1,
+            "dsc": "([B[B)I"
+          },
+          {
+            "nme": "compress",
+            "acc": 1,
+            "dsc": "([B)[B"
+          },
+          {
+            "nme": "close",
+            "acc": 4161,
+            "dsc": "()V"
+          },
+          {
+            "nme": "setFinalize",
+            "acc": 4161,
+            "dsc": "(Z)V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 2,
+            "nme": "nativePtr",
+            "dsc": "J"
+          },
+          {
+            "acc": 2,
+            "nme": "compression_dict",
+            "dsc": "Lcom/github/luben/zstd/ZstdDictCompress;"
+          }
+        ]
+      },
+      "com/github/luben/zstd/ZstdOutputStream.class": {
+        "ver": 50,
+        "acc": 33,
+        "nme": "com/github/luben/zstd/ZstdOutputStream",
+        "super": "java/io/FilterOutputStream",
+        "mthds": [
+          {
+            "nme": "recommendedCOutSize",
+            "acc": 266,
+            "dsc": "()J"
+          },
+          {
+            "nme": "createCStream",
+            "acc": 266,
+            "dsc": "()J"
+          },
+          {
+            "nme": "freeCStream",
+            "acc": 266,
+            "dsc": "(J)I"
+          },
+          {
+            "nme": "resetCStream",
+            "acc": 258,
+            "dsc": "(J)I"
+          },
+          {
+            "nme": "compressStream",
+            "acc": 258,
+            "dsc": "(J[BI[BI)I"
+          },
+          {
+            "nme": "flushStream",
+            "acc": 258,
+            "dsc": "(J[BI)I"
+          },
+          {
+            "nme": "endStream",
+            "acc": 258,
+            "dsc": "(J[BI)I"
+          },
+          {
+            "nme": "<init>",
+            "acc": 131073,
+            "dsc": "(Ljava/io/OutputStream;IZZ)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "<init>",
+            "acc": 131073,
+            "dsc": "(Ljava/io/OutputStream;IZ)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/io/OutputStream;I)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/io/OutputStream;)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/io/OutputStream;Lcom/github/luben/zstd/BufferPool;)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "setChecksum",
+            "acc": 33,
+            "dsc": "(Z)Lcom/github/luben/zstd/ZstdOutputStream;",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "setLevel",
+            "acc": 33,
+            "dsc": "(I)Lcom/github/luben/zstd/ZstdOutputStream;",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "setWorkers",
+            "acc": 33,
+            "dsc": "(I)Lcom/github/luben/zstd/ZstdOutputStream;",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "setCloseFrameOnFlush",
+            "acc": 33,
+            "dsc": "(Z)Lcom/github/luben/zstd/ZstdOutputStream;",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "setDict",
+            "acc": 33,
+            "dsc": "([B)Lcom/github/luben/zstd/ZstdOutputStream;",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "setDict",
+            "acc": 33,
+            "dsc": "(Lcom/github/luben/zstd/ZstdDictCompress;)Lcom/github/luben/zstd/ZstdOutputStream;",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "setFinalize",
+            "acc": 1,
+            "dsc": "(Z)V"
+          },
+          {
+            "nme": "write",
+            "acc": 33,
+            "dsc": "([BII)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "write",
+            "acc": 1,
+            "dsc": "(I)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "flush",
+            "acc": 33,
+            "dsc": "()V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "close",
+            "acc": 33,
+            "dsc": "()V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "finalize",
+            "acc": 4,
+            "dsc": "()V",
+            "exs": [
+              "java/lang/Throwable"
+            ]
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "stream",
+            "dsc": "J"
+          },
+          {
+            "acc": 2,
+            "nme": "srcPos",
+            "dsc": "J"
+          },
+          {
+            "acc": 2,
+            "nme": "dstPos",
+            "dsc": "J"
+          },
+          {
+            "acc": 18,
+            "nme": "bufferPool",
+            "dsc": "Lcom/github/luben/zstd/BufferPool;"
+          },
+          {
+            "acc": 18,
+            "nme": "dstByteBuffer",
+            "dsc": "Ljava/nio/ByteBuffer;"
+          },
+          {
+            "acc": 18,
+            "nme": "dst",
+            "dsc": "[B"
+          },
+          {
+            "acc": 2,
+            "nme": "isClosed",
+            "dsc": "Z"
+          },
+          {
+            "acc": 2,
+            "nme": "finalize",
+            "dsc": "Z"
+          },
+          {
+            "acc": 26,
+            "nme": "dstSize",
+            "dsc": "I"
+          },
+          {
+            "acc": 2,
+            "nme": "closeFrameOnFlush",
+            "dsc": "Z"
+          },
+          {
+            "acc": 2,
+            "nme": "frameClosed",
+            "dsc": "Z"
+          }
+        ]
+      },
+      "com/github/luben/zstd/ZstdDictCompress.class": {
+        "ver": 50,
+        "acc": 33,
+        "nme": "com/github/luben/zstd/ZstdDictCompress",
+        "super": "com/github/luben/zstd/SharedDictBase",
+        "mthds": [
+          {
+            "nme": "init",
+            "acc": 258,
+            "dsc": "([BIII)V"
+          },
+          {
+            "nme": "free",
+            "acc": 258,
+            "dsc": "()V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "([BI)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "([BIII)V"
+          },
+          {
+            "nme": "level",
+            "acc": 0,
+            "dsc": "()I"
+          },
+          {
+            "nme": "doClose",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "close",
+            "acc": 4161,
+            "dsc": "()V"
+          },
+          {
+            "nme": "setFinalize",
+            "acc": 4161,
+            "dsc": "(Z)V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 2,
+            "nme": "nativePtr",
+            "dsc": "J"
+          },
+          {
+            "acc": 2,
+            "nme": "level",
+            "dsc": "I"
+          }
+        ]
+      },
+      "com/github/luben/zstd/AutoCloseBase.class": {
+        "ver": 50,
+        "acc": 1056,
+        "nme": "com/github/luben/zstd/AutoCloseBase",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "setFinalize",
+            "acc": 1,
+            "dsc": "(Z)V"
+          },
+          {
+            "nme": "storeFence",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "acquireSharedLock",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "releaseSharedLock",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "doClose",
+            "acc": 1024,
+            "dsc": "()V"
+          },
+          {
+            "nme": "close",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "finalize",
+            "acc": 4,
+            "dsc": "()V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "SHARED_LOCK_UPDATER",
+            "dsc": "Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;",
+            "sig": "Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater<Lcom/github/luben/zstd/AutoCloseBase;>;"
+          },
+          {
+            "acc": 26,
+            "nme": "SHARED_LOCK_CLOSED",
+            "dsc": "I",
+            "val": -1
+          },
+          {
+            "acc": 2,
+            "nme": "finalize",
+            "dsc": "Z"
+          },
+          {
+            "acc": 66,
+            "nme": "sharedLock",
+            "dsc": "I"
+          }
+        ]
+      },
+      "com/github/luben/zstd/ZstdDictTrainer.class": {
+        "ver": 50,
+        "acc": 33,
+        "nme": "com/github/luben/zstd/ZstdDictTrainer",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(II)V"
+          },
+          {
+            "nme": "addSample",
+            "acc": 33,
+            "dsc": "([B)Z"
+          },
+          {
+            "nme": "trainSamplesDirect",
+            "acc": 1,
+            "dsc": "()Ljava/nio/ByteBuffer;",
+            "exs": [
+              "com/github/luben/zstd/ZstdException"
+            ]
+          },
+          {
+            "nme": "trainSamplesDirect",
+            "acc": 33,
+            "dsc": "(Z)Ljava/nio/ByteBuffer;",
+            "exs": [
+              "com/github/luben/zstd/ZstdException"
+            ]
+          },
+          {
+            "nme": "trainSamples",
+            "acc": 1,
+            "dsc": "()[B",
+            "exs": [
+              "com/github/luben/zstd/ZstdException"
+            ]
+          },
+          {
+            "nme": "trainSamples",
+            "acc": 1,
+            "dsc": "(Z)[B",
+            "exs": [
+              "com/github/luben/zstd/ZstdException"
+            ]
+          },
+          {
+            "nme": "copyToIntArray",
+            "acc": 2,
+            "dsc": "(Ljava/util/List;)[I",
+            "sig": "(Ljava/util/List<Ljava/lang/Integer;>;)[I"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "allocatedSize",
+            "dsc": "I"
+          },
+          {
+            "acc": 18,
+            "nme": "trainingSamples",
+            "dsc": "Ljava/nio/ByteBuffer;"
+          },
+          {
+            "acc": 18,
+            "nme": "sampleSizes",
+            "dsc": "Ljava/util/List;",
+            "sig": "Ljava/util/List<Ljava/lang/Integer;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "dictSize",
+            "dsc": "I"
+          },
+          {
+            "acc": 2,
+            "nme": "filledSize",
+            "dsc": "J"
+          }
+        ]
+      },
+      "com/github/luben/zstd/ZstdDictDecompress.class": {
+        "ver": 50,
+        "acc": 33,
+        "nme": "com/github/luben/zstd/ZstdDictDecompress",
+        "super": "com/github/luben/zstd/SharedDictBase",
+        "mthds": [
+          {
+            "nme": "init",
+            "acc": 258,
+            "dsc": "([BII)V"
+          },
+          {
+            "nme": "free",
+            "acc": 258,
+            "dsc": "()V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "([B)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "([BII)V"
+          },
+          {
+            "nme": "doClose",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "close",
+            "acc": 4161,
+            "dsc": "()V"
+          },
+          {
+            "nme": "setFinalize",
+            "acc": 4161,
+            "dsc": "(Z)V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 2,
+            "nme": "nativePtr",
+            "dsc": "J"
+          }
+        ]
+      },
+      "com/github/luben/zstd/Zstd.class": {
+        "ver": 50,
+        "acc": 33,
+        "nme": "com/github/luben/zstd/Zstd",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "compress",
+            "acc": 9,
+            "dsc": "([B[BIZ)J"
+          },
+          {
+            "nme": "compress",
+            "acc": 9,
+            "dsc": "([B[BI)J"
+          },
+          {
+            "nme": "compressByteArray",
+            "acc": 9,
+            "dsc": "([BII[BIIIZ)J"
+          },
+          {
+            "nme": "compressByteArray",
+            "acc": 9,
+            "dsc": "([BII[BIII)J"
+          },
+          {
+            "nme": "compressDirectByteBuffer",
+            "acc": 9,
+            "dsc": "(Ljava/nio/ByteBuffer;IILjava/nio/ByteBuffer;IIIZ)J"
+          },
+          {
+            "nme": "compressDirectByteBuffer",
+            "acc": 9,
+            "dsc": "(Ljava/nio/ByteBuffer;IILjava/nio/ByteBuffer;III)J"
+          },
+          {
+            "nme": "compressUnsafe",
+            "acc": 265,
+            "dsc": "(JJJJIZ)J"
+          },
+          {
+            "nme": "compressUnsafe",
+            "acc": 9,
+            "dsc": "(JJJJI)J"
+          },
+          {
+            "nme": "compressUsingDict",
+            "acc": 9,
+            "dsc": "([BI[BII[BI)J"
+          },
+          {
+            "nme": "compressUsingDict",
+            "acc": 9,
+            "dsc": "([BI[BI[BI)J"
+          },
+          {
+            "nme": "compressDirectByteBufferUsingDict",
+            "acc": 9,
+            "dsc": "(Ljava/nio/ByteBuffer;IILjava/nio/ByteBuffer;II[BI)J"
+          },
+          {
+            "nme": "compressFastDict",
+            "acc": 9,
+            "dsc": "([BI[BIILcom/github/luben/zstd/ZstdDictCompress;)J"
+          },
+          {
+            "nme": "compressFastDict",
+            "acc": 9,
+            "dsc": "([BI[BILcom/github/luben/zstd/ZstdDictCompress;)J"
+          },
+          {
+            "nme": "compress",
+            "acc": 9,
+            "dsc": "([B[BLcom/github/luben/zstd/ZstdDictCompress;)J"
+          },
+          {
+            "nme": "compressDirectByteBufferFastDict",
+            "acc": 9,
+            "dsc": "(Ljava/nio/ByteBuffer;IILjava/nio/ByteBuffer;IILcom/github/luben/zstd/ZstdDictCompress;)J"
+          },
+          {
+            "nme": "decompress",
+            "acc": 9,
+            "dsc": "([B[B)J"
+          },
+          {
+            "nme": "decompressByteArray",
+            "acc": 9,
+            "dsc": "([BII[BII)J"
+          },
+          {
+            "nme": "decompressDirectByteBuffer",
+            "acc": 9,
+            "dsc": "(Ljava/nio/ByteBuffer;IILjava/nio/ByteBuffer;II)J"
+          },
+          {
+            "nme": "decompressUnsafe",
+            "acc": 265,
+            "dsc": "(JJJJ)J"
+          },
+          {
+            "nme": "decompressUsingDict",
+            "acc": 9,
+            "dsc": "([BI[BII[B)J"
+          },
+          {
+            "nme": "decompressDirectByteBufferUsingDict",
+            "acc": 9,
+            "dsc": "(Ljava/nio/ByteBuffer;IILjava/nio/ByteBuffer;II[B)J"
+          },
+          {
+            "nme": "decompressFastDict",
+            "acc": 9,
+            "dsc": "([BI[BIILcom/github/luben/zstd/ZstdDictDecompress;)J"
+          },
+          {
+            "nme": "decompressDirectByteBufferFastDict",
+            "acc": 9,
+            "dsc": "(Ljava/nio/ByteBuffer;IILjava/nio/ByteBuffer;IILcom/github/luben/zstd/ZstdDictDecompress;)J"
+          },
+          {
+            "nme": "loadDictDecompress",
+            "acc": 265,
+            "dsc": "(J[BI)I"
+          },
+          {
+            "nme": "loadFastDictDecompress",
+            "acc": 265,
+            "dsc": "(JLcom/github/luben/zstd/ZstdDictDecompress;)I"
+          },
+          {
+            "nme": "loadDictCompress",
+            "acc": 265,
+            "dsc": "(J[BI)I"
+          },
+          {
+            "nme": "loadFastDictCompress",
+            "acc": 265,
+            "dsc": "(JLcom/github/luben/zstd/ZstdDictCompress;)I"
+          },
+          {
+            "nme": "setCompressionChecksums",
+            "acc": 265,
+            "dsc": "(JZ)I"
+          },
+          {
+            "nme": "setCompressionLevel",
+            "acc": 265,
+            "dsc": "(JI)I"
+          },
+          {
+            "nme": "setCompressionWorkers",
+            "acc": 265,
+            "dsc": "(JI)I"
+          },
+          {
+            "nme": "decompressedSize",
+            "acc": 9,
+            "dsc": "([BII)J"
+          },
+          {
+            "nme": "decompressedSize0",
+            "acc": 266,
+            "dsc": "([BII)J"
+          },
+          {
+            "nme": "decompressedSize",
+            "acc": 9,
+            "dsc": "([BI)J"
+          },
+          {
+            "nme": "decompressedSize",
+            "acc": 9,
+            "dsc": "([B)J"
+          },
+          {
+            "nme": "decompressedDirectByteBufferSize",
+            "acc": 265,
+            "dsc": "(Ljava/nio/ByteBuffer;II)J"
+          },
+          {
+            "nme": "compressBound",
+            "acc": 265,
+            "dsc": "(J)J"
+          },
+          {
+            "nme": "isError",
+            "acc": 265,
+            "dsc": "(J)Z"
+          },
+          {
+            "nme": "getErrorName",
+            "acc": 265,
+            "dsc": "(J)Ljava/lang/String;"
+          },
+          {
+            "nme": "getErrorCode",
+            "acc": 265,
+            "dsc": "(J)J"
+          },
+          {
+            "nme": "errNoError",
+            "acc": 265,
+            "dsc": "()J"
+          },
+          {
+            "nme": "errGeneric",
+            "acc": 265,
+            "dsc": "()J"
+          },
+          {
+            "nme": "errPrefixUnknown",
+            "acc": 265,
+            "dsc": "()J"
+          },
+          {
+            "nme": "errVersionUnsupported",
+            "acc": 265,
+            "dsc": "()J"
+          },
+          {
+            "nme": "errFrameParameterUnsupported",
+            "acc": 265,
+            "dsc": "()J"
+          },
+          {
+            "nme": "errFrameParameterWindowTooLarge",
+            "acc": 265,
+            "dsc": "()J"
+          },
+          {
+            "nme": "errCorruptionDetected",
+            "acc": 265,
+            "dsc": "()J"
+          },
+          {
+            "nme": "errChecksumWrong",
+            "acc": 265,
+            "dsc": "()J"
+          },
+          {
+            "nme": "errDictionaryCorrupted",
+            "acc": 265,
+            "dsc": "()J"
+          },
+          {
+            "nme": "errDictionaryWrong",
+            "acc": 265,
+            "dsc": "()J"
+          },
+          {
+            "nme": "errDictionaryCreationFailed",
+            "acc": 265,
+            "dsc": "()J"
+          },
+          {
+            "nme": "errParameterUnsupported",
+            "acc": 265,
+            "dsc": "()J"
+          },
+          {
+            "nme": "errParameterOutOfBound",
+            "acc": 265,
+            "dsc": "()J"
+          },
+          {
+            "nme": "errTableLogTooLarge",
+            "acc": 265,
+            "dsc": "()J"
+          },
+          {
+            "nme": "errMaxSymbolValueTooLarge",
+            "acc": 265,
+            "dsc": "()J"
+          },
+          {
+            "nme": "errMaxSymbolValueTooSmall",
+            "acc": 265,
+            "dsc": "()J"
+          },
+          {
+            "nme": "errStageWrong",
+            "acc": 265,
+            "dsc": "()J"
+          },
+          {
+            "nme": "errInitMissing",
+            "acc": 265,
+            "dsc": "()J"
+          },
+          {
+            "nme": "errMemoryAllocation",
+            "acc": 265,
+            "dsc": "()J"
+          },
+          {
+            "nme": "errWorkSpaceTooSmall",
+            "acc": 265,
+            "dsc": "()J"
+          },
+          {
+            "nme": "errDstSizeTooSmall",
+            "acc": 265,
+            "dsc": "()J"
+          },
+          {
+            "nme": "errSrcSizeWrong",
+            "acc": 265,
+            "dsc": "()J"
+          },
+          {
+            "nme": "errDstBufferNull",
+            "acc": 265,
+            "dsc": "()J"
+          },
+          {
+            "nme": "trainFromBuffer",
+            "acc": 265,
+            "dsc": "([[B[BZ)J"
+          },
+          {
+            "nme": "trainFromBufferDirect",
+            "acc": 265,
+            "dsc": "(Ljava/nio/ByteBuffer;[ILjava/nio/ByteBuffer;Z)J"
+          },
+          {
+            "nme": "getDictIdFromFrame",
+            "acc": 265,
+            "dsc": "([B)J"
+          },
+          {
+            "nme": "getDictIdFromFrameBuffer",
+            "acc": 265,
+            "dsc": "(Ljava/nio/ByteBuffer;)J"
+          },
+          {
+            "nme": "getDictIdFromDict",
+            "acc": 265,
+            "dsc": "([B)J"
+          },
+          {
+            "nme": "trainFromBuffer",
+            "acc": 9,
+            "dsc": "([[B[B)J"
+          },
+          {
+            "nme": "trainFromBufferDirect",
+            "acc": 9,
+            "dsc": "(Ljava/nio/ByteBuffer;[ILjava/nio/ByteBuffer;)J"
+          },
+          {
+            "nme": "magicNumber",
+            "acc": 265,
+            "dsc": "()I"
+          },
+          {
+            "nme": "windowLogMin",
+            "acc": 265,
+            "dsc": "()I"
+          },
+          {
+            "nme": "windowLogMax",
+            "acc": 265,
+            "dsc": "()I"
+          },
+          {
+            "nme": "chainLogMin",
+            "acc": 265,
+            "dsc": "()I"
+          },
+          {
+            "nme": "chainLogMax",
+            "acc": 265,
+            "dsc": "()I"
+          },
+          {
+            "nme": "hashLogMin",
+            "acc": 265,
+            "dsc": "()I"
+          },
+          {
+            "nme": "hashLogMax",
+            "acc": 265,
+            "dsc": "()I"
+          },
+          {
+            "nme": "searchLogMin",
+            "acc": 265,
+            "dsc": "()I"
+          },
+          {
+            "nme": "searchLogMax",
+            "acc": 265,
+            "dsc": "()I"
+          },
+          {
+            "nme": "searchLengthMin",
+            "acc": 265,
+            "dsc": "()I"
+          },
+          {
+            "nme": "searchLengthMax",
+            "acc": 265,
+            "dsc": "()I"
+          },
+          {
+            "nme": "frameHeaderSizeMin",
+            "acc": 265,
+            "dsc": "()I"
+          },
+          {
+            "nme": "frameHeaderSizeMax",
+            "acc": 265,
+            "dsc": "()I"
+          },
+          {
+            "nme": "blockSizeMax",
+            "acc": 265,
+            "dsc": "()I"
+          },
+          {
+            "nme": "minCompressionLevel",
+            "acc": 265,
+            "dsc": "()I"
+          },
+          {
+            "nme": "maxCompressionLevel",
+            "acc": 265,
+            "dsc": "()I"
+          },
+          {
+            "nme": "compress",
+            "acc": 9,
+            "dsc": "([B)[B",
+            "exs": [
+              "com/github/luben/zstd/ZstdException"
+            ]
+          },
+          {
+            "nme": "compress",
+            "acc": 9,
+            "dsc": "([BI)[B",
+            "exs": [
+              "com/github/luben/zstd/ZstdException"
+            ]
+          },
+          {
+            "nme": "compress",
+            "acc": 9,
+            "dsc": "(Ljava/nio/ByteBuffer;Ljava/nio/ByteBuffer;)I",
+            "exs": [
+              "com/github/luben/zstd/ZstdException"
+            ]
+          },
+          {
+            "nme": "compress",
+            "acc": 9,
+            "dsc": "(Ljava/nio/ByteBuffer;Ljava/nio/ByteBuffer;IZ)I",
+            "exs": [
+              "com/github/luben/zstd/ZstdException"
+            ]
+          },
+          {
+            "nme": "compress",
+            "acc": 9,
+            "dsc": "(Ljava/nio/ByteBuffer;Ljava/nio/ByteBuffer;I)I",
+            "exs": [
+              "com/github/luben/zstd/ZstdException"
+            ]
+          },
+          {
+            "nme": "compress",
+            "acc": 9,
+            "dsc": "(Ljava/nio/ByteBuffer;I)Ljava/nio/ByteBuffer;",
+            "exs": [
+              "com/github/luben/zstd/ZstdException"
+            ]
+          },
+          {
+            "nme": "compress",
+            "acc": 9,
+            "dsc": "([BLcom/github/luben/zstd/ZstdDictCompress;)[B",
+            "exs": [
+              "com/github/luben/zstd/ZstdException"
+            ]
+          },
+          {
+            "nme": "compressUsingDict",
+            "acc": 131081,
+            "dsc": "([B[B[BI)J",
+            "vanns": [
+              {
+                "dsc": "Ljava/lang/Deprecated;"
+              }
+            ]
+          },
+          {
+            "nme": "compressUsingDict",
+            "acc": 9,
+            "dsc": "([B[BI)[B",
+            "exs": [
+              "com/github/luben/zstd/ZstdException"
+            ]
+          },
+          {
+            "nme": "compress",
+            "acc": 9,
+            "dsc": "([B[B[BI)J"
+          },
+          {
+            "nme": "compress",
+            "acc": 9,
+            "dsc": "(Ljava/nio/ByteBuffer;Ljava/nio/ByteBuffer;[BI)I",
+            "exs": [
+              "com/github/luben/zstd/ZstdException"
+            ]
+          },
+          {
+            "nme": "compress",
+            "acc": 9,
+            "dsc": "(Ljava/nio/ByteBuffer;[BI)Ljava/nio/ByteBuffer;",
+            "exs": [
+              "com/github/luben/zstd/ZstdException"
+            ]
+          },
+          {
+            "nme": "compress",
+            "acc": 9,
+            "dsc": "(Ljava/nio/ByteBuffer;Ljava/nio/ByteBuffer;Lcom/github/luben/zstd/ZstdDictCompress;)I",
+            "exs": [
+              "com/github/luben/zstd/ZstdException"
+            ]
+          },
+          {
+            "nme": "compress",
+            "acc": 9,
+            "dsc": "(Ljava/nio/ByteBuffer;Lcom/github/luben/zstd/ZstdDictCompress;)Ljava/nio/ByteBuffer;",
+            "exs": [
+              "com/github/luben/zstd/ZstdException"
+            ]
+          },
+          {
+            "nme": "decompress",
+            "acc": 9,
+            "dsc": "([BI)[B",
+            "exs": [
+              "com/github/luben/zstd/ZstdException"
+            ]
+          },
+          {
+            "nme": "decompress",
+            "acc": 9,
+            "dsc": "(Ljava/nio/ByteBuffer;Ljava/nio/ByteBuffer;)I",
+            "exs": [
+              "com/github/luben/zstd/ZstdException"
+            ]
+          },
+          {
+            "nme": "decompress",
+            "acc": 9,
+            "dsc": "(Ljava/nio/ByteBuffer;I)Ljava/nio/ByteBuffer;",
+            "exs": [
+              "com/github/luben/zstd/ZstdException"
+            ]
+          },
+          {
+            "nme": "decompress",
+            "acc": 9,
+            "dsc": "([BLcom/github/luben/zstd/ZstdDictDecompress;I)[B",
+            "exs": [
+              "com/github/luben/zstd/ZstdException"
+            ]
+          },
+          {
+            "nme": "decompressUsingDict",
+            "acc": 131081,
+            "dsc": "([B[B[B)J",
+            "vanns": [
+              {
+                "dsc": "Ljava/lang/Deprecated;"
+              }
+            ]
+          },
+          {
+            "nme": "decompress",
+            "acc": 9,
+            "dsc": "([B[B[B)J"
+          },
+          {
+            "nme": "decompress",
+            "acc": 9,
+            "dsc": "([B[BI)[B",
+            "exs": [
+              "com/github/luben/zstd/ZstdException"
+            ]
+          },
+          {
+            "nme": "decompressedSize",
+            "acc": 9,
+            "dsc": "(Ljava/nio/ByteBuffer;)J"
+          },
+          {
+            "nme": "decompress",
+            "acc": 9,
+            "dsc": "(Ljava/nio/ByteBuffer;Ljava/nio/ByteBuffer;[B)I",
+            "exs": [
+              "com/github/luben/zstd/ZstdException"
+            ]
+          },
+          {
+            "nme": "decompress",
+            "acc": 9,
+            "dsc": "(Ljava/nio/ByteBuffer;[BI)Ljava/nio/ByteBuffer;",
+            "exs": [
+              "com/github/luben/zstd/ZstdException"
+            ]
+          },
+          {
+            "nme": "decompress",
+            "acc": 9,
+            "dsc": "(Ljava/nio/ByteBuffer;Ljava/nio/ByteBuffer;Lcom/github/luben/zstd/ZstdDictDecompress;)I",
+            "exs": [
+              "com/github/luben/zstd/ZstdException"
+            ]
+          },
+          {
+            "nme": "decompress",
+            "acc": 9,
+            "dsc": "(Ljava/nio/ByteBuffer;Lcom/github/luben/zstd/ZstdDictDecompress;I)Ljava/nio/ByteBuffer;",
+            "exs": [
+              "com/github/luben/zstd/ZstdException"
+            ]
+          },
+          {
+            "nme": "extractArray",
+            "acc": 24,
+            "dsc": "(Ljava/nio/ByteBuffer;)[B"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": []
+      },
+      "com/github/luben/zstd/ZstdInputStream.class": {
+        "ver": 50,
+        "acc": 33,
+        "nme": "com/github/luben/zstd/ZstdInputStream",
+        "super": "java/io/FilterInputStream",
+        "mthds": [
+          {
+            "nme": "recommendedDInSize",
+            "acc": 266,
+            "dsc": "()J"
+          },
+          {
+            "nme": "recommendedDOutSize",
+            "acc": 266,
+            "dsc": "()J"
+          },
+          {
+            "nme": "createDStream",
+            "acc": 266,
+            "dsc": "()J"
+          },
+          {
+            "nme": "freeDStream",
+            "acc": 266,
+            "dsc": "(J)I"
+          },
+          {
+            "nme": "initDStream",
+            "acc": 258,
+            "dsc": "(J)I"
+          },
+          {
+            "nme": "decompressStream",
+            "acc": 258,
+            "dsc": "(J[BI[BI)I"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/io/InputStream;)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/io/InputStream;Lcom/github/luben/zstd/BufferPool;)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "setContinuous",
+            "acc": 33,
+            "dsc": "(Z)Lcom/github/luben/zstd/ZstdInputStream;"
+          },
+          {
+            "nme": "getContinuous",
+            "acc": 33,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "setFinalize",
+            "acc": 1,
+            "dsc": "(Z)V"
+          },
+          {
+            "nme": "setDict",
+            "acc": 33,
+            "dsc": "([B)Lcom/github/luben/zstd/ZstdInputStream;",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "setDict",
+            "acc": 33,
+            "dsc": "(Lcom/github/luben/zstd/ZstdDictDecompress;)Lcom/github/luben/zstd/ZstdInputStream;",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "read",
+            "acc": 33,
+            "dsc": "([BII)I",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "readInternal",
+            "acc": 0,
+            "dsc": "([BII)I",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "read",
+            "acc": 33,
+            "dsc": "()I",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "available",
+            "acc": 33,
+            "dsc": "()I",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "markSupported",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "skip",
+            "acc": 33,
+            "dsc": "(J)J",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "close",
+            "acc": 33,
+            "dsc": "()V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "finalize",
+            "acc": 4,
+            "dsc": "()V",
+            "exs": [
+              "java/lang/Throwable"
+            ]
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "stream",
+            "dsc": "J"
+          },
+          {
+            "acc": 2,
+            "nme": "dstPos",
+            "dsc": "J"
+          },
+          {
+            "acc": 2,
+            "nme": "srcPos",
+            "dsc": "J"
+          },
+          {
+            "acc": 2,
+            "nme": "srcSize",
+            "dsc": "J"
+          },
+          {
+            "acc": 2,
+            "nme": "needRead",
+            "dsc": "Z"
+          },
+          {
+            "acc": 2,
+            "nme": "finalize",
+            "dsc": "Z"
+          },
+          {
+            "acc": 18,
+            "nme": "bufferPool",
+            "dsc": "Lcom/github/luben/zstd/BufferPool;"
+          },
+          {
+            "acc": 18,
+            "nme": "srcByteBuffer",
+            "dsc": "Ljava/nio/ByteBuffer;"
+          },
+          {
+            "acc": 18,
+            "nme": "src",
+            "dsc": "[B"
+          },
+          {
+            "acc": 26,
+            "nme": "srcBuffSize",
+            "dsc": "I"
+          },
+          {
+            "acc": 2,
+            "nme": "isContinuous",
+            "dsc": "Z"
+          },
+          {
+            "acc": 2,
+            "nme": "frameFinished",
+            "dsc": "Z"
+          },
+          {
+            "acc": 2,
+            "nme": "isClosed",
+            "dsc": "Z"
+          }
+        ]
+      },
+      "com/github/luben/zstd/util/Native.class": {
+        "ver": 50,
+        "acc": 16433,
+        "nme": "com/github/luben/zstd/util/Native",
+        "super": "java/lang/Enum",
+        "mthds": [
+          {
+            "nme": "values",
+            "acc": 9,
+            "dsc": "()[Lcom/github/luben/zstd/util/Native;"
+          },
+          {
+            "nme": "valueOf",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Lcom/github/luben/zstd/util/Native;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;I)V",
+            "sig": "()V"
+          },
+          {
+            "nme": "osName",
+            "acc": 10,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "osArch",
+            "acc": 10,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "libExtension",
+            "acc": 10,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "resourceName",
+            "acc": 10,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "isLoaded",
+            "acc": 41,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "load",
+            "acc": 41,
+            "dsc": "()V"
+          },
+          {
+            "nme": "load",
+            "acc": 41,
+            "dsc": "(Ljava/io/File;)V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "nativePathOverride",
+            "dsc": "Ljava/lang/String;",
+            "val": "ZstdNativePath"
+          },
+          {
+            "acc": 26,
+            "nme": "libnameShort",
+            "dsc": "Ljava/lang/String;",
+            "val": "zstd-jni"
+          },
+          {
+            "acc": 26,
+            "nme": "libname",
+            "dsc": "Ljava/lang/String;",
+            "val": "libzstd-jni"
+          },
+          {
+            "acc": 26,
+            "nme": "errorMsg",
+            "dsc": "Ljava/lang/String;"
+          },
+          {
+            "acc": 10,
+            "nme": "loaded",
+            "dsc": "Z"
+          },
+          {
+            "acc": 4122,
+            "nme": "$VALUES",
+            "dsc": "[Lcom/github/luben/zstd/util/Native;"
+          }
+        ]
+      },
+      "com/github/luben/zstd/ZstdDecompressCtx.class": {
+        "ver": 50,
+        "acc": 33,
+        "nme": "com/github/luben/zstd/ZstdDecompressCtx",
+        "super": "com/github/luben/zstd/AutoCloseBase",
+        "mthds": [
+          {
+            "nme": "init",
+            "acc": 258,
+            "dsc": "()V"
+          },
+          {
+            "nme": "free",
+            "acc": 258,
+            "dsc": "()V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "doClose",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "loadDict",
+            "acc": 1,
+            "dsc": "(Lcom/github/luben/zstd/ZstdDictDecompress;)Lcom/github/luben/zstd/ZstdDecompressCtx;"
+          },
+          {
+            "nme": "loadDDictFast0",
+            "acc": 258,
+            "dsc": "(Lcom/github/luben/zstd/ZstdDictDecompress;)J"
+          },
+          {
+            "nme": "loadDict",
+            "acc": 1,
+            "dsc": "([B)Lcom/github/luben/zstd/ZstdDecompressCtx;"
+          },
+          {
+            "nme": "loadDDict0",
+            "acc": 258,
+            "dsc": "([B)J"
+          },
+          {
+            "nme": "decompressDirectByteBuffer",
+            "acc": 1,
+            "dsc": "(Ljava/nio/ByteBuffer;IILjava/nio/ByteBuffer;II)I"
+          },
+          {
+            "nme": "decompressDirectByteBuffer0",
+            "acc": 258,
+            "dsc": "(Ljava/nio/ByteBuffer;IILjava/nio/ByteBuffer;II)J"
+          },
+          {
+            "nme": "decompressByteArray",
+            "acc": 1,
+            "dsc": "([BII[BII)I"
+          },
+          {
+            "nme": "decompressByteArray0",
+            "acc": 258,
+            "dsc": "([BII[BII)J"
+          },
+          {
+            "nme": "decompress",
+            "acc": 1,
+            "dsc": "(Ljava/nio/ByteBuffer;Ljava/nio/ByteBuffer;)I",
+            "exs": [
+              "com/github/luben/zstd/ZstdException"
+            ]
+          },
+          {
+            "nme": "decompress",
+            "acc": 1,
+            "dsc": "(Ljava/nio/ByteBuffer;I)Ljava/nio/ByteBuffer;",
+            "exs": [
+              "com/github/luben/zstd/ZstdException"
+            ]
+          },
+          {
+            "nme": "decompress",
+            "acc": 1,
+            "dsc": "([B[B)I"
+          },
+          {
+            "nme": "decompress",
+            "acc": 1,
+            "dsc": "([BI)[B",
+            "exs": [
+              "com/github/luben/zstd/ZstdException"
+            ]
+          },
+          {
+            "nme": "close",
+            "acc": 4161,
+            "dsc": "()V"
+          },
+          {
+            "nme": "setFinalize",
+            "acc": 4161,
+            "dsc": "(Z)V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 2,
+            "nme": "nativePtr",
+            "dsc": "J"
+          },
+          {
+            "acc": 2,
+            "nme": "decompression_dict",
+            "dsc": "Lcom/github/luben/zstd/ZstdDictDecompress;"
+          }
+        ]
+      },
+      "com/github/luben/zstd/NoPool.class": {
+        "ver": 50,
+        "acc": 33,
+        "nme": "com/github/luben/zstd/NoPool",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "get",
+            "acc": 33,
+            "dsc": "(I)Ljava/nio/ByteBuffer;"
+          },
+          {
+            "nme": "release",
+            "acc": 33,
+            "dsc": "(Ljava/nio/ByteBuffer;)V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "INSTANCE",
+            "dsc": "Lcom/github/luben/zstd/BufferPool;"
+          }
+        ]
+      },
+      "com/github/luben/zstd/ZstdDirectBufferCompressingStream.class": {
+        "ver": 50,
+        "acc": 33,
+        "nme": "com/github/luben/zstd/ZstdDirectBufferCompressingStream",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "flushBuffer",
+            "acc": 4,
+            "dsc": "(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/nio/ByteBuffer;I)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "recommendedOutputBufferSize",
+            "acc": 9,
+            "dsc": "()I"
+          },
+          {
+            "nme": "recommendedCOutSize",
+            "acc": 266,
+            "dsc": "()J"
+          },
+          {
+            "nme": "createCStream",
+            "acc": 266,
+            "dsc": "()J"
+          },
+          {
+            "nme": "freeCStream",
+            "acc": 266,
+            "dsc": "(J)I"
+          },
+          {
+            "nme": "initCStream",
+            "acc": 258,
+            "dsc": "(JI)I"
+          },
+          {
+            "nme": "initCStreamWithDict",
+            "acc": 258,
+            "dsc": "(J[BII)I"
+          },
+          {
+            "nme": "initCStreamWithFastDict",
+            "acc": 258,
+            "dsc": "(JLcom/github/luben/zstd/ZstdDictCompress;)I"
+          },
+          {
+            "nme": "compressDirectByteBuffer",
+            "acc": 258,
+            "dsc": "(JLjava/nio/ByteBuffer;IILjava/nio/ByteBuffer;II)I"
+          },
+          {
+            "nme": "flushStream",
+            "acc": 258,
+            "dsc": "(JLjava/nio/ByteBuffer;II)I"
+          },
+          {
+            "nme": "endStream",
+            "acc": 258,
+            "dsc": "(JLjava/nio/ByteBuffer;II)I"
+          },
+          {
+            "nme": "setDict",
+            "acc": 33,
+            "dsc": "([B)Lcom/github/luben/zstd/ZstdDirectBufferCompressingStream;",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "setDict",
+            "acc": 33,
+            "dsc": "(Lcom/github/luben/zstd/ZstdDictCompress;)Lcom/github/luben/zstd/ZstdDirectBufferCompressingStream;",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "setFinalize",
+            "acc": 1,
+            "dsc": "(Z)V"
+          },
+          {
+            "nme": "compress",
+            "acc": 33,
+            "dsc": "(Ljava/nio/ByteBuffer;)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "flush",
+            "acc": 33,
+            "dsc": "()V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "close",
+            "acc": 33,
+            "dsc": "()V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "finalize",
+            "acc": 4,
+            "dsc": "()V",
+            "exs": [
+              "java/lang/Throwable"
+            ]
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 2,
+            "nme": "target",
+            "dsc": "Ljava/nio/ByteBuffer;"
+          },
+          {
+            "acc": 18,
+            "nme": "stream",
+            "dsc": "J"
+          },
+          {
+            "acc": 2,
+            "nme": "consumed",
+            "dsc": "I"
+          },
+          {
+            "acc": 2,
+            "nme": "produced",
+            "dsc": "I"
+          },
+          {
+            "acc": 2,
+            "nme": "closed",
+            "dsc": "Z"
+          },
+          {
+            "acc": 2,
+            "nme": "initialized",
+            "dsc": "Z"
+          },
+          {
+            "acc": 2,
+            "nme": "finalize",
+            "dsc": "Z"
+          },
+          {
+            "acc": 2,
+            "nme": "level",
+            "dsc": "I"
+          },
+          {
+            "acc": 2,
+            "nme": "dict",
+            "dsc": "[B"
+          },
+          {
+            "acc": 2,
+            "nme": "fastDict",
+            "dsc": "Lcom/github/luben/zstd/ZstdDictCompress;"
+          }
+        ]
+      },
+      "com/github/luben/zstd/SharedDictBase.class": {
+        "ver": 50,
+        "acc": 1056,
+        "nme": "com/github/luben/zstd/SharedDictBase",
+        "super": "com/github/luben/zstd/AutoCloseBase",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          }
+        ],
+        "flds": []
+      },
+      "com/github/luben/zstd/RecyclingBufferPool.class": {
+        "ver": 50,
+        "acc": 33,
+        "nme": "com/github/luben/zstd/RecyclingBufferPool",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "getDeque",
+            "acc": 2,
+            "dsc": "(I)Ljava/util/Deque;",
+            "sig": "(I)Ljava/util/Deque<Ljava/nio/ByteBuffer;>;"
+          },
+          {
+            "nme": "get",
+            "acc": 33,
+            "dsc": "(I)Ljava/nio/ByteBuffer;"
+          },
+          {
+            "nme": "release",
+            "acc": 33,
+            "dsc": "(Ljava/nio/ByteBuffer;)V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 25,
+            "nme": "INSTANCE",
+            "dsc": "Lcom/github/luben/zstd/BufferPool;"
+          },
+          {
+            "acc": 18,
+            "nme": "pools",
+            "dsc": "Ljava/util/Map;",
+            "sig": "Ljava/util/Map<Ljava/lang/Integer;Ljava/lang/ref/SoftReference<Ljava/util/Deque<Ljava/nio/ByteBuffer;>;>;>;"
+          }
+        ]
+      },
+      "com/github/luben/zstd/ZstdException.class": {
+        "ver": 50,
+        "acc": 33,
+        "nme": "com/github/luben/zstd/ZstdException",
+        "super": "java/lang/RuntimeException",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(J)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(JLjava/lang/String;)V"
+          },
+          {
+            "nme": "getErrorCode",
+            "acc": 1,
+            "dsc": "()J"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 2,
+            "nme": "code",
+            "dsc": "J"
+          }
+        ]
+      }
+    }
+  }
+}

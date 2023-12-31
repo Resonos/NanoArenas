@@ -1,0 +1,550 @@
+{
+  "md5": "c265696b614c9b11b847b9d5b51ab7ea",
+  "sha2": "bee3ef997a95c8444280e5b0c1c2c17c6f14bf75",
+  "sha256": "e59ba591c99f4eed0bc0d858b71b07578d46216d8003a638071cc2eb861fb645",
+  "contents": {
+    "classes": {
+      "org/anarres/parallelgzip/ParallelGZIPEnvironment$ThreadPoolHolder.class": {
+        "ver": 51,
+        "acc": 32,
+        "nme": "org/anarres/parallelgzip/ParallelGZIPEnvironment$ThreadPoolHolder",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "access$100",
+            "acc": 4104,
+            "dsc": "()Ljava/util/concurrent/ExecutorService;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "EXECUTOR",
+            "dsc": "Ljava/util/concurrent/ExecutorService;"
+          }
+        ]
+      },
+      "org/anarres/parallelgzip/ParallelGZIPInputStream.class": {
+        "ver": 51,
+        "acc": 33,
+        "nme": "org/anarres/parallelgzip/ParallelGZIPInputStream",
+        "super": "java/util/zip/GZIPInputStream",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/io/InputStream;I)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/io/InputStream;)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          }
+        ],
+        "flds": []
+      },
+      "org/anarres/parallelgzip/ParallelGZIPOutputStream$State.class": {
+        "ver": 51,
+        "acc": 32,
+        "nme": "org/anarres/parallelgzip/ParallelGZIPOutputStream$State",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 4096,
+            "dsc": "(Lorg/anarres/parallelgzip/ParallelGZIPOutputStream$1;)V"
+          },
+          {
+            "nme": "access$400",
+            "acc": 4104,
+            "dsc": "(Lorg/anarres/parallelgzip/ParallelGZIPOutputStream$State;)Ljava/util/zip/Deflater;"
+          },
+          {
+            "nme": "access$500",
+            "acc": 4104,
+            "dsc": "(Lorg/anarres/parallelgzip/ParallelGZIPOutputStream$State;)Lorg/anarres/parallelgzip/ParallelGZIPOutputStream$ByteArrayOutputStreamExposed;"
+          },
+          {
+            "nme": "access$600",
+            "acc": 4104,
+            "dsc": "(Lorg/anarres/parallelgzip/ParallelGZIPOutputStream$State;)Ljava/util/zip/DeflaterOutputStream;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "def",
+            "dsc": "Ljava/util/zip/Deflater;"
+          },
+          {
+            "acc": 18,
+            "nme": "buf",
+            "dsc": "Lorg/anarres/parallelgzip/ParallelGZIPOutputStream$ByteArrayOutputStreamExposed;"
+          },
+          {
+            "acc": 18,
+            "nme": "str",
+            "dsc": "Ljava/util/zip/DeflaterOutputStream;"
+          }
+        ]
+      },
+      "org/anarres/parallelgzip/ParallelGZIPOutputStream$Block.class": {
+        "ver": 51,
+        "acc": 32,
+        "nme": "org/anarres/parallelgzip/ParallelGZIPOutputStream$Block",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "call",
+            "acc": 1,
+            "dsc": "()Lorg/anarres/parallelgzip/ParallelGZIPOutputStream$Block;",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "toString",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "call",
+            "acc": 4161,
+            "dsc": "()Ljava/lang/Object;",
+            "exs": [
+              "java/lang/Exception"
+            ]
+          },
+          {
+            "nme": "<init>",
+            "acc": 4096,
+            "dsc": "(Lorg/anarres/parallelgzip/ParallelGZIPOutputStream$1;)V"
+          },
+          {
+            "nme": "access$800",
+            "acc": 4104,
+            "dsc": "(Lorg/anarres/parallelgzip/ParallelGZIPOutputStream$Block;)[B"
+          },
+          {
+            "nme": "access$900",
+            "acc": 4104,
+            "dsc": "(Lorg/anarres/parallelgzip/ParallelGZIPOutputStream$Block;)I"
+          },
+          {
+            "nme": "access$902",
+            "acc": 4104,
+            "dsc": "(Lorg/anarres/parallelgzip/ParallelGZIPOutputStream$Block;I)I"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 2,
+            "nme": "buf",
+            "dsc": "[B"
+          },
+          {
+            "acc": 2,
+            "nme": "buf_length",
+            "dsc": "I"
+          }
+        ]
+      },
+      "org/anarres/parallelgzip/ParallelGZIPOutputStream.class": {
+        "ver": 51,
+        "acc": 33,
+        "nme": "org/anarres/parallelgzip/ParallelGZIPOutputStream",
+        "super": "java/io/FilterOutputStream",
+        "mthds": [
+          {
+            "nme": "newDeflater",
+            "acc": 10,
+            "dsc": "()Ljava/util/zip/Deflater;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nonnull;"
+              }
+            ]
+          },
+          {
+            "nme": "newDeflaterOutputStream",
+            "acc": 10,
+            "dsc": "(Ljava/io/OutputStream;Ljava/util/zip/Deflater;)Ljava/util/zip/DeflaterOutputStream;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nonnull;"
+              }
+            ]
+          },
+          {
+            "nme": "getThreadCount",
+            "acc": 10,
+            "dsc": "(Ljava/util/concurrent/ExecutorService;)I",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nonnegative;"
+              }
+            ]
+          },
+          {
+            "nme": "<init>",
+            "acc": 131073,
+            "dsc": "(Ljava/io/OutputStream;Ljava/util/concurrent/ExecutorService;I)V",
+            "exs": [
+              "java/io/IOException"
+            ],
+            "vanns": [
+              {
+                "dsc": "Ljava/lang/Deprecated;"
+              }
+            ]
+          },
+          {
+            "nme": "<init>",
+            "acc": 131073,
+            "dsc": "(Ljava/io/OutputStream;I)V",
+            "exs": [
+              "java/io/IOException"
+            ],
+            "vanns": [
+              {
+                "dsc": "Ljava/lang/Deprecated;"
+              }
+            ]
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/io/OutputStream;Ljava/util/concurrent/ExecutorService;)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Ljava/io/OutputStream;)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "writeHeader",
+            "acc": 2,
+            "dsc": "()V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "write",
+            "acc": 1,
+            "dsc": "(I)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "write",
+            "acc": 1,
+            "dsc": "([B)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "write",
+            "acc": 1,
+            "dsc": "([BII)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "submit",
+            "acc": 2,
+            "dsc": "()V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "tryEmit",
+            "acc": 2,
+            "dsc": "()V",
+            "exs": [
+              "java/io/IOException",
+              "java/lang/InterruptedException",
+              "java/util/concurrent/ExecutionException"
+            ]
+          },
+          {
+            "nme": "emitUntil",
+            "acc": 2,
+            "dsc": "(I)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "flush",
+            "acc": 1,
+            "dsc": "()V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "close",
+            "acc": 1,
+            "dsc": "()V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          },
+          {
+            "nme": "access$000",
+            "acc": 4104,
+            "dsc": "()Ljava/util/zip/Deflater;"
+          },
+          {
+            "nme": "access$100",
+            "acc": 4104,
+            "dsc": "(Ljava/io/OutputStream;Ljava/util/zip/Deflater;)Ljava/util/zip/DeflaterOutputStream;"
+          },
+          {
+            "nme": "access$300",
+            "acc": 4104,
+            "dsc": "()Ljava/lang/ThreadLocal;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "GZIP_MAGIC",
+            "dsc": "I",
+            "val": 35615
+          },
+          {
+            "acc": 26,
+            "nme": "SIZE",
+            "dsc": "I",
+            "val": 65536
+          },
+          {
+            "acc": 26,
+            "nme": "STATE",
+            "dsc": "Ljava/lang/ThreadLocal;",
+            "sig": "Ljava/lang/ThreadLocal<Lorg/anarres/parallelgzip/ParallelGZIPOutputStream$State;>;"
+          },
+          {
+            "acc": 18,
+            "nme": "executor",
+            "dsc": "Ljava/util/concurrent/ExecutorService;"
+          },
+          {
+            "acc": 18,
+            "nme": "crc",
+            "dsc": "Ljava/util/zip/CRC32;"
+          },
+          {
+            "acc": 18,
+            "nme": "emitQueueSize",
+            "dsc": "I"
+          },
+          {
+            "acc": 18,
+            "nme": "emitQueue",
+            "dsc": "Ljava/util/concurrent/BlockingQueue;",
+            "sig": "Ljava/util/concurrent/BlockingQueue<Ljava/util/concurrent/Future<Lorg/anarres/parallelgzip/ParallelGZIPOutputStream$Block;>;>;"
+          },
+          {
+            "acc": 2,
+            "nme": "block",
+            "dsc": "Lorg/anarres/parallelgzip/ParallelGZIPOutputStream$Block;"
+          },
+          {
+            "acc": 2,
+            "nme": "freeBlock",
+            "dsc": "Lorg/anarres/parallelgzip/ParallelGZIPOutputStream$Block;"
+          },
+          {
+            "acc": 2,
+            "nme": "bytesWritten",
+            "dsc": "J"
+          }
+        ]
+      },
+      "org/anarres/parallelgzip/ParallelGZIPOutputStream$ByteArrayOutputStreamExposed.class": {
+        "ver": 51,
+        "acc": 32,
+        "nme": "org/anarres/parallelgzip/ParallelGZIPOutputStream$ByteArrayOutputStreamExposed",
+        "super": "java/io/ByteArrayOutputStream",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(I)V"
+          },
+          {
+            "nme": "writeTo",
+            "acc": 1,
+            "dsc": "([B)V",
+            "exs": [
+              "java/io/IOException"
+            ]
+          }
+        ],
+        "flds": []
+      },
+      "org/anarres/parallelgzip/ParallelGZIPEnvironment$ThreadFactoryHolder$1.class": {
+        "ver": 51,
+        "acc": 48,
+        "nme": "org/anarres/parallelgzip/ParallelGZIPEnvironment$ThreadFactoryHolder$1",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "newThread",
+            "acc": 1,
+            "dsc": "(Ljava/lang/Runnable;)Ljava/lang/Thread;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "defaultThreadFactory",
+            "dsc": "Ljava/util/concurrent/ThreadFactory;"
+          },
+          {
+            "acc": 18,
+            "nme": "counter",
+            "dsc": "Ljava/util/concurrent/atomic/AtomicLong;"
+          }
+        ]
+      },
+      "org/anarres/parallelgzip/ParallelGZIPEnvironment$ThreadFactoryHolder.class": {
+        "ver": 51,
+        "acc": 32,
+        "nme": "org/anarres/parallelgzip/ParallelGZIPEnvironment$ThreadFactoryHolder",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "access$000",
+            "acc": 4104,
+            "dsc": "()Ljava/util/concurrent/ThreadFactory;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "THREAD_FACTORY",
+            "dsc": "Ljava/util/concurrent/ThreadFactory;"
+          }
+        ]
+      },
+      "org/anarres/parallelgzip/ParallelGZIPOutputStream$1.class": {
+        "ver": 51,
+        "acc": 48,
+        "nme": "org/anarres/parallelgzip/ParallelGZIPOutputStream$1",
+        "super": "java/lang/ThreadLocal",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "()V"
+          },
+          {
+            "nme": "initialValue",
+            "acc": 4,
+            "dsc": "()Lorg/anarres/parallelgzip/ParallelGZIPOutputStream$State;"
+          },
+          {
+            "nme": "initialValue",
+            "acc": 4164,
+            "dsc": "()Ljava/lang/Object;"
+          }
+        ],
+        "flds": []
+      },
+      "org/anarres/parallelgzip/ParallelGZIPEnvironment.class": {
+        "ver": 51,
+        "acc": 33,
+        "nme": "org/anarres/parallelgzip/ParallelGZIPEnvironment",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "newThreadPoolExecutor",
+            "acc": 9,
+            "dsc": "(I)Ljava/util/concurrent/ThreadPoolExecutor;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nonnull;"
+              }
+            ]
+          },
+          {
+            "nme": "getSharedThreadPool",
+            "acc": 9,
+            "dsc": "()Ljava/util/concurrent/ExecutorService;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nonnull;"
+              }
+            ]
+          }
+        ],
+        "flds": []
+      }
+    }
+  }
+}

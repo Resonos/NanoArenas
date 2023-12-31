@@ -1,0 +1,541 @@
+{
+  "md5": "c50af69b704dc91050efb98e0dff66d1",
+  "sha2": "c85270e307e7b822f1086b93689124b89768e273",
+  "sha256": "f02a95fa1a5e95edb3ed859fd0fb7df709d121a35290eff8b74dce2ab7f4d6ed",
+  "contents": {
+    "classes": {
+      "com/google/j2objc/annotations/Property.class": {
+        "ver": 51,
+        "acc": 9729,
+        "nme": "com/google/j2objc/annotations/Property",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "value",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "SOURCE"
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "FIELD"
+                ]
+              ]
+            ]
+          }
+        ]
+      },
+      "com/google/j2objc/annotations/RetainedWith.class": {
+        "ver": 51,
+        "acc": 9729,
+        "nme": "com/google/j2objc/annotations/RetainedWith",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "FIELD"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "CLASS"
+              ]
+            ]
+          }
+        ]
+      },
+      "com/google/j2objc/annotations/RetainedLocalRef.class": {
+        "ver": 51,
+        "acc": 9729,
+        "nme": "com/google/j2objc/annotations/RetainedLocalRef",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "LOCAL_VARIABLE"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "SOURCE"
+              ]
+            ]
+          }
+        ]
+      },
+      "com/google/j2objc/annotations/J2ObjCIncompatible.class": {
+        "ver": 51,
+        "acc": 9729,
+        "nme": "com/google/j2objc/annotations/J2ObjCIncompatible",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "ANNOTATION_TYPE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "CONSTRUCTOR"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "FIELD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "SOURCE"
+              ]
+            ]
+          }
+        ]
+      },
+      "com/google/j2objc/annotations/OnDealloc.class": {
+        "ver": 51,
+        "acc": 9729,
+        "nme": "com/google/j2objc/annotations/OnDealloc",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "CLASS"
+              ]
+            ]
+          }
+        ]
+      },
+      "com/google/j2objc/annotations/AutoreleasePool.class": {
+        "ver": 51,
+        "acc": 9729,
+        "nme": "com/google/j2objc/annotations/AutoreleasePool",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "LOCAL_VARIABLE"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "SOURCE"
+              ]
+            ]
+          }
+        ]
+      },
+      "com/google/j2objc/annotations/LoopTranslation$LoopStyle.class": {
+        "ver": 51,
+        "acc": 16433,
+        "nme": "com/google/j2objc/annotations/LoopTranslation$LoopStyle",
+        "super": "java/lang/Enum",
+        "mthds": [
+          {
+            "nme": "values",
+            "acc": 9,
+            "dsc": "()[Lcom/google/j2objc/annotations/LoopTranslation$LoopStyle;"
+          },
+          {
+            "nme": "valueOf",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Lcom/google/j2objc/annotations/LoopTranslation$LoopStyle;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;I)V",
+            "sig": "()V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 16409,
+            "nme": "JAVA_ITERATOR",
+            "dsc": "Lcom/google/j2objc/annotations/LoopTranslation$LoopStyle;"
+          },
+          {
+            "acc": 16409,
+            "nme": "FAST_ENUMERATION",
+            "dsc": "Lcom/google/j2objc/annotations/LoopTranslation$LoopStyle;"
+          },
+          {
+            "acc": 4122,
+            "nme": "$VALUES",
+            "dsc": "[Lcom/google/j2objc/annotations/LoopTranslation$LoopStyle;"
+          }
+        ]
+      },
+      "com/google/j2objc/annotations/ReflectionSupport$Level.class": {
+        "ver": 51,
+        "acc": 16433,
+        "nme": "com/google/j2objc/annotations/ReflectionSupport$Level",
+        "super": "java/lang/Enum",
+        "mthds": [
+          {
+            "nme": "values",
+            "acc": 9,
+            "dsc": "()[Lcom/google/j2objc/annotations/ReflectionSupport$Level;"
+          },
+          {
+            "nme": "valueOf",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Lcom/google/j2objc/annotations/ReflectionSupport$Level;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;I)V",
+            "sig": "()V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 16409,
+            "nme": "NATIVE_ONLY",
+            "dsc": "Lcom/google/j2objc/annotations/ReflectionSupport$Level;"
+          },
+          {
+            "acc": 16409,
+            "nme": "FULL",
+            "dsc": "Lcom/google/j2objc/annotations/ReflectionSupport$Level;"
+          },
+          {
+            "acc": 4122,
+            "nme": "$VALUES",
+            "dsc": "[Lcom/google/j2objc/annotations/ReflectionSupport$Level;"
+          }
+        ]
+      },
+      "com/google/j2objc/annotations/ReflectionSupport.class": {
+        "ver": 51,
+        "acc": 9729,
+        "nme": "com/google/j2objc/annotations/ReflectionSupport",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "value",
+            "acc": 1025,
+            "dsc": "()Lcom/google/j2objc/annotations/ReflectionSupport$Level;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "PACKAGE"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "CLASS"
+              ]
+            ]
+          }
+        ]
+      },
+      "com/google/j2objc/annotations/Weak.class": {
+        "ver": 51,
+        "acc": 9729,
+        "nme": "com/google/j2objc/annotations/Weak",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "FIELD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "LOCAL_VARIABLE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "PARAMETER"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "CLASS"
+              ]
+            ]
+          }
+        ]
+      },
+      "com/google/j2objc/annotations/WeakOuter.class": {
+        "ver": 51,
+        "acc": 9729,
+        "nme": "com/google/j2objc/annotations/WeakOuter",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE_USE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "LOCAL_VARIABLE"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "SOURCE"
+              ]
+            ]
+          }
+        ]
+      },
+      "com/google/j2objc/annotations/ObjectiveCName.class": {
+        "ver": 51,
+        "acc": 9729,
+        "nme": "com/google/j2objc/annotations/ObjectiveCName",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "value",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Documented;"
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "TYPE"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "METHOD"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "CONSTRUCTOR"
+                ],
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "PACKAGE"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "CLASS"
+              ]
+            ]
+          }
+        ]
+      },
+      "com/google/j2objc/annotations/LoopTranslation.class": {
+        "ver": 51,
+        "acc": 9729,
+        "nme": "com/google/j2objc/annotations/LoopTranslation",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "value",
+            "acc": 1025,
+            "dsc": "()Lcom/google/j2objc/annotations/LoopTranslation$LoopStyle;"
+          }
+        ],
+        "flds": [],
+        "vanns": [
+          {
+            "dsc": "Ljava/lang/annotation/Target;",
+            "vals": [
+              "value",
+              [
+                [
+                  "Ljava/lang/annotation/ElementType;",
+                  "LOCAL_VARIABLE"
+                ]
+              ]
+            ]
+          },
+          {
+            "dsc": "Ljava/lang/annotation/Retention;",
+            "vals": [
+              "value",
+              [
+                "Ljava/lang/annotation/RetentionPolicy;",
+                "SOURCE"
+              ]
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

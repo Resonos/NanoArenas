@@ -1,0 +1,515 @@
+{
+  "md5": "03b5ce78bb51c0180613999733e20c1d",
+  "sha2": "d588fe8f5c7bb31d1f0e403eff07c2b4568e71f5",
+  "sha256": "33e9ad5c9649a896084f654f5405ef776e79555f8658ba107a9db445a299df4a",
+  "contents": {
+    "classes": {
+      "org/incendo/serverlib/ServerLib.class": {
+        "ver": 52,
+        "acc": 49,
+        "nme": "org/incendo/serverlib/ServerLib",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Ljava/util/Collection;)V",
+            "sig": "(Ljava/util/Collection<Lorg/incendo/serverlib/Check;>;)V"
+          },
+          {
+            "nme": "builder",
+            "acc": 9,
+            "dsc": "()Lorg/incendo/serverlib/ServerLib$Builder;"
+          },
+          {
+            "nme": "checkUnsafeForks",
+            "acc": 9,
+            "dsc": "()V"
+          },
+          {
+            "nme": "checkJavaLTS",
+            "acc": 131081,
+            "dsc": "()V",
+            "vanns": [
+              {
+                "dsc": "Ljava/lang/Deprecated;"
+              }
+            ]
+          },
+          {
+            "nme": "isJavaSixteen",
+            "acc": 9,
+            "dsc": "()V"
+          },
+          {
+            "nme": "checkJavaMinor",
+            "acc": 131081,
+            "dsc": "()V",
+            "vanns": [
+              {
+                "dsc": "Ljava/lang/Deprecated;"
+              }
+            ]
+          },
+          {
+            "nme": "isJavaFifteen",
+            "acc": 9,
+            "dsc": "()V"
+          },
+          {
+            "nme": "runChecks",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 4096,
+            "dsc": "(Ljava/util/Collection;Lorg/incendo/serverlib/ServerLib$1;)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "checks",
+            "dsc": "Ljava/util/Collection;",
+            "sig": "Ljava/util/Collection<Lorg/incendo/serverlib/Check;>;"
+          }
+        ]
+      },
+      "org/incendo/serverlib/Check.class": {
+        "ver": 52,
+        "acc": 1057,
+        "nme": "org/incendo/serverlib/Check",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(Lorg/incendo/serverlib/CheckType;)V"
+          },
+          {
+            "nme": "type",
+            "acc": 17,
+            "dsc": "()Lorg/incendo/serverlib/CheckType;"
+          },
+          {
+            "nme": "shouldFlag",
+            "acc": 1025,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "explain",
+            "acc": 1025,
+            "dsc": "()[Ljava/lang/String;"
+          },
+          {
+            "nme": "printExplanation",
+            "acc": 17,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "EXPLANATION_BORDER",
+            "dsc": "Ljava/lang/String;",
+            "val": "************************************************************"
+          },
+          {
+            "acc": 18,
+            "nme": "type",
+            "dsc": "Lorg/incendo/serverlib/CheckType;"
+          }
+        ]
+      },
+      "org/incendo/serverlib/forks/Yatopia.class": {
+        "ver": 52,
+        "acc": 49,
+        "nme": "org/incendo/serverlib/forks/Yatopia",
+        "super": "org/incendo/serverlib/PackagePresenceCheck",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "explain",
+            "acc": 1,
+            "dsc": "()[Ljava/lang/String;"
+          }
+        ],
+        "flds": []
+      },
+      "org/incendo/serverlib/forks/Akarin.class": {
+        "ver": 52,
+        "acc": 49,
+        "nme": "org/incendo/serverlib/forks/Akarin",
+        "super": "org/incendo/serverlib/ClassPresenceCheck",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "explain",
+            "acc": 1,
+            "dsc": "()[Ljava/lang/String;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "AKARAIN_CONFIG",
+            "dsc": "Ljava/lang/String;",
+            "val": "io.akarin.server.Config"
+          }
+        ]
+      },
+      "org/incendo/serverlib/forks/KibblePatcher.class": {
+        "ver": 52,
+        "acc": 49,
+        "nme": "org/incendo/serverlib/forks/KibblePatcher",
+        "super": "org/incendo/serverlib/ClassPresenceCheck",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "explain",
+            "acc": 1,
+            "dsc": "()[Ljava/lang/String;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "FAST_MATH",
+            "dsc": "Ljava/lang/String;",
+            "val": "net.kibblelands.server.FastMath"
+          }
+        ]
+      },
+      "org/incendo/serverlib/util/JavaVersionCheck.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "org/incendo/serverlib/util/JavaVersionCheck",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "javaVersion",
+            "acc": 10,
+            "dsc": "()I"
+          },
+          {
+            "nme": "checkJavaSixteen",
+            "acc": 9,
+            "dsc": "()V"
+          },
+          {
+            "nme": "checkJavaFifteen",
+            "acc": 9,
+            "dsc": "()V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "logger",
+            "dsc": "Ljava/util/logging/Logger;"
+          }
+        ]
+      },
+      "org/incendo/serverlib/ServerLib$Builder.class": {
+        "ver": 52,
+        "acc": 49,
+        "nme": "org/incendo/serverlib/ServerLib$Builder",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Ljava/util/Collection;)V",
+            "sig": "(Ljava/util/Collection<Lorg/incendo/serverlib/Check;>;)V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "withCheck",
+            "acc": 1,
+            "dsc": "(Lorg/incendo/serverlib/Check;)Lorg/incendo/serverlib/ServerLib$Builder;"
+          },
+          {
+            "nme": "build",
+            "acc": 1,
+            "dsc": "()Lorg/incendo/serverlib/ServerLib;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 4096,
+            "dsc": "(Lorg/incendo/serverlib/ServerLib$1;)V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "checks",
+            "dsc": "Ljava/util/Collection;",
+            "sig": "Ljava/util/Collection<Lorg/incendo/serverlib/Check;>;"
+          }
+        ]
+      },
+      "org/incendo/serverlib/CheckType.class": {
+        "ver": 52,
+        "acc": 16433,
+        "nme": "org/incendo/serverlib/CheckType",
+        "super": "java/lang/Enum",
+        "mthds": [
+          {
+            "nme": "values",
+            "acc": 9,
+            "dsc": "()[Lorg/incendo/serverlib/CheckType;"
+          },
+          {
+            "nme": "valueOf",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Lorg/incendo/serverlib/CheckType;"
+          },
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "(Ljava/lang/String;I)V",
+            "sig": "()V"
+          },
+          {
+            "nme": "$values",
+            "acc": 4106,
+            "dsc": "()[Lorg/incendo/serverlib/CheckType;"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 16409,
+            "nme": "UNSAFE_FORK",
+            "dsc": "Lorg/incendo/serverlib/CheckType;"
+          },
+          {
+            "acc": 16409,
+            "nme": "MODDED_HYBRID",
+            "dsc": "Lorg/incendo/serverlib/CheckType;"
+          },
+          {
+            "acc": 4122,
+            "nme": "$VALUES",
+            "dsc": "[Lorg/incendo/serverlib/CheckType;"
+          }
+        ]
+      },
+      "org/incendo/serverlib/ServerLib$1.class": {
+        "ver": 52,
+        "acc": 4128,
+        "nme": "org/incendo/serverlib/ServerLib$1",
+        "super": "java/lang/Object",
+        "mthds": [],
+        "flds": []
+      },
+      "org/incendo/serverlib/util/PackageChecker.class": {
+        "ver": 52,
+        "acc": 49,
+        "nme": "org/incendo/serverlib/util/PackageChecker",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "handleResource",
+            "acc": 10,
+            "dsc": "(Lcom/google/common/collect/ImmutableSet$Builder;Ljava/lang/String;)V",
+            "sig": "(Lcom/google/common/collect/ImmutableSet$Builder<Ljava/lang/String;>;Ljava/lang/String;)V"
+          },
+          {
+            "nme": "packageExists",
+            "acc": 9,
+            "dsc": "(Ljava/lang/String;)Z"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "LOGGER",
+            "dsc": "Ljava/util/logging/Logger;"
+          },
+          {
+            "acc": 26,
+            "nme": "CLASS_EXTENSION",
+            "dsc": "Ljava/lang/String;",
+            "val": ".class"
+          },
+          {
+            "acc": 26,
+            "nme": "KNOWN_ENTRIES",
+            "dsc": "Ljava/util/Set;",
+            "sig": "Ljava/util/Set<Ljava/lang/String;>;"
+          }
+        ]
+      },
+      "org/incendo/serverlib/PackagePresenceCheck.class": {
+        "ver": 52,
+        "acc": 1057,
+        "nme": "org/incendo/serverlib/PackagePresenceCheck",
+        "super": "org/incendo/serverlib/Check",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 129,
+            "dsc": "(Lorg/incendo/serverlib/CheckType;[Ljava/lang/String;)V"
+          },
+          {
+            "nme": "shouldFlag",
+            "acc": 1,
+            "dsc": "()Z"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "illegalPackages",
+            "dsc": "[Ljava/lang/String;"
+          }
+        ]
+      },
+      "org/incendo/serverlib/forks/Sugarcane.class": {
+        "ver": 52,
+        "acc": 49,
+        "nme": "org/incendo/serverlib/forks/Sugarcane",
+        "super": "org/incendo/serverlib/ClassPresenceCheck",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "explain",
+            "acc": 1,
+            "dsc": "()[Ljava/lang/String;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "SUGARCANE_CONFIG",
+            "dsc": "Ljava/lang/String;",
+            "val": "org.sugarcanemc.sugarcane.config.SugarcaneConfig"
+          }
+        ]
+      },
+      "org/incendo/serverlib/ClassPresenceCheck.class": {
+        "ver": 52,
+        "acc": 1057,
+        "nme": "org/incendo/serverlib/ClassPresenceCheck",
+        "super": "org/incendo/serverlib/Check",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 129,
+            "dsc": "(Lorg/incendo/serverlib/CheckType;[Ljava/lang/String;)V"
+          },
+          {
+            "nme": "shouldFlag",
+            "acc": 1,
+            "dsc": "()Z"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "illegalClasses",
+            "dsc": "[Ljava/lang/String;"
+          }
+        ]
+      },
+      "org/incendo/serverlib/hybrids/Fabric.class": {
+        "ver": 52,
+        "acc": 49,
+        "nme": "org/incendo/serverlib/hybrids/Fabric",
+        "super": "org/incendo/serverlib/ClassPresenceCheck",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "explain",
+            "acc": 1,
+            "dsc": "()[Ljava/lang/String;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "KNOT_SERVER",
+            "dsc": "Ljava/lang/String;",
+            "val": "net.fabricmc.loader.launch.knot.KnotServer"
+          }
+        ]
+      },
+      "org/incendo/serverlib/hybrids/Forge.class": {
+        "ver": 52,
+        "acc": 49,
+        "nme": "org/incendo/serverlib/hybrids/Forge",
+        "super": "org/incendo/serverlib/ClassPresenceCheck",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "explain",
+            "acc": 1,
+            "dsc": "()[Ljava/lang/String;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 26,
+            "nme": "MINECRAFT_FORGE",
+            "dsc": "Ljava/lang/String;",
+            "val": "net.fabricmc.loader.launch.knot.KnotServer"
+          }
+        ]
+      }
+    }
+  }
+}

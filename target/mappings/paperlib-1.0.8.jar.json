@@ -1,0 +1,965 @@
+{
+  "md5": "eae4226e20f2ee381cca76b12fd6c94f",
+  "sha2": "3d2cc3de7c5a0bd7bc4019feca3b3384f156ffc1",
+  "sha256": "63916eda827d2f24da8705a21c5584c28c38adb9b111b537bf4ffc0a2bc6a443",
+  "contents": {
+    "classes": {
+      "io/papermc/lib/features/chunkisgenerated/ChunkIsGeneratedApiExists.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "io/papermc/lib/features/chunkisgenerated/ChunkIsGeneratedApiExists",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "isChunkGenerated",
+            "acc": 1,
+            "dsc": "(Lorg/bukkit/World;II)Z"
+          }
+        ],
+        "flds": []
+      },
+      "io/papermc/lib/features/blockstatesnapshot/BlockStateSnapshotOptionalSnapshots.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "io/papermc/lib/features/blockstatesnapshot/BlockStateSnapshotOptionalSnapshots",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "getBlockState",
+            "acc": 1,
+            "dsc": "(Lorg/bukkit/block/Block;Z)Lio/papermc/lib/features/blockstatesnapshot/BlockStateSnapshotResult;"
+          }
+        ],
+        "flds": []
+      },
+      "io/papermc/lib/features/chunkisgenerated/ChunkIsGenerated.class": {
+        "ver": 52,
+        "acc": 1537,
+        "nme": "io/papermc/lib/features/chunkisgenerated/ChunkIsGenerated",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "isChunkGenerated",
+            "acc": 1025,
+            "dsc": "(Lorg/bukkit/World;II)Z"
+          }
+        ],
+        "flds": []
+      },
+      "io/papermc/lib/features/inventoryholdersnapshot/InventoryHolderSnapshotNoOption.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "io/papermc/lib/features/inventoryholdersnapshot/InventoryHolderSnapshotNoOption",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "getHolder",
+            "acc": 1,
+            "dsc": "(Lorg/bukkit/inventory/Inventory;Z)Lio/papermc/lib/features/inventoryholdersnapshot/InventoryHolderSnapshotResult;"
+          }
+        ],
+        "flds": []
+      },
+      "io/papermc/lib/features/asyncchunks/AsyncChunksSync.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "io/papermc/lib/features/asyncchunks/AsyncChunksSync",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "getChunkAtAsync",
+            "acc": 1,
+            "dsc": "(Lorg/bukkit/World;IIZZ)Ljava/util/concurrent/CompletableFuture;",
+            "sig": "(Lorg/bukkit/World;IIZZ)Ljava/util/concurrent/CompletableFuture<Lorg/bukkit/Chunk;>;"
+          }
+        ],
+        "flds": []
+      },
+      "io/papermc/lib/environments/CraftBukkitEnvironment.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "io/papermc/lib/environments/CraftBukkitEnvironment",
+        "super": "io/papermc/lib/environments/Environment",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "getName",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          }
+        ],
+        "flds": []
+      },
+      "io/papermc/lib/features/bedspawnlocation/BedSpawnLocationSync.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "io/papermc/lib/features/bedspawnlocation/BedSpawnLocationSync",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "getBedSpawnLocationAsync",
+            "acc": 1,
+            "dsc": "(Lorg/bukkit/entity/Player;Z)Ljava/util/concurrent/CompletableFuture;",
+            "sig": "(Lorg/bukkit/entity/Player;Z)Ljava/util/concurrent/CompletableFuture<Lorg/bukkit/Location;>;"
+          }
+        ],
+        "flds": []
+      },
+      "io/papermc/lib/features/blockstatesnapshot/BlockStateSnapshot.class": {
+        "ver": 52,
+        "acc": 1537,
+        "nme": "io/papermc/lib/features/blockstatesnapshot/BlockStateSnapshot",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "getBlockState",
+            "acc": 1025,
+            "dsc": "(Lorg/bukkit/block/Block;Z)Lio/papermc/lib/features/blockstatesnapshot/BlockStateSnapshotResult;"
+          }
+        ],
+        "flds": []
+      },
+      "io/papermc/lib/features/blockstatesnapshot/BlockStateSnapshotResult.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "io/papermc/lib/features/blockstatesnapshot/BlockStateSnapshotResult",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(ZLorg/bukkit/block/BlockState;)V"
+          },
+          {
+            "nme": "isSnapshot",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "getState",
+            "acc": 1,
+            "dsc": "()Lorg/bukkit/block/BlockState;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "isSnapshot",
+            "dsc": "Z"
+          },
+          {
+            "acc": 18,
+            "nme": "state",
+            "dsc": "Lorg/bukkit/block/BlockState;"
+          }
+        ]
+      },
+      "io/papermc/lib/features/asyncchunks/AsyncChunks.class": {
+        "ver": 52,
+        "acc": 1537,
+        "nme": "io/papermc/lib/features/asyncchunks/AsyncChunks",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "getChunkAtAsync",
+            "acc": 1,
+            "dsc": "(Lorg/bukkit/World;IIZ)Ljava/util/concurrent/CompletableFuture;",
+            "sig": "(Lorg/bukkit/World;IIZ)Ljava/util/concurrent/CompletableFuture<Lorg/bukkit/Chunk;>;"
+          },
+          {
+            "nme": "getChunkAtAsync",
+            "acc": 1025,
+            "dsc": "(Lorg/bukkit/World;IIZZ)Ljava/util/concurrent/CompletableFuture;",
+            "sig": "(Lorg/bukkit/World;IIZZ)Ljava/util/concurrent/CompletableFuture<Lorg/bukkit/Chunk;>;"
+          }
+        ],
+        "flds": []
+      },
+      "io/papermc/lib/features/bedspawnlocation/BedSpawnLocationPaper.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "io/papermc/lib/features/bedspawnlocation/BedSpawnLocationPaper",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "getBedSpawnLocationAsync",
+            "acc": 1,
+            "dsc": "(Lorg/bukkit/entity/Player;Z)Ljava/util/concurrent/CompletableFuture;",
+            "sig": "(Lorg/bukkit/entity/Player;Z)Ljava/util/concurrent/CompletableFuture<Lorg/bukkit/Location;>;"
+          },
+          {
+            "nme": "lambda$getBedSpawnLocationAsync$0",
+            "acc": 4106,
+            "dsc": "(Lorg/bukkit/entity/Player;Lorg/bukkit/Chunk;)Ljava/util/concurrent/CompletionStage;"
+          }
+        ],
+        "flds": []
+      },
+      "io/papermc/lib/features/asyncteleport/AsyncTeleportPaper_13.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "io/papermc/lib/features/asyncteleport/AsyncTeleportPaper_13",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "teleportAsync",
+            "acc": 1,
+            "dsc": "(Lorg/bukkit/entity/Entity;Lorg/bukkit/Location;Lorg/bukkit/event/player/PlayerTeleportEvent$TeleportCause;)Ljava/util/concurrent/CompletableFuture;",
+            "sig": "(Lorg/bukkit/entity/Entity;Lorg/bukkit/Location;Lorg/bukkit/event/player/PlayerTeleportEvent$TeleportCause;)Ljava/util/concurrent/CompletableFuture<Ljava/lang/Boolean;>;"
+          }
+        ],
+        "flds": []
+      },
+      "io/papermc/lib/features/inventoryholdersnapshot/InventoryHolderSnapshotResult.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "io/papermc/lib/features/inventoryholdersnapshot/InventoryHolderSnapshotResult",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "(ZLorg/bukkit/inventory/InventoryHolder;)V"
+          },
+          {
+            "nme": "isSnapshot",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "getHolder",
+            "acc": 1,
+            "dsc": "()Lorg/bukkit/inventory/InventoryHolder;"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "isSnapshot",
+            "dsc": "Z"
+          },
+          {
+            "acc": 18,
+            "nme": "holder",
+            "dsc": "Lorg/bukkit/inventory/InventoryHolder;"
+          }
+        ]
+      },
+      "io/papermc/lib/features/blockstatesnapshot/BlockStateSnapshotBeforeSnapshots.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "io/papermc/lib/features/blockstatesnapshot/BlockStateSnapshotBeforeSnapshots",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "getBlockState",
+            "acc": 1,
+            "dsc": "(Lorg/bukkit/block/Block;Z)Lio/papermc/lib/features/blockstatesnapshot/BlockStateSnapshotResult;"
+          }
+        ],
+        "flds": []
+      },
+      "io/papermc/lib/features/inventoryholdersnapshot/InventoryHolderSnapshotBeforeSnapshots.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "io/papermc/lib/features/inventoryholdersnapshot/InventoryHolderSnapshotBeforeSnapshots",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "getHolder",
+            "acc": 1,
+            "dsc": "(Lorg/bukkit/inventory/Inventory;Z)Lio/papermc/lib/features/inventoryholdersnapshot/InventoryHolderSnapshotResult;"
+          }
+        ],
+        "flds": []
+      },
+      "io/papermc/lib/features/asyncteleport/AsyncTeleportPaper.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "io/papermc/lib/features/asyncteleport/AsyncTeleportPaper",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "teleportAsync",
+            "acc": 1,
+            "dsc": "(Lorg/bukkit/entity/Entity;Lorg/bukkit/Location;Lorg/bukkit/event/player/PlayerTeleportEvent$TeleportCause;)Ljava/util/concurrent/CompletableFuture;",
+            "sig": "(Lorg/bukkit/entity/Entity;Lorg/bukkit/Location;Lorg/bukkit/event/player/PlayerTeleportEvent$TeleportCause;)Ljava/util/concurrent/CompletableFuture<Ljava/lang/Boolean;>;"
+          },
+          {
+            "nme": "lambda$teleportAsync$0",
+            "acc": 4106,
+            "dsc": "(Lorg/bukkit/entity/Entity;Lorg/bukkit/Location;Lorg/bukkit/event/player/PlayerTeleportEvent$TeleportCause;Lorg/bukkit/Chunk;)Ljava/lang/Boolean;"
+          }
+        ],
+        "flds": []
+      },
+      "io/papermc/lib/features/inventoryholdersnapshot/InventoryHolderSnapshot.class": {
+        "ver": 52,
+        "acc": 1537,
+        "nme": "io/papermc/lib/features/inventoryholdersnapshot/InventoryHolderSnapshot",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "getHolder",
+            "acc": 1025,
+            "dsc": "(Lorg/bukkit/inventory/Inventory;Z)Lio/papermc/lib/features/inventoryholdersnapshot/InventoryHolderSnapshotResult;"
+          }
+        ],
+        "flds": []
+      },
+      "io/papermc/lib/features/asyncteleport/AsyncTeleport.class": {
+        "ver": 52,
+        "acc": 1537,
+        "nme": "io/papermc/lib/features/asyncteleport/AsyncTeleport",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "teleportAsync",
+            "acc": 1025,
+            "dsc": "(Lorg/bukkit/entity/Entity;Lorg/bukkit/Location;Lorg/bukkit/event/player/PlayerTeleportEvent$TeleportCause;)Ljava/util/concurrent/CompletableFuture;",
+            "sig": "(Lorg/bukkit/entity/Entity;Lorg/bukkit/Location;Lorg/bukkit/event/player/PlayerTeleportEvent$TeleportCause;)Ljava/util/concurrent/CompletableFuture<Ljava/lang/Boolean;>;"
+          }
+        ],
+        "flds": []
+      },
+      "io/papermc/lib/features/asyncchunks/AsyncChunksPaper_13.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "io/papermc/lib/features/asyncchunks/AsyncChunksPaper_13",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "getChunkAtAsync",
+            "acc": 1,
+            "dsc": "(Lorg/bukkit/World;IIZZ)Ljava/util/concurrent/CompletableFuture;",
+            "sig": "(Lorg/bukkit/World;IIZZ)Ljava/util/concurrent/CompletableFuture<Lorg/bukkit/Chunk;>;"
+          }
+        ],
+        "flds": []
+      },
+      "io/papermc/lib/features/chunkisgenerated/ChunkIsGeneratedUnknown.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "io/papermc/lib/features/chunkisgenerated/ChunkIsGeneratedUnknown",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "isChunkGenerated",
+            "acc": 1,
+            "dsc": "(Lorg/bukkit/World;II)Z"
+          }
+        ],
+        "flds": []
+      },
+      "io/papermc/lib/environments/SpigotEnvironment.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "io/papermc/lib/environments/SpigotEnvironment",
+        "super": "io/papermc/lib/environments/CraftBukkitEnvironment",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "getName",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "isSpigot",
+            "acc": 1,
+            "dsc": "()Z"
+          }
+        ],
+        "flds": []
+      },
+      "io/papermc/lib/features/blockstatesnapshot/BlockStateSnapshotNoOption.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "io/papermc/lib/features/blockstatesnapshot/BlockStateSnapshotNoOption",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "getBlockState",
+            "acc": 1,
+            "dsc": "(Lorg/bukkit/block/Block;Z)Lio/papermc/lib/features/blockstatesnapshot/BlockStateSnapshotResult;"
+          }
+        ],
+        "flds": []
+      },
+      "io/papermc/lib/features/bedspawnlocation/BedSpawnLocation.class": {
+        "ver": 52,
+        "acc": 1537,
+        "nme": "io/papermc/lib/features/bedspawnlocation/BedSpawnLocation",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "getBedSpawnLocationAsync",
+            "acc": 1025,
+            "dsc": "(Lorg/bukkit/entity/Player;Z)Ljava/util/concurrent/CompletableFuture;",
+            "sig": "(Lorg/bukkit/entity/Player;Z)Ljava/util/concurrent/CompletableFuture<Lorg/bukkit/Location;>;"
+          }
+        ],
+        "flds": []
+      },
+      "io/papermc/lib/environments/Environment.class": {
+        "ver": 52,
+        "acc": 1057,
+        "nme": "io/papermc/lib/environments/Environment",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "<init>",
+            "acc": 0,
+            "dsc": "(Ljava/lang/String;)V"
+          },
+          {
+            "nme": "getName",
+            "acc": 1025,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "getChunkAtAsync",
+            "acc": 1,
+            "dsc": "(Lorg/bukkit/World;IIZ)Ljava/util/concurrent/CompletableFuture;",
+            "sig": "(Lorg/bukkit/World;IIZ)Ljava/util/concurrent/CompletableFuture<Lorg/bukkit/Chunk;>;"
+          },
+          {
+            "nme": "getChunkAtAsync",
+            "acc": 1,
+            "dsc": "(Lorg/bukkit/World;IIZZ)Ljava/util/concurrent/CompletableFuture;",
+            "sig": "(Lorg/bukkit/World;IIZZ)Ljava/util/concurrent/CompletableFuture<Lorg/bukkit/Chunk;>;"
+          },
+          {
+            "nme": "getChunkAtAsyncUrgently",
+            "acc": 1,
+            "dsc": "(Lorg/bukkit/World;IIZ)Ljava/util/concurrent/CompletableFuture;",
+            "sig": "(Lorg/bukkit/World;IIZ)Ljava/util/concurrent/CompletableFuture<Lorg/bukkit/Chunk;>;"
+          },
+          {
+            "nme": "teleport",
+            "acc": 1,
+            "dsc": "(Lorg/bukkit/entity/Entity;Lorg/bukkit/Location;Lorg/bukkit/event/player/PlayerTeleportEvent$TeleportCause;)Ljava/util/concurrent/CompletableFuture;",
+            "sig": "(Lorg/bukkit/entity/Entity;Lorg/bukkit/Location;Lorg/bukkit/event/player/PlayerTeleportEvent$TeleportCause;)Ljava/util/concurrent/CompletableFuture<Ljava/lang/Boolean;>;"
+          },
+          {
+            "nme": "isChunkGenerated",
+            "acc": 1,
+            "dsc": "(Lorg/bukkit/World;II)Z"
+          },
+          {
+            "nme": "getBlockState",
+            "acc": 1,
+            "dsc": "(Lorg/bukkit/block/Block;Z)Lio/papermc/lib/features/blockstatesnapshot/BlockStateSnapshotResult;"
+          },
+          {
+            "nme": "getHolder",
+            "acc": 1,
+            "dsc": "(Lorg/bukkit/inventory/Inventory;Z)Lio/papermc/lib/features/inventoryholdersnapshot/InventoryHolderSnapshotResult;"
+          },
+          {
+            "nme": "getBedSpawnLocationAsync",
+            "acc": 1,
+            "dsc": "(Lorg/bukkit/entity/Player;Z)Ljava/util/concurrent/CompletableFuture;",
+            "sig": "(Lorg/bukkit/entity/Player;Z)Ljava/util/concurrent/CompletableFuture<Lorg/bukkit/Location;>;"
+          },
+          {
+            "nme": "isVersion",
+            "acc": 1,
+            "dsc": "(I)Z"
+          },
+          {
+            "nme": "isVersion",
+            "acc": 1,
+            "dsc": "(II)Z"
+          },
+          {
+            "nme": "getMinecraftVersion",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "getMinecraftPatchVersion",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "getMinecraftPreReleaseVersion",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "getMinecraftReleaseCandidateVersion",
+            "acc": 1,
+            "dsc": "()I"
+          },
+          {
+            "nme": "isSpigot",
+            "acc": 1,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "isPaper",
+            "acc": 1,
+            "dsc": "()Z"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 18,
+            "nme": "minecraftVersion",
+            "dsc": "I"
+          },
+          {
+            "acc": 18,
+            "nme": "minecraftPatchVersion",
+            "dsc": "I"
+          },
+          {
+            "acc": 18,
+            "nme": "minecraftPreReleaseVersion",
+            "dsc": "I"
+          },
+          {
+            "acc": 18,
+            "nme": "minecraftReleaseCandidateVersion",
+            "dsc": "I"
+          },
+          {
+            "acc": 4,
+            "nme": "asyncChunksHandler",
+            "dsc": "Lio/papermc/lib/features/asyncchunks/AsyncChunks;"
+          },
+          {
+            "acc": 4,
+            "nme": "asyncTeleportHandler",
+            "dsc": "Lio/papermc/lib/features/asyncteleport/AsyncTeleport;"
+          },
+          {
+            "acc": 4,
+            "nme": "isGeneratedHandler",
+            "dsc": "Lio/papermc/lib/features/chunkisgenerated/ChunkIsGenerated;"
+          },
+          {
+            "acc": 4,
+            "nme": "blockStateSnapshotHandler",
+            "dsc": "Lio/papermc/lib/features/blockstatesnapshot/BlockStateSnapshot;"
+          },
+          {
+            "acc": 4,
+            "nme": "inventoryHolderSnapshotHandler",
+            "dsc": "Lio/papermc/lib/features/inventoryholdersnapshot/InventoryHolderSnapshot;"
+          },
+          {
+            "acc": 4,
+            "nme": "bedSpawnLocationHandler",
+            "dsc": "Lio/papermc/lib/features/bedspawnlocation/BedSpawnLocation;"
+          }
+        ]
+      },
+      "io/papermc/lib/features/asyncteleport/AsyncTeleportSync.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "io/papermc/lib/features/asyncteleport/AsyncTeleportSync",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "teleportAsync",
+            "acc": 1,
+            "dsc": "(Lorg/bukkit/entity/Entity;Lorg/bukkit/Location;Lorg/bukkit/event/player/PlayerTeleportEvent$TeleportCause;)Ljava/util/concurrent/CompletableFuture;",
+            "sig": "(Lorg/bukkit/entity/Entity;Lorg/bukkit/Location;Lorg/bukkit/event/player/PlayerTeleportEvent$TeleportCause;)Ljava/util/concurrent/CompletableFuture<Ljava/lang/Boolean;>;"
+          }
+        ],
+        "flds": []
+      },
+      "io/papermc/lib/features/asyncchunks/AsyncChunksPaper_9_12.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "io/papermc/lib/features/asyncchunks/AsyncChunksPaper_9_12",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "getChunkAtAsync",
+            "acc": 1,
+            "dsc": "(Lorg/bukkit/World;IIZZ)Ljava/util/concurrent/CompletableFuture;",
+            "sig": "(Lorg/bukkit/World;IIZZ)Ljava/util/concurrent/CompletableFuture<Lorg/bukkit/Chunk;>;"
+          }
+        ],
+        "flds": []
+      },
+      "io/papermc/lib/features/inventoryholdersnapshot/InventoryHolderSnapshotOptionalSnapshots.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "io/papermc/lib/features/inventoryholdersnapshot/InventoryHolderSnapshotOptionalSnapshots",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "getHolder",
+            "acc": 1,
+            "dsc": "(Lorg/bukkit/inventory/Inventory;Z)Lio/papermc/lib/features/inventoryholdersnapshot/InventoryHolderSnapshotResult;"
+          }
+        ],
+        "flds": []
+      },
+      "io/papermc/lib/features/asyncchunks/AsyncChunksPaper_15.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "io/papermc/lib/features/asyncchunks/AsyncChunksPaper_15",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "getChunkAtAsync",
+            "acc": 1,
+            "dsc": "(Lorg/bukkit/World;IIZZ)Ljava/util/concurrent/CompletableFuture;",
+            "sig": "(Lorg/bukkit/World;IIZZ)Ljava/util/concurrent/CompletableFuture<Lorg/bukkit/Chunk;>;"
+          }
+        ],
+        "flds": []
+      },
+      "io/papermc/lib/environments/PaperEnvironment.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "io/papermc/lib/environments/PaperEnvironment",
+        "super": "io/papermc/lib/environments/SpigotEnvironment",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 1,
+            "dsc": "()V"
+          },
+          {
+            "nme": "getName",
+            "acc": 1,
+            "dsc": "()Ljava/lang/String;"
+          },
+          {
+            "nme": "isPaper",
+            "acc": 1,
+            "dsc": "()Z"
+          }
+        ],
+        "flds": []
+      },
+      "io/papermc/lib/PaperLib.class": {
+        "ver": 52,
+        "acc": 33,
+        "nme": "io/papermc/lib/PaperLib",
+        "super": "java/lang/Object",
+        "mthds": [
+          {
+            "nme": "<init>",
+            "acc": 2,
+            "dsc": "()V"
+          },
+          {
+            "nme": "initialize",
+            "acc": 10,
+            "dsc": "()Lio/papermc/lib/environments/Environment;"
+          },
+          {
+            "nme": "hasClass",
+            "acc": 10,
+            "dsc": "(Ljava/lang/String;)Z"
+          },
+          {
+            "nme": "getEnvironment",
+            "acc": 9,
+            "dsc": "()Lio/papermc/lib/environments/Environment;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nonnull;"
+              }
+            ]
+          },
+          {
+            "nme": "setCustomEnvironment",
+            "acc": 9,
+            "dsc": "(Lio/papermc/lib/environments/Environment;)V"
+          },
+          {
+            "nme": "teleportAsync",
+            "acc": 9,
+            "dsc": "(Lorg/bukkit/entity/Entity;Lorg/bukkit/Location;)Ljava/util/concurrent/CompletableFuture;",
+            "sig": "(Lorg/bukkit/entity/Entity;Lorg/bukkit/Location;)Ljava/util/concurrent/CompletableFuture<Ljava/lang/Boolean;>;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nonnull;"
+              }
+            ]
+          },
+          {
+            "nme": "teleportAsync",
+            "acc": 9,
+            "dsc": "(Lorg/bukkit/entity/Entity;Lorg/bukkit/Location;Lorg/bukkit/event/player/PlayerTeleportEvent$TeleportCause;)Ljava/util/concurrent/CompletableFuture;",
+            "sig": "(Lorg/bukkit/entity/Entity;Lorg/bukkit/Location;Lorg/bukkit/event/player/PlayerTeleportEvent$TeleportCause;)Ljava/util/concurrent/CompletableFuture<Ljava/lang/Boolean;>;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nonnull;"
+              }
+            ]
+          },
+          {
+            "nme": "getChunkAtAsync",
+            "acc": 9,
+            "dsc": "(Lorg/bukkit/Location;)Ljava/util/concurrent/CompletableFuture;",
+            "sig": "(Lorg/bukkit/Location;)Ljava/util/concurrent/CompletableFuture<Lorg/bukkit/Chunk;>;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nonnull;"
+              }
+            ]
+          },
+          {
+            "nme": "getChunkAtAsync",
+            "acc": 9,
+            "dsc": "(Lorg/bukkit/Location;Z)Ljava/util/concurrent/CompletableFuture;",
+            "sig": "(Lorg/bukkit/Location;Z)Ljava/util/concurrent/CompletableFuture<Lorg/bukkit/Chunk;>;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nonnull;"
+              }
+            ]
+          },
+          {
+            "nme": "getChunkAtAsync",
+            "acc": 9,
+            "dsc": "(Lorg/bukkit/World;II)Ljava/util/concurrent/CompletableFuture;",
+            "sig": "(Lorg/bukkit/World;II)Ljava/util/concurrent/CompletableFuture<Lorg/bukkit/Chunk;>;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nonnull;"
+              }
+            ]
+          },
+          {
+            "nme": "getChunkAtAsync",
+            "acc": 9,
+            "dsc": "(Lorg/bukkit/World;IIZ)Ljava/util/concurrent/CompletableFuture;",
+            "sig": "(Lorg/bukkit/World;IIZ)Ljava/util/concurrent/CompletableFuture<Lorg/bukkit/Chunk;>;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nonnull;"
+              }
+            ]
+          },
+          {
+            "nme": "getChunkAtAsync",
+            "acc": 9,
+            "dsc": "(Lorg/bukkit/World;IIZZ)Ljava/util/concurrent/CompletableFuture;",
+            "sig": "(Lorg/bukkit/World;IIZZ)Ljava/util/concurrent/CompletableFuture<Lorg/bukkit/Chunk;>;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nonnull;"
+              }
+            ]
+          },
+          {
+            "nme": "getChunkAtAsyncUrgently",
+            "acc": 9,
+            "dsc": "(Lorg/bukkit/World;IIZ)Ljava/util/concurrent/CompletableFuture;",
+            "sig": "(Lorg/bukkit/World;IIZ)Ljava/util/concurrent/CompletableFuture<Lorg/bukkit/Chunk;>;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nonnull;"
+              }
+            ]
+          },
+          {
+            "nme": "isChunkGenerated",
+            "acc": 9,
+            "dsc": "(Lorg/bukkit/Location;)Z"
+          },
+          {
+            "nme": "isChunkGenerated",
+            "acc": 9,
+            "dsc": "(Lorg/bukkit/World;II)Z"
+          },
+          {
+            "nme": "getBlockState",
+            "acc": 9,
+            "dsc": "(Lorg/bukkit/block/Block;Z)Lio/papermc/lib/features/blockstatesnapshot/BlockStateSnapshotResult;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nonnull;"
+              }
+            ]
+          },
+          {
+            "nme": "getHolder",
+            "acc": 9,
+            "dsc": "(Lorg/bukkit/inventory/Inventory;Z)Lio/papermc/lib/features/inventoryholdersnapshot/InventoryHolderSnapshotResult;",
+            "vanns": [
+              {
+                "dsc": "Ljavax/annotation/Nonnull;"
+              }
+            ]
+          },
+          {
+            "nme": "getBedSpawnLocationAsync",
+            "acc": 9,
+            "dsc": "(Lorg/bukkit/entity/Player;Z)Ljava/util/concurrent/CompletableFuture;",
+            "sig": "(Lorg/bukkit/entity/Player;Z)Ljava/util/concurrent/CompletableFuture<Lorg/bukkit/Location;>;"
+          },
+          {
+            "nme": "isVersion",
+            "acc": 9,
+            "dsc": "(I)Z"
+          },
+          {
+            "nme": "isVersion",
+            "acc": 9,
+            "dsc": "(II)Z"
+          },
+          {
+            "nme": "getMinecraftVersion",
+            "acc": 9,
+            "dsc": "()I"
+          },
+          {
+            "nme": "getMinecraftPatchVersion",
+            "acc": 9,
+            "dsc": "()I"
+          },
+          {
+            "nme": "getMinecraftPreReleaseVersion",
+            "acc": 9,
+            "dsc": "()I"
+          },
+          {
+            "nme": "getMinecraftReleaseCandidateVersion",
+            "acc": 9,
+            "dsc": "()I"
+          },
+          {
+            "nme": "isSpigot",
+            "acc": 9,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "isPaper",
+            "acc": 9,
+            "dsc": "()Z"
+          },
+          {
+            "nme": "suggestPaper",
+            "acc": 9,
+            "dsc": "(Lorg/bukkit/plugin/Plugin;)V"
+          },
+          {
+            "nme": "suggestPaper",
+            "acc": 9,
+            "dsc": "(Lorg/bukkit/plugin/Plugin;Ljava/util/logging/Level;)V"
+          },
+          {
+            "nme": "<clinit>",
+            "acc": 8,
+            "dsc": "()V"
+          }
+        ],
+        "flds": [
+          {
+            "acc": 10,
+            "nme": "ENVIRONMENT",
+            "dsc": "Lio/papermc/lib/environments/Environment;"
+          }
+        ]
+      }
+    }
+  }
+}
