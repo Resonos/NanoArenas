@@ -5,7 +5,7 @@ import studio.resonos.nano.api.command.Command;
 import studio.resonos.nano.core.util.CC;
 
 /**
- * @Author: Athishh
+ * @Author: Athulsib
  * Package: studio.resonos.arenas.core.commands.arena
  * Created on: 12/25/2023
  */

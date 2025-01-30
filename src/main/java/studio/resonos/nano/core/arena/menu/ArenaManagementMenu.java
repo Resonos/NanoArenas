@@ -9,7 +9,7 @@ import studio.resonos.nano.core.arena.Arena;
 import studio.resonos.nano.core.util.ItemBuilder;
 
 /**
- * @Author Athishh
+ * @Author Athulsib
  * Package: studio.resonos.arenas.core.arena.menu
  * Created on: 12/16/2023
  */

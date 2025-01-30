@@ -49,6 +49,7 @@ studio\resonos\nano\api\command\paramter\impl\ChatColorProcessor.class
 studio\resonos\nano\core\util\cuboid\Cuboid$LocationCuboidIterator.class
 studio\resonos\nano\core\util\menu\pagination\ViewAllPagesMenu.class
 studio\resonos\nano\api\gui\buttons\SGButtonListener.class
+studio\resonos\nano\core\util\Config.class
 studio\resonos\nano\core\util\menu\button\BackButton.class
 studio\resonos\nano\api\gui\menu\SGMenuListener.class
 studio\resonos\nano\core\util\callback\ReturnableTypeCallback.class
@@ -57,7 +58,6 @@ studio\resonos\nano\api\command\paramter\impl\DoubleProcessor.class
 studio\resonos\nano\api\gui\item\ItemBuilder.class
 studio\resonos\nano\core\commands\arena\ArenaSaveCommand.class
 studio\resonos\nano\core\arena\ArenaListener.class
-studio\resonos\nano\core\util\BasicConfigurationFile.class
 studio\resonos\nano\core\util\file\type\BasicConfigurationFile.class
 studio\resonos\nano\api\command\paramter\impl\PlayerProcessor.class
 studio\resonos\nano\api\gui\toolbar\SGDefaultToolbarBuilder.class

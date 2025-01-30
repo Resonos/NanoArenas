@@ -8,7 +8,7 @@ import studio.resonos.nano.core.arena.Arena;
 import studio.resonos.nano.core.util.CC;
 
 /**
- * @Author Athishh
+ * @Author Athulsib
  * Package: studio.resonos.arenas.core.arena.command
  * Created on: 12/16/2023
  */

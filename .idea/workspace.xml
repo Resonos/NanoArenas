@@ -4,12 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f7c8cbbd-3eb4-4853-89db-fd24be48b738" name="Changes" comment="Moments before disaster&#10;&#10;jokes apart fix licensing">
-      <change afterPath="$PROJECT_DIR$/src/main/java/studio/resonos/nano/core/util/Config.java" afterDir="false" />
+    <list default="true" id="f7c8cbbd-3eb4-4853-89db-fd24be48b738" name="Changes" comment="gitignore">
+      <change beforePath="$PROJECT_DIR$/.idea/discord.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/libs/Nano" beforeDir="false" afterPath="$PROJECT_DIR$/libs/Nano" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/studio/resonos/nano/NanoArenas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/studio/resonos/nano/NanoArenas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/studio/resonos/nano/core/util/BasicConfigurationFile.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/studio/resonos/nano/api/command/processors/ArenaProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/studio/resonos/nano/api/command/processors/ArenaProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/studio/resonos/nano/core/arena/menu/ArenaManagementMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/studio/resonos/nano/core/arena/menu/ArenaManagementMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/studio/resonos/nano/core/commands/arena/ArenaCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/studio/resonos/nano/core/commands/arena/ArenaCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/studio/resonos/nano/core/commands/arena/ArenaCreateCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/studio/resonos/nano/core/commands/arena/ArenaCreateCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/studio/resonos/nano/core/commands/arena/ArenaDeleteCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/studio/resonos/nano/core/commands/arena/ArenaDeleteCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/studio/resonos/nano/core/commands/arena/ArenaInfoCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/studio/resonos/nano/core/commands/arena/ArenaInfoCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/studio/resonos/nano/core/commands/arena/ArenaManageCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/studio/resonos/nano/core/commands/arena/ArenaManageCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/studio/resonos/nano/core/commands/arena/ArenaResetCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/studio/resonos/nano/core/commands/arena/ArenaResetCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/studio/resonos/nano/core/commands/arena/ArenaResetTimeCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/studio/resonos/nano/core/commands/arena/ArenaResetTimeCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/studio/resonos/nano/core/commands/arena/ArenaSaveCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/studio/resonos/nano/core/commands/arena/ArenaSaveCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/studio/resonos/nano/core/commands/arena/ArenaSelectionCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/studio/resonos/nano/core/commands/arena/ArenaSelectionCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/studio/resonos/nano/core/commands/arena/ArenaSetIconCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/studio/resonos/nano/core/commands/arena/ArenaSetIconCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/studio/resonos/nano/core/commands/arena/ArenaSetSpawnCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/studio/resonos/nano/core/commands/arena/ArenaSetSpawnCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/studio/resonos/nano/core/commands/arena/ArenaTeleportCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/studio/resonos/nano/core/commands/arena/ArenaTeleportCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/studio/resonos/nano/core/commands/arena/ArenasCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/studio/resonos/nano/core/commands/arena/ArenasCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/studio/resonos/nano/core/commands/dev/NanoCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/studio/resonos/nano/core/commands/dev/NanoCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,15 +43,20 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "vishalpj14"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Resonos/NanoArenas",
+    "accountId": "1a41fb75-4bc2-42be-8d09-397520e220bc"
+  }
+}]]></component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="workOffline" value="true" />
-      </MavenGeneralSettings>
-    </option>
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
@@ -44,26 +66,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Maven.Nano [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.Nano [org.apache.maven.plugins:maven-dependency-plugin:3.6.1:copy-dependencies].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.Nano [org.apache.maven.plugins:maven-resources-plugin:3.3.1:copy-resources].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/pjvis/Desktop/code/Nano-Arenas&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Maven.Nano [install].executor": "Run",
+    "Maven.Nano [org.apache.maven.plugins:maven-dependency-plugin:3.6.1:copy-dependencies].executor": "Run",
+    "Maven.Nano [org.apache.maven.plugins:maven-resources-plugin:3.3.1:copy-resources].executor": "Run",
+    "Maven.Nano package.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/pjvis/Desktop/code/Nano-Arenas",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="Nano-Arenas" />
@@ -93,6 +117,7 @@
                 <option value="package" />
               </list>
             </option>
+            <option name="multimoduleDir" />
             <option name="pomFileName" />
             <option name="profilesMap">
               <map />
@@ -107,6 +132,14 @@
       </MavenSettings>
       <method v="2" />
     </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-125ca727e0f0-intellij.indexing.shared.core-IU-243.23654.153" />
+        <option value="bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-IU-243.23654.153" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -125,6 +158,7 @@
       <workItem from="1703863030578" duration="846000" />
       <workItem from="1703864203152" duration="1129000" />
       <workItem from="1704030241818" duration="6304000" />
+      <workItem from="1738248840691" duration="1372000" />
     </task>
     <task id="LOCAL-00001" summary="Moments before disaster&#10;&#10;jokes apart fix licensing">
       <option name="closed" value="true" />
@@ -134,7 +168,23 @@
       <option name="project" value="LOCAL" />
       <updated>1704038999819</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="remove license temporarily&#10;make it 1.21.4">
+      <option name="closed" value="true" />
+      <created>1738249487634</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1738249487634</updated>
+    </task>
+    <task id="LOCAL-00003" summary="gitignore">
+      <option name="closed" value="true" />
+      <created>1738249497923</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1738249497923</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -142,6 +192,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Moments before disaster&#10;&#10;jokes apart fix licensing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Moments before disaster&#10;&#10;jokes apart fix licensing" />
+    <MESSAGE value="remove license temporarily&#10;make it 1.21.4" />
+    <MESSAGE value="gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="gitignore" />
   </component>
 </project>

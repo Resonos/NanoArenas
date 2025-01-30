@@ -3,7 +3,7 @@ name: NanoArenas
 version: ${project.version}
 api-version: 1.20
 authors:
-  - Athishh
+  - Athulsib
 depend:
   - FastAsyncWorldEdit
 description: Fast asynchronous arena system. Developed by Resonos Studios.

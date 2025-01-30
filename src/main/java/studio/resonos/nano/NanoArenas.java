@@ -24,7 +24,7 @@ import java.util.Arrays;
 import java.util.Collections;
 
 /**
- * @Author Athishh
+ * @Author Athulsib
  * Package: studio.resonos.arenas.core.arena.generator
  * Created on: 12/16/2023
  */
