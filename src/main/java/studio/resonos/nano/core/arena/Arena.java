@@ -1,14 +1,18 @@
 package studio.resonos.nano.core.arena;
 
-import com.fastasyncworldedit.core.FaweAPI;
 import com.sk89q.worldedit.EditSession;
 import com.sk89q.worldedit.WorldEdit;
 import com.sk89q.worldedit.bukkit.BukkitAdapter;
-import com.sk89q.worldedit.math.BlockVector3;
-import com.sk89q.worldedit.world.block.BaseBlock;
+import com.sk89q.worldedit.extent.clipboard.BlockArrayClipboard;
+import com.sk89q.worldedit.extent.clipboard.io.BuiltInClipboardFormat;
+import com.sk89q.worldedit.extent.clipboard.io.ClipboardWriter;
+import com.sk89q.worldedit.function.operation.ForwardExtentCopy;
+import com.sk89q.worldedit.function.operation.Operations;
+import com.sk89q.worldedit.regions.CuboidRegion;
 import lombok.Getter;
 import lombok.Setter;
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.block.BlockState;
@@ -17,11 +21,15 @@ import org.bukkit.entity.Entity;
 import org.bukkit.inventory.ItemStack;
 import studio.resonos.nano.NanoArenas;
 import studio.resonos.nano.core.arena.impl.StandaloneArena;
+import studio.resonos.nano.core.arena.selection.Schematic;
 import studio.resonos.nano.core.util.CC;
 import studio.resonos.nano.core.util.ItemBuilder;
 import studio.resonos.nano.core.util.LocationUtil;
 import studio.resonos.nano.core.util.cuboid.Cuboid;
 
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -42,15 +50,13 @@ public class Arena extends Cuboid {
      * */
     @Getter
     protected String name, displayName;
-    @Getter
-    protected boolean active;
     @Setter
     protected ItemStack icon;
     @Setter
     protected Location spawn;
     @Getter
     @Setter
-    protected int resetTime;
+    protected int resetTime = -1;
     @Getter
     @Setter
     private List<String> kits = new ArrayList<>();
@@ -170,6 +176,8 @@ public class Arena extends Cuboid {
     }
 
     public void delete() {
+        NanoArenas.get().cancelResetFor(this);
+        arenaNames.remove(this.getName());
         arenas.remove(this);
     }
 
@@ -177,81 +185,66 @@ public class Arena extends Cuboid {
         return this.icon.clone();
     }
 
-    public void reset() {
-        NanoArenas.get().getLogger().info("Resetting arena: " + this.getName());
-        NanoArenas.get().getLogger().info("Blocks to reset: " + getPlacedBlocks().size() + getChangedBlocks().size());
-        getChangedBlocks().forEach((blockState) -> blockState.getLocation().getBlock().setType(blockState.getType()));
-        FaweAPI.getTaskManager().async(() -> {
-            long setupTime = System.currentTimeMillis();
-            com.sk89q.worldedit.world.World worldeez = BukkitAdapter.adapt(getSpawn().getWorld());
-            EditSession editSession = WorldEdit.getInstance().getEditSessionFactory().getEditSession(worldeez, Integer.MAX_VALUE);
-            if (!this.getPlacedBlocks().isEmpty()) {
-                editSession.setFastMode(true);
+    public void createSchematic() {
+        /*
+         * Automatically create & save a schematic for the arena
+         * */
+        CuboidRegion region = new CuboidRegion(
+                BukkitAdapter.adapt(getWorld()),
+                LocationUtil.locationToBlockVector(getLowerCorner()),
+                LocationUtil.locationToBlockVector(getUpperCorner()));
 
-                for (Location location : this.getPlacedBlocks()) {
-                    try {
-                        editSession.setBlock(
-                                new BlockVector3() {
-                                    @Override
-                                    public int getX() {
-                                        return location.getBlockX();
-                                    }
+        BlockArrayClipboard clipboard = new BlockArrayClipboard(region);
+        // set schematic paste point to spawnA inorder to continue working with current system
+        clipboard.setOrigin(LocationUtil.locationToBlockVector(getSpawn()));
+        EditSession editSession = WorldEdit.getInstance().getEditSessionFactory().getEditSession(region.getWorld(), -1);
 
-                                    @Override
-                                    public int getY() {
-                                        return location.getBlockY();
-                                    }
+        ForwardExtentCopy forwardExtentCopy = new ForwardExtentCopy(editSession, region, clipboard, region.getMinimumPoint());
+        forwardExtentCopy.setCopyingEntities(false);
+        Operations.complete(forwardExtentCopy);
 
-                                    @Override
-                                    public int getZ() {
-                                        return location.getBlockZ();
-                                    }
-                                }, new BaseBlock(0, 0));
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-                }
-                editSession.flushQueue();
-                this.getPlacedBlocks().clear();
-            }
-			/*if (!this.getChangedBlocks().isEmpty()) {
-				editSession.setFastMode(true);
+        // ensure schematics directory exists (creates parents as needed)
+        File schematicsDir = new File(NanoArenas.get().getDataFolder(), "data" + File.separator + "arenas");
+        if (!schematicsDir.exists()) {
+            schematicsDir.mkdirs();
+        }
 
-				for (BlockState blockState : this.getChangedBlocks()) {
+        File file = new File(schematicsDir, getName() + ".nano");
 
-					try {
-						editSession.setBlock(
-								new BlockVector3() {
-									@Override
-									public int getX() {
-										return blockState.getX();
-									}
-
-									@Override
-									public int getY() {
-										return  blockState.getY();
-									}
-									@Override
-									public int getZ() {
-										return  blockState.getZ();
-									}
-								}, new BaseBlock( blockState.getBlock().getType().getId(),  blockState.getBlock().getData()));
-					} catch (Exception e) {
-						e.printStackTrace();
-					}
-				}
-				editSession.flushQueue();
-				this.getChangedBlocks().clear();
-			}*/
-            for (Entity entity: getEntities()) {
-                if (Bukkit.getWorld(this.getWorld().getName()).getEntities().contains(entity)) {
-                    entity.remove();
-                }
-            }
-            this.getChangedBlocks().clear();
-            long setupEndTime = System.currentTimeMillis();
-            long durationSetup = setupEndTime - setupTime;
-            NanoArenas.get().getLogger().info(durationSetup + " ms taken to reset arena: " + this.getName());
-        });
+        try (ClipboardWriter writer = BuiltInClipboardFormat.FAST.getWriter(Files.newOutputStream(file.toPath()))) {
+            writer.write(clipboard);
+        } catch (IOException e) {
+            Bukkit.getConsoleSender().sendMessage(ChatColor.RED + "Failed to save: " + getDisplayName());
+            e.printStackTrace();
+        }
     }
+
+    public File getSchematicFile() {
+        return new File(NanoArenas.get().getDataFolder(), "data" + File.separator + "arenas" + File.separator + getName() + ".nano");
+    }
+
+    public Schematic getSchematic() throws IOException {
+        return new Schematic(getSchematicFile());
+    }
+
+
+    public void reset() {
+        if (isSetup()) {
+            try {
+                long start = System.currentTimeMillis();
+
+                Schematic schematic = getSchematic();
+                schematic.paste(getWorld(), getSpawn().getBlockX(), getSpawn().getBlockY(), getSpawn().getBlockZ());
+
+                long end = System.currentTimeMillis();
+                NanoArenas.get().getLogger().info("Reset arena " + this.getName() + " in " + (end - start) + "ms");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } else {
+            NanoArenas.get().getLogger().info("Arena " + this.getName() + " is not setup correctly. Cannot reset.");
+        }
+
+    }
+
 }

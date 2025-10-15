@@ -25,18 +25,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "vishalpj14"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;vishalpj14&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Resonos/NanoArenas",
-    "accountId": "1a41fb75-4bc2-42be-8d09-397520e220bc"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Resonos/NanoArenas&quot;,
+    &quot;accountId&quot;: &quot;1a41fb75-4bc2-42be-8d09-397520e220bc&quot;
   }
-}]]></component>
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -55,14 +55,18 @@
   "keyToString": {
     "Maven.Nano [install].executor": "Run",
     "Maven.Nano [org.apache.maven.plugins:maven-dependency-plugin:3.6.1:copy-dependencies].executor": "Run",
+    "Maven.Nano [org.apache.maven.plugins:maven-install-plugin:3.1.2:install].executor": "Run",
     "Maven.Nano [org.apache.maven.plugins:maven-resources-plugin:3.3.1:copy-resources].executor": "Run",
     "Maven.Nano package.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
+    "go.import.settings.migrated": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/pjvis/Desktop/code/Nano-Arenas",
     "node.js.detected.package.eslint": "true",
@@ -70,6 +74,9 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -121,8 +128,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-125ca727e0f0-intellij.indexing.shared.core-IU-243.23654.153" />
-        <option value="bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-IU-243.23654.153" />
+        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.26094.121" />
+        <option value="bundled-js-predefined-d6986cc7102b-b26f3e71634d-JavaScript-IU-251.26094.121" />
       </set>
     </attachedChunks>
   </component>
@@ -144,6 +151,7 @@
       <workItem from="1703864203152" duration="1129000" />
       <workItem from="1704030241818" duration="6304000" />
       <workItem from="1738248840691" duration="2355000" />
+      <workItem from="1760532908505" duration="11474000" />
     </task>
     <task id="LOCAL-00001" summary="Moments before disaster&#10;&#10;jokes apart fix licensing">
       <option name="closed" value="true" />
@@ -207,5 +215,8 @@
     <MESSAGE value="target" />
     <MESSAGE value="will this fix?" />
     <option name="LAST_COMMIT_MESSAGE" value="will this fix?" />
+  </component>
+  <component name="VgoProject">
+    <settings-migrated>true</settings-migrated>
   </component>
 </project>

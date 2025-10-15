@@ -1,5 +1,6 @@
 package studio.resonos.nano.core.util;
 
+import com.sk89q.worldedit.math.BlockVector3;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.World;
@@ -41,6 +42,10 @@ public class LocationUtil {
 
     public static Location locAdd(Location loc, int x, int y, int z) {
         return new Location(loc.getWorld(), loc.getX() + x, loc.getY() + y, loc.getZ() + z);
+    }
+
+    public static BlockVector3 locationToBlockVector(Location location) {
+        return BlockVector3.at(location.getX(), location.getY(), location.getZ());
     }
 
 }

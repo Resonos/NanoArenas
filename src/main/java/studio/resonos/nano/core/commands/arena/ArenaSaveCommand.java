@@ -16,6 +16,7 @@ public class ArenaSaveCommand {
     public void Command(Player sender) {
         for (Arena arena : Arena.getArenas()) {
             arena.save();
+            arena.createSchematic();
         }
 
         sender.sendMessage(ChatColor.GREEN + "Saved all arenas!");

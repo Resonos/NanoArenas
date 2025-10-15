@@ -18,6 +18,7 @@ public class ArenaSetIconCommand {
         if (arena != null) {
             if (player.getItemInHand() != null) {
                 arena.setIcon(player.getItemInUse());
+                arena.save();
                 player.sendMessage(CC.translate("&aYou have set icon of arena " + arena.getName()));
             } else {
                 player.sendMessage(CC.translate("&cInvalid Item"));

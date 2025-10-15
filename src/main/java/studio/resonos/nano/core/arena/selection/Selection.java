@@ -1,86 +1,34 @@
 package studio.resonos.nano.core.arena.selection;
 
+import com.sk89q.worldedit.IncompleteRegionException;
+import com.sk89q.worldedit.LocalSession;
+import com.sk89q.worldedit.WorldEdit;
+import com.sk89q.worldedit.bukkit.BukkitAdapter;
+import com.sk89q.worldedit.regions.Region;
+import com.sk89q.worldedit.session.SessionManager;
+import com.sk89q.worldedit.world.World;
 import lombok.Data;
-import lombok.NonNull;
-import org.bukkit.Location;
-import org.bukkit.Material;
 import org.bukkit.entity.Player;
-import org.bukkit.inventory.ItemStack;
-import org.bukkit.metadata.FixedMetadataValue;
-import studio.resonos.nano.NanoArenas;
-import studio.resonos.nano.core.util.ItemBuilder;
-import studio.resonos.nano.core.util.cuboid.Cuboid;
-
-import java.util.Arrays;
+import studio.resonos.nano.core.util.CC;
 
 @Data
 public class Selection {
 
-    public static final ItemStack SELECTION_WAND;
-    private static final String SELECTION_METADATA_KEY = "CLAIM_SELECTION";
+    public static Region createOrGetSelection(Player player) {
 
-    static {
-        SELECTION_WAND = new ItemBuilder(Material.GOLDEN_AXE)
-                .name("&6&lSelection Wand")
-                .lore(Arrays.asList(
-                        "&eLeft-click to set position 1.",
-                        "&eRight-click to set position 2."
-                ))
-                .build();
-    }
+        com.sk89q.worldedit.entity.Player actor = BukkitAdapter.adapt(player); // WorldEdit's native Player class extends Actor
+        SessionManager manager = WorldEdit.getInstance().getSessionManager();
+        LocalSession localSession = manager.get(actor);
 
-    @NonNull
-    private Location point1;
-    @NonNull
-    private Location point2;
-
-    /**
-     * Private, so that we can create a new instance in the Selection#createOrGetSelection method.
-     */
-    private Selection() {
-    }
-
-    /**
-     * Selections are stored in the player's metadata. This method removes the need to active Bukkit Metadata API calls
-     * all over the place.
-     * <p>
-     * This method can be modified structurally as needed, the plugin only accepts Selection objects via this method.
-     *
-     * @param player the player for whom to grab the Selection object for
-     * @return selection object, either new or created
-     */
-    public static Selection createOrGetSelection(Player player) {
-        if (player.hasMetadata(SELECTION_METADATA_KEY)) {
-            return (Selection) player.getMetadata(SELECTION_METADATA_KEY).get(0).value();
+        // note: not necessarily the player's current world, see the concepts page
+        World selectionWorld = localSession.getSelectionWorld();
+        try {
+            if (selectionWorld == null) throw new IncompleteRegionException();
+            return localSession.getSelection(selectionWorld);
+        } catch (IncompleteRegionException ex) {
+            player.sendMessage(CC.translate("&cYour selection is incomplete."));
+            return null;
         }
-
-        Selection selection = new Selection();
-
-        player.setMetadata(SELECTION_METADATA_KEY, new FixedMetadataValue(NanoArenas.get(), selection));
-
-        return selection;
-    }
-
-    /**
-     * @return the cuboid
-     */
-    public Cuboid getCuboid() {
-        return new Cuboid(point1, point2);
-    }
-
-    /**
-     * @return if the Selection can form a full cuboid object
-     */
-    public boolean isFullObject() {
-        return point1 != null && point2 != null;
-    }
-
-    /**
-     * Resets both locations in the Selection
-     */
-    public void clear() {
-        point1 = null;
-        point2 = null;
     }
 
 }

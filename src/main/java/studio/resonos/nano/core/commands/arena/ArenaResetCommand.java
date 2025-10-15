@@ -15,8 +15,11 @@ public class ArenaResetCommand {
     @Command(names = {"arena reset"}, permission = "nano.arena", playerOnly = true)
     public void Command(Player sender, @Param(name = "arena") Arena arena) {
         if (arena != null) {
-            arena.reset();
             sender.sendMessage(CC.translate("&aAttempting to reset arena " + arena.getName()));
+            long start = System.currentTimeMillis();
+            arena.reset();
+            long end = System.currentTimeMillis();
+            sender.sendMessage(CC.translate("&aSuccessfully reset arena " + arena.getName() + " in " + (end - start) + "ms"));
         } else {
             sender.sendMessage(CC.RED + "An arena with that name does not exist.");
         }

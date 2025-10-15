@@ -6,6 +6,7 @@ import studio.resonos.nano.NanoArenas;
 import studio.resonos.nano.api.gui.buttons.SGButton;
 import studio.resonos.nano.api.gui.menu.SGMenu;
 import studio.resonos.nano.core.arena.Arena;
+import studio.resonos.nano.core.util.CC;
 import studio.resonos.nano.core.util.ItemBuilder;
 
 /**
@@ -18,18 +19,22 @@ public class ArenaManagementMenu {
     public static void openMenu(Player player) {
 
         // Create a GUI with calculated rows
-        SGMenu Menu = NanoArenas.spiGUI.create("&dArena Management", 2);
+        SGMenu Menu = NanoArenas.spiGUI.create("&bArena Management &c[ADMIN]", 2);
 
         Menu.setAutomaticPaginationEnabled(true);
+        if (Arena.getArenas().isEmpty()) {
+            player.sendMessage(CC.translate("&cThere are no arenas"));
+            return;
+        }
 
         for (Arena arena : Arena.getArenas()) {
             Menu.addButton(new SGButton(new ItemBuilder(arena.getIcon())
-                    .name("&d&l" + arena.getName())
+                    .name("&9&l" + arena.getName())
                     .lore("")
-                    .lore("&dArena Information:")
-                    .lore(" &d&fType: &b" + arena.getType().toString())
-                    .lore(" &d&fIs Setup: &b" + (arena.isSetup() ? "&a✓" : "&c✗"))
-                    .lore(" &d&fStatus: &b" + (arena.isActive() ? "&aEnabled" : "&cDisabled"))
+                    .lore("&bArena Information:")
+                    .lore("   &fType: &b" + arena.getType().toString())
+                    .lore("   &fIs Setup: &b" + (arena.isSetup() ? "&a✓" : "&c✗"))
+                    .lore("   &fResetDelay: &b" + arena.getResetTime() + "s")
                     .lore("")
                     .lore("&b&lLEFT-CLICK &bto teleport to arena.")
                     .lore("&b&lRIGHT-CLICK &bto see arena status.")

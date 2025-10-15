@@ -11,7 +11,7 @@ import studio.resonos.nano.core.util.CC;
  */
 public class NanoCommand {
 
-    @Command(names = {"arena"})
+    @Command(names = {"nano", "nanoarenas"})
     public void Command(Player sender) {
         sender.sendMessage(CC.CHAT_BAR);
         sender.sendMessage(CC.translate(" &b&lNano Arenas"));
