@@ -19,10 +19,6 @@ import java.util.Set;
 @Setter
 public class StandaloneArena extends Arena {
 
-    private final Set<StandaloneArena> copies = Sets.newHashSet();
-    private List<Arena> duplicates = new ArrayList<>();
-    private int gridIndex;
-
     public StandaloneArena(String name, Location location1, Location location2) {
         super(name, location1, location2);
     }

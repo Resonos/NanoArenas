@@ -8,6 +8,7 @@ import org.bukkit.scheduler.BukkitRunnable;
 import studio.resonos.nano.api.command.CommandHandler;
 import studio.resonos.nano.api.gui.SpiGUI;
 import studio.resonos.nano.core.arena.Arena;
+import studio.resonos.nano.core.arena.schedule.ArenaResetScheduler;
 import studio.resonos.nano.core.util.CC;
 import studio.resonos.nano.core.util.Config;
 import studio.resonos.nano.core.util.file.type.BasicConfigurationFile;
@@ -30,11 +31,11 @@ public class NanoArenas extends JavaPlugin {
     @Getter
     private BasicConfigurationFile arenasConfig;
     public Config mainConfig;
-    private final Map<String, Integer> arenaResetTaskIds = new HashMap<>();
 
     public static NanoArenas get() {
         return nanoArenas;
     }
+    private ArenaResetScheduler resetScheduler;
 
     @Override
     public void onEnable() {
@@ -48,27 +49,26 @@ public class NanoArenas extends JavaPlugin {
         arenasConfig = new BasicConfigurationFile(this, "arenas");
         spiGUI = new SpiGUI(this);
         Arena.init();
+        resetScheduler = new ArenaResetScheduler(this);
         registerProcessors();
         registerCommands();
+        // schedule a short delayed startup pass to allow arenas to load first
         new BukkitRunnable() {
             @Override
             public void run() {
                 NanoArenas.get().getLogger().info("Started Reset timer Task");
-                scheduleArenaResets();
+                resetScheduler.scheduleAll();
             }
-        }.runTaskLater(this, 10 * 20L); // delay to allow arenas to load first
+        }.runTaskLater(this, 10 * 20L);
     }
 
 
     @Override
     public void onDisable() {
-        // cancel any scheduled tasks to avoid leaks
-        for (Integer taskId : arenaResetTaskIds.values()) {
-            if (taskId != null) {
-                Bukkit.getScheduler().cancelTask(taskId);
-            }
-        }
-        arenaResetTaskIds.clear();
+        // cancel scheduler tasks
+        if (resetScheduler != null) {
+            resetScheduler.cancelAll();
+        };
 
         Arena.getArenas().forEach(Arena::reset);
         Arena.getArenas().forEach(Arena::save);
@@ -82,69 +82,6 @@ public class NanoArenas extends JavaPlugin {
         CommandHandler.registerCommands("studio.resonos.nano.core.commands.arena", this);
         CommandHandler.registerCommands("studio.resonos.nano.core.commands.dev", this);
         System.out.println("Registered Commands");
-    }
-
-    private void scheduleArenaResets() {
-        // cancel previous tasks
-        for (Integer taskId : arenaResetTaskIds.values()) {
-            if (taskId != null) {
-                Bukkit.getScheduler().cancelTask(taskId);
-            }
-        }
-        arenaResetTaskIds.clear();
-
-        // schedule new tasks per arena using the helper so single arenas can be scheduled later
-        for (Arena arena : Arena.getArenas()) {
-            scheduleResetFor(arena);
-        }
-    }
-
-    /**
-     * Schedule repeating reset for a single arena.
-     * Call this after a new arena is added at runtime: NanoArenas.get().scheduleResetFor(addedArena)
-     */
-    public void scheduleResetFor(Arena arena) {
-        if (arena == null) return;
-
-        // cancel existing task for this arena if present
-        Integer existing = arenaResetTaskIds.remove(arena.getName());
-        if (existing != null) {
-            Bukkit.getScheduler().cancelTask(existing);
-        }
-
-        int delaySeconds = arena.getResetTime();
-        if (delaySeconds <= 0) {
-            getLogger().info("Auto-reset disabled for arena " + arena.getName() + " (resetTime=" + delaySeconds + ")");
-            return;
-        }
-
-        long ticks = Math.max(1L, delaySeconds * 20L);
-
-        int taskId = new BukkitRunnable() {
-            @Override
-            public void run() {
-                try {
-                    arena.reset();
-                } catch (Exception e) {
-                    getLogger().severe("Failed to reset arena " + arena.getName() + ": " + e.getMessage());
-                    e.printStackTrace();
-                }
-            }
-        }.runTaskTimer(this, ticks, ticks).getTaskId();
-
-        arenaResetTaskIds.put(arena.getName(), taskId);
-    }
-
-    /**
-     * Cancel scheduled reset for a single arena.
-     * Call this when an arena is removed at runtime.
-     */
-    public void cancelResetFor(Arena arena) {
-        if (arena == null) return;
-        Integer taskId = arenaResetTaskIds.remove(arena.getName());
-        if (taskId != null) {
-            Bukkit.getScheduler().cancelTask(taskId);
-        }
     }
 
 }

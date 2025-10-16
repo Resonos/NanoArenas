@@ -19,8 +19,9 @@ public class ArenaSetSpawnCommand {
         if (arena != null) {
             arena.setSpawn(player.getLocation());
             arena.save();
+            player.sendMessage(CC.BLUE + "Set spawn for Arena " + arena.getName() + " to your current location.");
+            player.sendMessage(CC.YELLOW + "Finalizing arena...");
             arena.createSchematic();
-            player.sendMessage(CC.BLUE + "Updated spawn point for arena " + arena.getName());
         } else {
             player.sendMessage(CC.RED + "An arena with that name does not exist.");
         }

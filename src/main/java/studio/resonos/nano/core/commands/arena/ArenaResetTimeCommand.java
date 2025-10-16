@@ -19,7 +19,7 @@ public class ArenaResetTimeCommand {
         if (arena != null) {
             arena.setResetTime(delay);
             arena.save();
-            NanoArenas.get().scheduleResetFor(arena);
+            NanoArenas.get().getResetScheduler().schedule(arena);
             player.sendMessage(CC.BLUE + "Reset time for Arena " + arena.getName() + " set to " + delay + " seconds.");
         } else {
             player.sendMessage(CC.RED + "An arena with that name does not exist.");

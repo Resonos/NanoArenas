@@ -176,7 +176,7 @@ public class Arena extends Cuboid {
     }
 
     public void delete() {
-        NanoArenas.get().cancelResetFor(this);
+        NanoArenas.get().getResetScheduler().cancel(this);
         arenaNames.remove(this.getName());
         arenas.remove(this);
     }

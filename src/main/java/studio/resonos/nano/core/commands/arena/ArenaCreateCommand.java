@@ -32,6 +32,7 @@ public class ArenaCreateCommand {
                 Arena.getArenas().add(arena);
                 arena.save();
                 player.sendMessage(CC.translate("&bCreated new Arena&f " + arenaName));
+                player.sendMessage(CC.translate("&eMake sure to set the spawn using &a/arena setspawn " + arenaName + "&ein order to finalize the arena."));
             } else {
                 player.sendMessage(CC.RED + "Your region is incomplete.");
             }

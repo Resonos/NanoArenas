@@ -17,11 +17,11 @@ studio\resonos\nano\api\command\Command.class
 studio\resonos\nano\core\commands\arena\ArenaSaveCommand.class
 studio\resonos\nano\core\util\ItemBuilder.class
 studio\resonos\nano\core\commands\arena\ArenaDeleteCommand.class
-studio\resonos\nano\NanoArenas$2.class
 studio\resonos\nano\core\util\menu\MenuListener.class
 studio\resonos\nano\core\util\file\type\BasicConfigurationFile.class
 studio\resonos\nano\api\command\paramter\impl\PlayerProcessor.class
 studio\resonos\nano\api\gui\toolbar\SGDefaultToolbarBuilder.class
+studio\resonos\nano\core\arena\schedule\ArenaResetScheduler.class
 studio\resonos\nano\core\commands\dev\NanoCommand.class
 studio\resonos\nano\core\arena\ArenaType.class
 studio\resonos\nano\api\command\paramter\impl\WorldProcessor.class
@@ -51,6 +51,7 @@ studio\resonos\nano\core\util\menu\Button$1.class
 studio\resonos\nano\core\util\file\languaje\Lang.class
 studio\resonos\nano\core\arena\Arena.class
 studio\resonos\nano\core\commands\arena\ArenaTeleportCommand.class
+studio\resonos\nano\core\arena\schedule\ArenaResetScheduler$1.class
 studio\resonos\nano\api\gui\toolbar\SGToolbarBuilder.class
 studio\resonos\nano\core\util\menu\Button.class
 studio\resonos\nano\api\gui\menu\SGOpenMenu.class
