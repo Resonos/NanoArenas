@@ -1,8 +1,12 @@
+
 package studio.resonos.nano.core.arena.schedule;
 
+import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scheduler.BukkitRunnable;
+import studio.resonos.nano.api.event.ArenaResetEvent;
 import studio.resonos.nano.core.arena.Arena;
+
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -56,14 +60,26 @@ public class ArenaResetScheduler {
                     int value = rem.decrementAndGet();
                     if (value <= 0) {
                         try {
-                            plugin.getLogger().info("Auto-resetting arena " + arena.getName());
-                            arena.reset();
+                            // fire cancellable event BEFORE performing the reset
+                            ArenaResetEvent event = new ArenaResetEvent(arena);
+                            Bukkit.getServer().getPluginManager().callEvent(event);
+
+                            if (event.isCancelled()) {
+                                plugin.getLogger().info("Auto-reset cancelled for arena " + arena.getName());
+                                int configured = Math.max(1, arena.getResetTime());
+                                rem.set(configured);
+                            } else {
+                                plugin.getLogger().info("Auto-resetting arena " + arena.getName());
+                                arena.reset();
+                                int configured = Math.max(1, arena.getResetTime());
+                                rem.set(configured);
+                            }
                         } catch (Exception e) {
                             plugin.getLogger().severe("Failed to reset arena " + arena.getName() + ": " + e.getMessage());
                             e.printStackTrace();
+                            int configured = Math.max(1, arena.getResetTime());
+                            rem.set(configured);
                         }
-                        int configured = Math.max(1, arena.getResetTime());
-                        rem.set(configured);
                     }
                 } catch (Exception e) {
                     plugin.getLogger().severe("Error in arena countdown for " + arena.getName() + ": " + e.getMessage());
