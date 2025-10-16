@@ -4,6 +4,7 @@ import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import studio.resonos.nano.api.command.Command;
 import studio.resonos.nano.core.arena.Arena;
+import studio.resonos.nano.core.util.CC;
 
 /**
  * @Author Athulsib
@@ -19,6 +20,6 @@ public class ArenaSaveCommand {
             arena.createSchematic();
         }
 
-        sender.sendMessage(ChatColor.GREEN + "Saved all arenas!");
+        sender.sendMessage(CC.translate("&8[&bNanoArenas&8] &aSaved " + Arena.getArenas().size() + " arenas."));
     }
 }

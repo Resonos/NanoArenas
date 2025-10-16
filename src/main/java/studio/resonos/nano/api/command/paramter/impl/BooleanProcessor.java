@@ -3,6 +3,7 @@ package studio.resonos.nano.api.command.paramter.impl;
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
 import studio.resonos.nano.api.command.paramter.Processor;
+import studio.resonos.nano.core.util.CC;
 
 import java.util.HashMap;
 import java.util.List;
@@ -29,7 +30,7 @@ public class BooleanProcessor extends Processor<Boolean> {
     public Boolean process(CommandSender sender, String supplied) {
         supplied = supplied.toLowerCase();
         if (!values.containsKey(supplied)) {
-            sender.sendMessage(ChatColor.RED + "You have entered an invalid value.");
+            sender.sendMessage(CC.translate("&8[&bNanoArenas&8] &eValid values are: &a" + String.join(", ", values.keySet())));
             return null;
         }
 

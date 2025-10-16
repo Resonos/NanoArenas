@@ -23,8 +23,8 @@ public class ArenaPauseResetCommand {
             arena.setAutoResetPaused(next);
             arena.save();
             NanoArenas.get().getResetScheduler().schedule(arena);
-            player.sendMessage(next ? CC.GREEN + "Auto-resets paused for arena " + arena.getName() + "." :
-                    CC.BLUE + "Auto-resets resumed for arena " + arena.getName() + ".");
+            player.sendMessage(CC.translate("&8[&bNanoArenas&8] " + (next ? "&aAuto-resets paused for arena " + arena.getName() + "."
+                    : "&bAuto-resets resumed for arena " + arena.getName() + ".")));
             return;
         }
 
@@ -32,7 +32,7 @@ public class ArenaPauseResetCommand {
             arena.setAutoResetPaused(true);
             arena.save();
             NanoArenas.get().getResetScheduler().schedule(arena);
-            player.sendMessage(CC.GREEN + "Auto-resets paused for arena " + arena.getName() + ".");
+            player.sendMessage(CC.translate("&8[&bNanoArenas&8] &cAuto-resets paused for arena " + arena.getName() + "."));
             return;
         }
 
@@ -40,10 +40,10 @@ public class ArenaPauseResetCommand {
             arena.setAutoResetPaused(false);
             arena.save();
             NanoArenas.get().getResetScheduler().schedule(arena);
-            player.sendMessage(CC.BLUE + "Auto-resets resumed for arena " + arena.getName() + ".");
+            player.sendMessage(CC.translate("&8[&bNanoArenas&8] &aAuto-resets resumed for arena " + arena.getName() + "."));
             return;
         }
 
-        player.sendMessage(CC.RED + "Usage: /arena pause <arena> [on|off|toggle]");
+        player.sendMessage(CC.translate("&8[&bNanoArenas&8] &eUsage: /arena pause <arena> [on|off|toggle]"));
     }
 }

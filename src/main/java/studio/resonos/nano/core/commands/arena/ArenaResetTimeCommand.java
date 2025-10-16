@@ -21,8 +21,9 @@ public class ArenaResetTimeCommand {
             arena.save();
             NanoArenas.get().getResetScheduler().schedule(arena);
             player.sendMessage(CC.BLUE + "Reset time for Arena " + arena.getName() + " set to " + delay + " seconds.");
+            player.sendMessage(CC.translate("&8[&bNanoArenas&8] &fReset time for arena &b" + arena.getName() + "&f set to &b" + delay + " &fseconds."));
         } else {
-            player.sendMessage(CC.RED + "An arena with that name does not exist.");
+            player.sendMessage(CC.translate("&8[&bNanoArenas&8] &cAn arena with that name does not exist.") );
         }
     }
 }

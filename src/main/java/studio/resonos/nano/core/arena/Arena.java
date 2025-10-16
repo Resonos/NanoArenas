@@ -248,13 +248,13 @@ public class Arena extends Cuboid {
                 schematic.paste(getWorld(), getSpawn().getBlockX(), getSpawn().getBlockY(), getSpawn().getBlockZ());
                 long end = System.currentTimeMillis();
                 Bukkit.getServer().getPluginManager().callEvent(new ArenaResetEvent(this, end - start, schematic.size));
-                NanoArenas.get().getLogger().info("Reset arena " + this.getName() + " in " + (end - start) + "ms");
+                Bukkit.getConsoleSender().sendMessage(CC.translate("&8[&bNanoArenas&8] &aReset arena " + this.getName() + " in " + (end - start) + "ms"));
             } catch (Exception e) {
                 e.printStackTrace();
-                NanoArenas.get().getLogger().info("Failed to reset arena " + this.getName() + ". Is the schematic file missing or corrupted?");
+                Bukkit.getConsoleSender().sendMessage(CC.translate("&8[&bNanoArenas&8] &4Failed to reset arena &e" + this.getName() + ". &4Is the schematic file missing or corrupted?"));
             }
         } else {
-            NanoArenas.get().getLogger().info("Arena " + this.getName() + " is not setup correctly. Cannot reset.");
+            Bukkit.getConsoleSender().sendMessage(CC.translate("&8[&bNanoArenas&8] &cArena " + this.getName() + " is not setup correctly. Cannot reset."));
         }
 
     }

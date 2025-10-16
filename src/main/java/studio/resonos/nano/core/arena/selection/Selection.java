@@ -26,7 +26,7 @@ public class Selection {
             if (selectionWorld == null) throw new IncompleteRegionException();
             return localSession.getSelection(selectionWorld);
         } catch (IncompleteRegionException ex) {
-            player.sendMessage(CC.translate("&cYour selection is incomplete."));
+            player.sendMessage(CC.translate("&8[&bNanoArenas&8] &cYour selection is incomplete."));
             return null;
         }
     }

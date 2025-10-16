@@ -19,11 +19,12 @@ public class ArenaSetSpawnCommand {
         if (arena != null) {
             arena.setSpawn(player.getLocation());
             arena.save();
-            player.sendMessage(CC.BLUE + "Set spawn for Arena " + arena.getName() + " to your current location.");
-            player.sendMessage(CC.YELLOW + "Finalizing arena...");
+            player.sendMessage(CC.translate("&8[&bNanoArenas&8] &fSet spawn for arena &b" + arena.getName() + " &fto your current location."));
+            player.sendMessage(CC.translate("&8[&bNanoArenas&8] &eFinalizing arena &b" + arena.getName() + "..."));
             arena.createSchematic();
+            player.sendMessage(CC.translate("&8[&bNanoArenas&8] &aSuccessfully finalized arena &b" + arena.getName() + "&a."));
         } else {
-            player.sendMessage(CC.RED + "An arena with that name does not exist.");
+            player.sendMessage(CC.translate("&8[&bNanoArenas&8] &cAn arena with that name does not exist."));
         }
     }
 }

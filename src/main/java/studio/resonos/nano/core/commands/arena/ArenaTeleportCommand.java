@@ -16,10 +16,10 @@ public class ArenaTeleportCommand {
     @Command(names = {"arena teleport"}, permission = "nano.arena", playerOnly = true)
     public void Command(Player sender, @Param(name = "arena") Arena arena) {
         if (arena == null) {
-            sender.sendMessage(CC.translate("&cAn arena with that name does not exist."));
+            sender.sendMessage(CC.translate("&8[&bNanoArenas&8] &cAn arena with that name does not exist."));
         } else {
             sender.teleport(arena.getSpawn());
-            sender.sendMessage(CC.translate("&aYou have been teleported to Arena " + arena.getName()));
+            sender.sendMessage(CC.translate("&8[&bNanoArenas&8] &aYou have been teleported to Arena " + arena.getName()));
         }
     }
 }

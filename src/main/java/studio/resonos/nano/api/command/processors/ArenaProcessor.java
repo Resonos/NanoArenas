@@ -21,6 +21,7 @@ public class ArenaProcessor extends Processor<Arena> {
             return Arena.getByName(supplied);
         } catch (IllegalArgumentException e) {
             sender.sendMessage(CC.RED + "Unknown Arena: " + supplied);
+            sender.sendMessage(CC.RED + CC.translate("&8[&bNanoArenas&8] &cAn arena with that name does not exist. (supplied: " + supplied + ")"));
             return null;
         }
     }

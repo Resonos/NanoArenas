@@ -13,6 +13,7 @@ public class ArenaCommand {
 
     @Command(names = {"arena help", "arena"}, permission = "nano.arena")
     public void Command(Player sender) {
+        sender.sendMessage(CC.CHAT_BAR);
         sender.sendMessage(CC.translate("&b&lArena &7&m-&r &b&lHelp"));
         sender.sendMessage(CC.translate(" &7⚙ &b/arena create &8<&7arena&8>"));
         sender.sendMessage(CC.translate(" &7⚙ &b/arena delete &8<&7arena&8>"));
@@ -23,5 +24,6 @@ public class ArenaCommand {
         sender.sendMessage(CC.translate(" &7⚙ &b/arena manage"));
         sender.sendMessage(CC.translate(" &7⚙ &b/arena save"));
         sender.sendMessage(CC.translate(" &7⚙ &b/arenas"));
+        sender.sendMessage(CC.CHAT_BAR);
     }
 }

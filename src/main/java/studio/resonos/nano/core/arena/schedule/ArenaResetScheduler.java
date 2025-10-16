@@ -1,8 +1,10 @@
 package studio.resonos.nano.core.arena.schedule;
 
+import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scheduler.BukkitRunnable;
 import studio.resonos.nano.core.arena.Arena;
+import studio.resonos.nano.core.util.CC;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -40,7 +42,7 @@ public class ArenaResetScheduler {
 
         int resetSeconds = arena.getResetTime();
         if (resetSeconds <= 0) {
-            plugin.getLogger().info("Auto-reset disabled for arena " + arena.getName() + " (resetTime=" + resetSeconds + ")");
+            Bukkit.getConsoleSender().sendMessage(CC.translate("&8[&bNanoArenas&8] &fAuto-reset disabled for arena &b" + arena.getName() + "&f (resetTime=" + resetSeconds + ")"));
             return;
         }
 
@@ -65,19 +67,19 @@ public class ArenaResetScheduler {
                     int value = rem.decrementAndGet();
                     if (value <= 0) {
                         try {
-                            plugin.getLogger().info("Auto-resetting arena " + arena.getName());
+                            Bukkit.getConsoleSender().sendMessage(CC.translate("&8[&bNanoArenas&8] &fAuto-resetting arena &b" + arena.getName() + "&f now."));
                             // Arena.reset() handles firing events and measuring duration.
                             arena.reset();
                             // reload the captured configured seconds
                             rem.set(configuredSeconds);
                         } catch (Exception e) {
-                            plugin.getLogger().severe("Failed to reset arena " + arena.getName() + ": " + e.getMessage());
+                            Bukkit.getConsoleSender().sendMessage(CC.translate("&8[&bNanoArenas&8] &cFailed to reset arena &b" + arena.getName() + "&c. See console for details."));
                             e.printStackTrace();
                             rem.set(configuredSeconds);
                         }
                     }
                 } catch (Exception e) {
-                    plugin.getLogger().severe("Error in arena countdown for " + arena.getName() + ": " + e.getMessage());
+                    Bukkit.getConsoleSender().sendMessage(CC.translate("&8[&bNanoArenas&8] &cError in arena countdown for arena &b" + arena.getName() + ". See console for details."));
                     e.printStackTrace();
                 }
             }

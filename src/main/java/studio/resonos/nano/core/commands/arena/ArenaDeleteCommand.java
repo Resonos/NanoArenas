@@ -17,9 +17,9 @@ public class ArenaDeleteCommand {
     public void Command(Player player, @Param(name = "arena") Arena arena) {
         if (arena != null) {
             arena.delete();
-            player.sendMessage(CC.BLUE + "Deleted arena " + arena.getName());
+            player.sendMessage(CC.translate("&8[&bNanoArenas&8] &fDeleted arena &b" + arena.getName() + "&f."));
         } else {
-            player.sendMessage(CC.RED + "An arena with that name does not exist.");
+            player.sendMessage(CC.translate("&8[&bNanoArenas&8] &cAn arena with that name does not exist."));
         }
     }
 }
