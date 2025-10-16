@@ -171,7 +171,7 @@ public class Arena extends Cuboid {
     }
 
     public boolean isSetup() {
-        return getLowerCorner() != null && getUpperCorner() != null && spawn != null;
+        return getLowerCorner() != null && getUpperCorner() != null /*&& spawn != null*/;
     }
 
     public Location getSpawn() {
@@ -207,7 +207,7 @@ public class Arena extends Cuboid {
 
         BlockArrayClipboard clipboard = new BlockArrayClipboard(region);
         // set schematic paste point to spawnA inorder to continue working with current system
-        clipboard.setOrigin(LocationUtil.locationToBlockVector(getSpawn()));
+        clipboard.setOrigin(LocationUtil.locationToBlockVector(getUpperCorner()));
         EditSession editSession = WorldEdit.getInstance().getEditSessionFactory().getEditSession(region.getWorld(), -1);
 
         ForwardExtentCopy forwardExtentCopy = new ForwardExtentCopy(editSession, region, clipboard, region.getMinimumPoint());
@@ -245,7 +245,7 @@ public class Arena extends Cuboid {
                 long start = System.currentTimeMillis();
 
                 Schematic schematic = getSchematic();
-                schematic.paste(getWorld(), getSpawn().getBlockX(), getSpawn().getBlockY(), getSpawn().getBlockZ());
+                schematic.paste(getWorld(), getUpperX(), getUpperY(), getUpperZ());
                 long end = System.currentTimeMillis();
                 Bukkit.getServer().getPluginManager().callEvent(new ArenaResetEvent(this, end - start, schematic.size));
                 Bukkit.getConsoleSender().sendMessage(CC.translate("&8[&bNanoArenas&8] &aReset arena " + this.getName() + " in " + (end - start) + "ms"));

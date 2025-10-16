@@ -11,12 +11,13 @@ import studio.resonos.nano.core.arena.Arena;
 import studio.resonos.nano.core.arena.listener.ArenaResetBroadcastListener;
 import studio.resonos.nano.core.arena.schedule.ArenaResetScheduler;
 import studio.resonos.nano.core.managers.AdminAlertManager;
+import studio.resonos.nano.core.migrator.PlatinumArenasMigration;
 import studio.resonos.nano.core.util.CC;
 import studio.resonos.nano.core.util.Config;
 import studio.resonos.nano.core.util.file.type.BasicConfigurationFile;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.io.File;
+import java.util.List;
 
 /**
  * @Author Athulsib
@@ -53,6 +54,9 @@ public class NanoArenas extends JavaPlugin {
         spiGUI = new SpiGUI(this);
         manager = new AdminAlertManager();
         Arena.init();
+
+        PlatinumArenasMigration.migrateFromPlatinumArenas();
+
         Bukkit.getServer().getPluginManager().registerEvents(new ArenaResetBroadcastListener(manager), this);
         resetScheduler = new ArenaResetScheduler(this);
         registerProcessors();
