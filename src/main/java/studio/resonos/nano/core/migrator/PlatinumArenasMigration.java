@@ -6,6 +6,7 @@ import org.bukkit.World;
 import studio.resonos.nano.NanoArenas;
 import studio.resonos.nano.core.arena.Arena;
 import studio.resonos.nano.core.arena.impl.StandaloneArena;
+import studio.resonos.nano.core.arena.schedule.ArenaResetScheduler;
 import studio.resonos.nano.core.util.CC;
 
 import java.io.ByteArrayOutputStream;
@@ -63,6 +64,7 @@ public class PlatinumArenasMigration {
                 Arena.getArenaNames().add(arena.getName());
                 arena.save();
                 arena.createSchematic();
+                NanoArenas.get().getResetScheduler().schedule(arena); // add to scheduling
                 long fileDuration = System.currentTimeMillis() - fileStartTime;
                 Bukkit.getConsoleSender().sendMessage(CC.translate("&8[&bNanoArenas&8] &fMigrated arena &b" + arena.getName() + " &fin &a" + fileDuration + "ms"));
             } catch (Exception e) {

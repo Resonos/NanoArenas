@@ -80,7 +80,7 @@ public class Arena extends Cuboid {
     public Arena(String name, Location location1, Location location2) {
         super(location1, location2);
         this.name = name;
-        this.displayName = CC.translate("&d&l" + name);
+        this.displayName = CC.translate("&b&l" + name);
         this.icon = getUniqueIcon();
         this.placedBlocks = new ArrayList<>();
         this.changedBlocks = new ArrayList<>();

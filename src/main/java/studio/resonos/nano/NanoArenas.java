@@ -54,9 +54,6 @@ public class NanoArenas extends JavaPlugin {
         spiGUI = new SpiGUI(this);
         manager = new AdminAlertManager();
         Arena.init();
-
-        PlatinumArenasMigration.migrateFromPlatinumArenas();
-
         Bukkit.getServer().getPluginManager().registerEvents(new ArenaResetBroadcastListener(manager), this);
         resetScheduler = new ArenaResetScheduler(this);
         registerProcessors();

@@ -31,8 +31,8 @@ public class ArenaCreateCommand {
                 Arena.getArenaNames().add(arena.getName());
                 Arena.getArenas().add(arena);
                 arena.save();
+                arena.createSchematic();
                 player.sendMessage(CC.translate("&8[&bNanoArenas&8] &bCreated new Arena&f " + arenaName));
-                player.sendMessage(CC.translate("&8[&bNanoArenas&8] &eMake sure to set the spawn using &a/arena setspawn " + arenaName + "&ein order to finalize the arena."));
             } else {
                 player.sendMessage(CC.translate("&8[&bNanoArenas&8] &cYour region is incomplete."));
             }
