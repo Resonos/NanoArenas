@@ -23,10 +23,6 @@ public class StandaloneArena extends Arena {
         super(name, location1, location2);
     }
 
-    @Override
-    public ArenaType getType() {
-        return ArenaType.STANDALONE;
-    }
 
     @Override
     public void save() {
@@ -34,7 +30,6 @@ public class StandaloneArena extends Arena {
 
         FileConfiguration configuration = NanoArenas.get().getArenasConfig().getConfiguration();
         configuration.set(path, null);
-        configuration.set(path + ".type", getType().name());
         configuration.set(path + ".icon.material", getIcon().getType().name());
         configuration.set(path + ".icon.durability", getIcon().getDurability());
         configuration.set(path + ".spawn", LocationUtil.serialize(spawn));

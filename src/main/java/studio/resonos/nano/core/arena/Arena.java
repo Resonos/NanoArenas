@@ -64,14 +64,7 @@ public class Arena extends Cuboid {
     private boolean autoResetPaused = false;
 
     @Getter
-    @Setter
-    private List<String> kits = new ArrayList<>();
-    @Getter
-    @Setter
-    private List<Location> placedBlocks;
-    @Getter
-    @Setter
-    private List<BlockState> changedBlocks;
+    private Schematic cachedSchematic;
 
 
     /*
@@ -82,8 +75,7 @@ public class Arena extends Cuboid {
         this.name = name;
         this.displayName = CC.translate("&b&l" + name);
         this.icon = getUniqueIcon();
-        this.placedBlocks = new ArrayList<>();
-        this.changedBlocks = new ArrayList<>();
+
     }
 
     public static void init() {
@@ -122,7 +114,7 @@ public class Arena extends Cuboid {
 
     public static Arena getByName(String name) {
         for (Arena arena : arenas) {
-            if (arena.getType() != ArenaType.DUPLICATE && arena.getName() != null &&
+            if (arena.getName() != null &&
                     arena.getName().equalsIgnoreCase(name)) {
                 return arena;
             }
@@ -166,9 +158,7 @@ public class Arena extends Cuboid {
         return new ItemStack(randIcon);
     }
 
-    public ArenaType getType() {
-        return ArenaType.DUPLICATE;
-    }
+
 
     public boolean isSetup() {
         return getLowerCorner() != null && getUpperCorner() != null /*&& spawn != null*/;
@@ -224,10 +214,13 @@ public class Arena extends Cuboid {
 
         try (ClipboardWriter writer = BuiltInClipboardFormat.FAST.getWriter(Files.newOutputStream(file.toPath()))) {
             writer.write(clipboard);
+            cachedSchematic = null; // reset cached schematic to force reload next time
         } catch (IOException e) {
             Bukkit.getConsoleSender().sendMessage(ChatColor.RED + "Failed to save: " + getDisplayName());
             e.printStackTrace();
         }
+
+
     }
 
     public File getSchematicFile() {
@@ -235,7 +228,12 @@ public class Arena extends Cuboid {
     }
 
     public Schematic getSchematic() throws IOException {
-        return new Schematic(getSchematicFile());
+        if (cachedSchematic != null) {
+            return cachedSchematic;
+        }
+
+        cachedSchematic = new Schematic(getSchematicFile());
+        return cachedSchematic;
     }
 
 

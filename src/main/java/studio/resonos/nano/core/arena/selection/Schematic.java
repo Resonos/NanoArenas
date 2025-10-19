@@ -42,6 +42,7 @@ public class Schematic {
 
     public void paste(World world, int x, int y, int z) {
         try (EditSession editSession = WorldEdit.getInstance().getEditSessionFactory().getEditSession(BukkitAdapter.adapt(world), -1)) {
+            editSession.setFastMode(true);
             Operation operation = new ClipboardHolder(clipBoard)
                     .createPaste(editSession)
                     .to(BlockVector3.at(x, y, z))
