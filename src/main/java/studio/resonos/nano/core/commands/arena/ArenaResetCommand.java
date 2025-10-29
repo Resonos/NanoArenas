@@ -16,10 +16,10 @@ public class ArenaResetCommand {
     public void Command(Player sender, @Param(name = "arena") Arena arena) {
         if (arena != null) {
             sender.sendMessage(CC.translate("&8[&bNanoArenas&8] &aAttempting to reset arena " + arena.getName()));
-            long start = System.currentTimeMillis();
+            //long start = System.currentTimeMillis();
             arena.reset();
-            long end = System.currentTimeMillis();
-            sender.sendMessage(CC.translate("&8[&bNanoArenas&8] &aSuccessfully reset arena " + arena.getName() + " in " + (end - start) + "ms"));
+            //long end = System.currentTimeMillis();
+           // sender.sendMessage(CC.translate("&8[&bNanoArenas&8] &aSuccessfully reset arena " + arena.getName() + " in " + (end - start) + "ms"));
         } else {
             sender.sendMessage(CC.translate("&8[&bNanoArenas&8] &cAn arena with that name does not exist.") );
         }

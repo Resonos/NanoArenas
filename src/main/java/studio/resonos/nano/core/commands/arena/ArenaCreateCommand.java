@@ -1,5 +1,6 @@
 package studio.resonos.nano.core.commands.arena;
 
+import com.fastasyncworldedit.core.FaweAPI;
 import com.sk89q.worldedit.bukkit.BukkitAdapter;
 import com.sk89q.worldedit.regions.Region;
 import org.bukkit.entity.Player;
@@ -31,8 +32,13 @@ public class ArenaCreateCommand {
                 Arena.getArenaNames().add(arena.getName());
                 Arena.getArenas().add(arena);
                 arena.save();
-                arena.createSchematic();
                 player.sendMessage(CC.translate("&8[&bNanoArenas&8] &bCreated new Arena&f " + arenaName));
+                FaweAPI.getTaskManager().async(() -> {
+                    player.sendMessage(CC.translate("&8[&bNanoArenas&8] &bSetting up Arena&f " + arenaName + "... &7&o(This may take a while)"));
+                    long start = System.currentTimeMillis();
+                    arena.createSchematic();
+                    player.sendMessage(CC.translate("&8[&bNanoArenas&8] &fSuccessfully set up Arena&f " + arenaName + " in &b" + (System.currentTimeMillis() - start) + "ms"));
+                });
             } else {
                 player.sendMessage(CC.translate("&8[&bNanoArenas&8] &cYour region is incomplete."));
             }

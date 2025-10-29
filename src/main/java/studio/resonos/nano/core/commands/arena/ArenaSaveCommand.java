@@ -2,6 +2,9 @@ package studio.resonos.nano.core.commands.arena;
 
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
+
+import com.fastasyncworldedit.core.FaweAPI;
+
 import studio.resonos.nano.api.command.Command;
 import studio.resonos.nano.core.arena.Arena;
 import studio.resonos.nano.core.util.CC;
@@ -17,7 +20,9 @@ public class ArenaSaveCommand {
     public void Command(Player sender) {
         for (Arena arena : Arena.getArenas()) {
             arena.save();
-            arena.createSchematic();
+            FaweAPI.getTaskManager().async(() -> {
+                arena.createSchematic();
+            });
         }
 
         sender.sendMessage(CC.translate("&8[&bNanoArenas&8] &aSaved " + Arena.getArenas().size() + " arenas."));
