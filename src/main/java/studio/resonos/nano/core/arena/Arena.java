@@ -1,5 +1,6 @@
 package studio.resonos.nano.core.arena;
 
+import com.fastasyncworldedit.core.FaweAPI;
 import com.sk89q.worldedit.EditSession;
 import com.sk89q.worldedit.WorldEdit;
 import com.sk89q.worldedit.bukkit.BukkitAdapter;
@@ -239,18 +240,22 @@ public class Arena extends Cuboid {
 
     public void reset() {
         if (isSetup()) {
+            FaweAPI.getTaskManager().async(() -> {
             try {
-                long start = System.currentTimeMillis();
+            
+                    long start = System.currentTimeMillis();
 
-                Schematic schematic = getSchematic();
-                schematic.paste(getWorld(), getUpperX(), getUpperY(), getUpperZ());
-                long end = System.currentTimeMillis();
-                Bukkit.getServer().getPluginManager().callEvent(new ArenaResetEvent(this, end - start, schematic.size));
-                Bukkit.getConsoleSender().sendMessage(CC.translate("&8[&bNanoArenas&8] &aReset arena " + this.getName() + " in " + (end - start) + "ms"));
+                    Schematic schematic = getSchematic();
+                    schematic.paste(getWorld(), getUpperX(), getUpperY(), getUpperZ());
+                    long end = System.currentTimeMillis();
+                    Bukkit.getServer().getScheduler().runTask(NanoArenas.get(), () -> {
+                        Bukkit.getServer().getPluginManager().callEvent(new ArenaResetEvent(this, end - start, schematic.size));
+                    });
+                    Bukkit.getConsoleSender().sendMessage(CC.translate("&8[&bNanoArenas&8] &aReset arena " + this.getName() + " in " + (end - start) + "ms"));
             } catch (Exception e) {
                 e.printStackTrace();
                 Bukkit.getConsoleSender().sendMessage(CC.translate("&8[&bNanoArenas&8] &4Failed to reset arena &e" + this.getName() + ". &4Is the schematic file missing or corrupted?"));
-            }
+            }});
         } else {
             Bukkit.getConsoleSender().sendMessage(CC.translate("&8[&bNanoArenas&8] &cArena " + this.getName() + " is not setup correctly. Cannot reset."));
         }
