@@ -61,7 +61,8 @@ public class NanoArenas extends JavaPlugin {
         Bukkit.getConsoleSender().sendMessage(CC.translate((" &b▐ &fAuthor&7: &bAthishh")));
         Bukkit.getConsoleSender().sendMessage(CC.translate((" &b▐ &fVersion &7: &b" + getDescription().getVersion())));
         Bukkit.getConsoleSender().sendMessage(CC.translate(" "));
-        Bukkit.getConsoleSender().sendMessage(CC.translate(" &aThank you for purchasing Nano Arenas!"));
+        Bukkit.getConsoleSender().sendMessage(CC.translate(" &aThank you for Using Nano Arenas!"));
+        Bukkit.getConsoleSender().sendMessage(CC.translate(" &aJoin our discord for support &b&ndsc.gg/resonos"));
         Bukkit.getConsoleSender().sendMessage(CC.CHAT_BAR);
         nanoArenas = this;
         arenasConfig = new BasicConfigurationFile(this, "arenas");
