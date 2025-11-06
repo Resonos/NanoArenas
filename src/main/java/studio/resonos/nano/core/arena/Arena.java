@@ -18,7 +18,8 @@ import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.block.BlockState;
 import org.bukkit.configuration.file.FileConfiguration;
-import org.bukkit.entity.Entity;
+import org.bukkit.entity.*;
+import org.bukkit.entity.minecart.ExplosiveMinecart;
 import org.bukkit.inventory.ItemStack;
 import studio.resonos.nano.NanoArenas;
 import studio.resonos.nano.api.event.ArenaResetEvent;
@@ -240,6 +241,21 @@ public class Arena extends Cuboid {
 
     public void reset() {
         if (isSetup()) {
+           // if (spawn != null) {
+                // Remove entities in the arena
+                for (Entity entity : getWorld().getEntities()) {
+                    if (entity.getLocation().toVector().isInAABB(getLowerCorner().toVector(), getUpperCorner().toVector())) {
+                        if (entity instanceof org.bukkit.entity.Player) {
+                            if (spawn != null) entity.teleport(spawn);
+                        }else if (entity instanceof Item || entity instanceof Projectile || entity instanceof EnderCrystal
+                                || entity instanceof Minecart || entity instanceof Boat ||
+                                entity instanceof FallingBlock || entity instanceof ExplosiveMinecart) {
+                            entity.remove();
+                        }
+                    }
+                }
+            //}
+
             FaweAPI.getTaskManager().async(() -> {
             try {
             
