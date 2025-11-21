@@ -2,6 +2,7 @@ package studio.resonos.nano.core.commands.arena;
 
 import org.apache.commons.lang3.StringEscapeUtils;
 import org.bukkit.Location;
+import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import studio.resonos.nano.api.command.Command;
 import studio.resonos.nano.api.command.paramter.Param;
@@ -17,8 +18,8 @@ import java.io.IOException;
  */
 public class ArenaInfoCommand {
 
-    @Command(names = {"arena info"}, permission = "nano.arena", playerOnly = true)
-    public void Command(Player sender, @Param(name = "arena") Arena arena)  {
+    @Command(names = {"arena info"}, permission = "nano.arena")
+    public void Command(CommandSender sender, @Param(name = "arena") Arena arena)  {
         if (arena != null) {
 
            sender.sendMessage(CC.CHAT_BAR);

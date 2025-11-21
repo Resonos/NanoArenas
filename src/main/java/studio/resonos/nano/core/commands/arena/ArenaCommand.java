@@ -1,5 +1,6 @@
 package studio.resonos.nano.core.commands.arena;
 
+import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import studio.resonos.nano.api.command.Command;
 import studio.resonos.nano.core.util.CC;
@@ -12,7 +13,7 @@ import studio.resonos.nano.core.util.CC;
 public class ArenaCommand {
 
     @Command(names = {"arena help", "arena"}, permission = "nano.arena")
-    public void Command(Player sender) {
+    public void Command(CommandSender sender) {
         sender.sendMessage(CC.CHAT_BAR);
         sender.sendMessage(CC.translate("&b&lArena &7&m-&r &b&lHelp"));
         sender.sendMessage(CC.translate(" &7⚙ &b/arena create &8<&7arena&8>"));

@@ -1,5 +1,6 @@
 package studio.resonos.nano.core.commands.arena;
 
+import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import studio.resonos.nano.api.command.Command;
 import studio.resonos.nano.api.command.paramter.Param;
@@ -12,8 +13,8 @@ import studio.resonos.nano.core.util.CC;
  * Created on: 12/16/2023
  */
 public class ArenaResetCommand {
-    @Command(names = {"arena reset"}, permission = "nano.arena", playerOnly = true)
-    public void Command(Player sender, @Param(name = "arena") Arena arena) {
+    @Command(names = {"arena reset"}, permission = "nano.arena")
+    public void Command(CommandSender sender, @Param(name = "arena") Arena arena) {
         if (arena != null) {
             sender.sendMessage(CC.translate("&8[&bNanoArenas&8] &aAttempting to reset arena " + arena.getName()));
             //long start = System.currentTimeMillis();

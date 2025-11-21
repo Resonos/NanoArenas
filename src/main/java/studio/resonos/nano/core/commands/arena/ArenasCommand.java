@@ -5,7 +5,7 @@ import net.md_5.bungee.api.chat.ComponentBuilder;
 import net.md_5.bungee.api.chat.HoverEvent;
 import net.md_5.bungee.api.chat.TextComponent;
 import org.bukkit.Location;
-import org.bukkit.entity.Player;
+import org.bukkit.command.CommandSender;
 import studio.resonos.nano.api.command.Command;
 import studio.resonos.nano.api.command.paramter.Param;
 import studio.resonos.nano.core.arena.Arena;
@@ -18,8 +18,8 @@ public class ArenasCommand {
     private static final int PER_PAGE = 6;
     private static final String PREFIX = CC.translate("&8[&bNanoArenas&8] ");
 
-    @Command(names = {"arenas"}, playerOnly = true, permission = "nano.arena")
-    public void Command(Player player, @Param(name = "page", required = false) Integer page) {
+    @Command(names = {"arenas"}, permission = "nano.arena")
+    public void Command(CommandSender player, @Param(name = "page", required = false) Integer page) {
         List<Arena> arenas = Arena.getArenas();
 
         if (arenas.isEmpty()) {

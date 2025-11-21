@@ -1,6 +1,7 @@
 package studio.resonos.nano.core.commands.arena;
 
 import org.bukkit.ChatColor;
+import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 import com.fastasyncworldedit.core.FaweAPI;
@@ -16,8 +17,8 @@ import studio.resonos.nano.core.util.CC;
  */
 public class ArenaSaveCommand {
 
-    @Command(names = {"arena save"}, permission = "nano.arena", playerOnly = true)
-    public void Command(Player sender) {
+    @Command(names = {"arena save"}, permission = "nano.arena")
+    public void Command(CommandSender sender) {
         for (Arena arena : Arena.getArenas()) {
             arena.save();
             FaweAPI.getTaskManager().async(() -> {
