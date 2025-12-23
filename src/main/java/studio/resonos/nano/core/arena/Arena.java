@@ -16,7 +16,6 @@ import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.Material;
-import org.bukkit.block.BlockState;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.*;
 import org.bukkit.entity.minecart.ExplosiveMinecart;
@@ -36,6 +35,7 @@ import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.concurrent.*;
 
 public class Arena extends Cuboid {
 
@@ -60,14 +60,17 @@ public class Arena extends Cuboid {
     @Getter
     @Setter
     protected int resetTime = -1;
-
     @Getter
     @Setter
     private boolean autoResetPaused = false;
 
-    @Getter
-    private Schematic cachedSchematic;
+    private static final ExecutorService RESET_EXECUTOR = Executors.newSingleThreadExecutor(r -> {
+        Thread t = new Thread(r, "Nano-Reset-Thread");
+        t.setDaemon(true);
+        return t;
+    });
 
+    private static final ConcurrentMap<String, Future<?>> resetTasks = new ConcurrentHashMap<>();
 
     /*
      * Default arena constructor
@@ -200,11 +203,18 @@ public class Arena extends Cuboid {
         BlockArrayClipboard clipboard = new BlockArrayClipboard(region);
         // set schematic paste point to spawnA inorder to continue working with current system
         clipboard.setOrigin(LocationUtil.locationToBlockVector(getUpperCorner()));
-        EditSession editSession = WorldEdit.getInstance().getEditSessionFactory().getEditSession(region.getWorld(), -1);
 
-        ForwardExtentCopy forwardExtentCopy = new ForwardExtentCopy(editSession, region, clipboard, region.getMinimumPoint());
-        forwardExtentCopy.setCopyingEntities(false);
-        Operations.complete(forwardExtentCopy);
+        try (EditSession editSession = WorldEdit.getInstance()
+                .getEditSessionFactory()
+                .getEditSession(region.getWorld(), -1)) {
+
+            ForwardExtentCopy forwardExtentCopy =
+                    new ForwardExtentCopy(editSession, region, clipboard, region.getMinimumPoint());
+
+            forwardExtentCopy.setCopyingEntities(false);
+            Operations.completeBlindly(forwardExtentCopy);
+        }
+
 
         // ensure schematics directory exists (creates parents as needed)
         File schematicsDir = new File(NanoArenas.get().getDataFolder(), "data" + File.separator + "arenas");
@@ -212,11 +222,10 @@ public class Arena extends Cuboid {
             schematicsDir.mkdirs();
         }
 
-        File file = new File(schematicsDir, getName() + ".nano");
+        File file = new File(schematicsDir, getName() + ".schem");
 
-        try (ClipboardWriter writer = BuiltInClipboardFormat.FAST.getWriter(Files.newOutputStream(file.toPath()))) {
+        try (ClipboardWriter writer = BuiltInClipboardFormat.FAST_V3.getWriter(Files.newOutputStream(file.toPath()))) {
             writer.write(clipboard);
-            cachedSchematic = null; // reset cached schematic to force reload next time
         } catch (IOException e) {
             Bukkit.getConsoleSender().sendMessage(ChatColor.RED + "Failed to save: " + getDisplayName());
             e.printStackTrace();
@@ -226,56 +235,59 @@ public class Arena extends Cuboid {
     }
 
     public File getSchematicFile() {
-        return new File(NanoArenas.get().getDataFolder(), "data" + File.separator + "arenas" + File.separator + getName() + ".nano");
+        return new File(NanoArenas.get().getDataFolder(), "data" + File.separator + "arenas" + File.separator + getName() + ".schem");
     }
 
     public Schematic getSchematic() throws IOException {
-        if (cachedSchematic != null) {
-            return cachedSchematic;
-        }
-
-        cachedSchematic = new Schematic(getSchematicFile());
-        return cachedSchematic;
+        return new Schematic(getSchematicFile());
     }
 
 
     public void reset() {
-        if (isSetup()) {
-           // if (spawn != null) {
-                // Remove entities in the arena
-                for (Entity entity : getWorld().getEntities()) {
-                    if (entity.getLocation().toVector().isInAABB(getLowerCorner().toVector(), getUpperCorner().toVector())) {
-                        if (entity instanceof org.bukkit.entity.Player) {
-                            if (spawn != null) entity.teleport(spawn);
-                        }else if (entity instanceof Item || entity instanceof Projectile || entity instanceof EnderCrystal
-                                || entity instanceof Minecart || entity instanceof Boat ||
-                                entity instanceof FallingBlock || entity instanceof ExplosiveMinecart) {
-                            entity.remove();
-                        }
-                    }
+        if (!isSetup()) {
+            Bukkit.getConsoleSender().sendMessage(CC.translate("&8[&bNanoArenas&8] &cArena " + this.getName() + " is not setup correctly. Cannot reset."));
+            return;
+        }
+
+        // Check if a reset is already in progress for this arena
+        Future<?> existing = resetTasks.get(this.getName());
+        if (existing != null && !existing.isDone()) {
+            Bukkit.getConsoleSender().sendMessage(CC.translate("&8[&bNanoArenas&8] &eArena " + this.getName() + " is already being reset. Please wait."));
+            return;
+        }
+
+        for (Entity entity : getWorld().getEntities()) {
+            if (entity.getLocation().toVector().isInAABB(getLowerCorner().toVector(), getUpperCorner().toVector())) {
+                if (entity instanceof org.bukkit.entity.Player) {
+                    if (spawn != null) entity.teleport(spawn);
+                } else if (entity instanceof Item || entity instanceof Projectile || entity instanceof EnderCrystal
+                        || entity instanceof Minecart || entity instanceof Boat ||
+                        entity instanceof FallingBlock || entity instanceof ExplosiveMinecart) {
+                    entity.remove();
                 }
-            //}
+            }
+        }
 
-            FaweAPI.getTaskManager().async(() -> {
+        Future<?> future = RESET_EXECUTOR.submit(() -> {
             try {
-            
-                    long start = System.currentTimeMillis();
+                long start = System.currentTimeMillis();
+                Schematic schematic = getSchematic();
+                schematic.paste(getWorld(), getUpperX(), getUpperY(), getUpperZ());
+                long end = System.currentTimeMillis();
 
-                    Schematic schematic = getSchematic();
-                    schematic.paste(getWorld(), getUpperX(), getUpperY(), getUpperZ());
-                    long end = System.currentTimeMillis();
-                    Bukkit.getServer().getScheduler().runTask(NanoArenas.get(), () -> {
-                        Bukkit.getServer().getPluginManager().callEvent(new ArenaResetEvent(this, end - start, schematic.size));
-                    });
+                Bukkit.getServer().getScheduler().runTask(NanoArenas.get(), () -> {
+                    Bukkit.getServer().getPluginManager().callEvent(new ArenaResetEvent(this, end - start, schematic.size));
                     Bukkit.getConsoleSender().sendMessage(CC.translate("&8[&bNanoArenas&8] &aReset arena " + this.getName() + " in " + (end - start) + "ms"));
+                });
             } catch (Exception e) {
                 e.printStackTrace();
                 Bukkit.getConsoleSender().sendMessage(CC.translate("&8[&bNanoArenas&8] &4Failed to reset arena &e" + this.getName() + ". &4Is the schematic file missing or corrupted?"));
-            }});
-        } else {
-            Bukkit.getConsoleSender().sendMessage(CC.translate("&8[&bNanoArenas&8] &cArena " + this.getName() + " is not setup correctly. Cannot reset."));
-        }
+            } finally {
+                resetTasks.remove(this.getName());
+            }
+        });
 
+        resetTasks.put(this.getName(), future);
     }
 
 }

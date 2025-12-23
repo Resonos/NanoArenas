@@ -50,7 +50,8 @@ public class Schematic {
                     .copyBiomes(true)
                     .ignoreAirBlocks(false)
                     .build();
-            Operations.complete(operation);
+            Operations.completeBlindly(operation);
+            //Operations.complete(operation);
         } catch (Exception e) {
             e.printStackTrace();
         }
