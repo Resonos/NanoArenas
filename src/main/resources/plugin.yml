@@ -1,9 +1,25 @@
 main: studio.resonos.nano.NanoArenas
 name: NanoArenas
-version: 1.5
+version: 1.6
 api-version: 1.20
 authors:
   - Athulsib
 depend:
   - FastAsyncWorldEdit
 description: Fast asynchronous arena system. Developed by Resonos Studios.
+permissions:
+  nano.admin:
+    description: Administrative permissions for NanoArenas
+    default: op
+  nano.arena:
+    description: Arena management permissions for NanoArenas
+    default: op
+  nano.alerts:
+    description: Alert system permissions for NanoArenas
+    default: op
+  nano.kit:
+    description: Kit management permissions for NanoArenas
+    default: op
+  nano.reload:
+    description: Reload configuration permissions for NanoArenas
+    default: op

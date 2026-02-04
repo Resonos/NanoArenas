@@ -1,33 +1,32 @@
 package studio.resonos.nano.core.commands.arena;
 
 import org.bukkit.command.CommandSender;
-import org.bukkit.entity.Player;
+import studio.resonos.nano.NanoArenas;
 import studio.resonos.nano.api.command.Command;
 import studio.resonos.nano.core.util.CC;
 
 /**
- * @Author Athulsib
- * Package: studio.resonos.arenas.core.arena.command
- * Created on: 12/16/2023
+ * @Author: Athulsib
+ * Package: studio.resonos.arenas.core.commands.arena
+ * Created on: 12/25/2023
  */
 public class ArenaCommand {
 
-    @Command(names = {"arena help", "arena"}, permission = "nano.arena")
+    @Command(names = {"arena help", "arena"}, permission = "", description = "Shows NanoArenas help")
     public void Command(CommandSender sender) {
-        sender.sendMessage(CC.CHAT_BAR);
-        sender.sendMessage(CC.translate("&b&lArena &7&m-&r &b&lHelp"));
-        sender.sendMessage(CC.translate(" &7⚙ &b/arena create &8<&7arena&8>"));
-        sender.sendMessage(CC.translate(" &7⚙ &b/arena delete &8<&7arena&8>"));
-        sender.sendMessage(CC.translate(" &7⚙ &b/arena info &8<&7arena&8>"));
-        sender.sendMessage(CC.translate(" &7⚙ &b/arena setspawn &8<&7arena&8>"));
-        sender.sendMessage(CC.translate(" &7⚙ &b/arena teleport &8<&7arena&8>"));
-        sender.sendMessage(CC.translate(" &7⚙ &b/arena seticon &8<&7arena&8>"));
-        sender.sendMessage(CC.translate(" &7⚙ &b/arena reset &8<&7arena&8>"));
-        sender.sendMessage(CC.translate(" &7⚙ &b/arena pause &8<&7arena&8>"));
-        sender.sendMessage(CC.translate(" &7⚙ &b/arena resetdelay &8<&7arena&8> &8<&7seconds&8>"));
-        sender.sendMessage(CC.translate(" &7⚙ &b/arena manage"));
-        sender.sendMessage(CC.translate(" &7⚙ &b/arena save"));
-        sender.sendMessage(CC.translate(" &7⚙ &b/arenas"));
+        // Check permission using configuration
+        if (!sender.hasPermission(NanoArenas.get().getConfigManager().getArenaPermission())) {
+            sender.sendMessage(CC.translate(NanoArenas.get().getConfigManager().getMessagePrefix() + 
+                NanoArenas.get().getConfigManager().getErrorColor() + "You don't have permission to use this command."));
+            return;
+        }
+        
+        sender.sendMessage(CC.translate("&8[&bNanoArenas&8] &f" + " &b&lNano Arenas"));
+        sender.sendMessage(" ");
+        sender.sendMessage(CC.translate(" &fThis server is running &bNano. A lightning fast Arena system"));
+        sender.sendMessage(CC.translate(" &fmade for Large scale maps and servers."));
+        sender.sendMessage(" ");
+        sender.sendMessage(CC.translate(" &fDeveloped by &bResonos Studios &f[&bdsc.gg/resonos&f]"));
         sender.sendMessage(CC.CHAT_BAR);
     }
 }

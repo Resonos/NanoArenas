@@ -13,6 +13,7 @@ import studio.resonos.nano.core.arena.schedule.ArenaResetScheduler;
 import studio.resonos.nano.core.managers.AdminAlertManager;
 import studio.resonos.nano.core.util.CC;
 import studio.resonos.nano.core.util.Config;
+import studio.resonos.nano.core.util.ConfigurationManager;
 import studio.resonos.nano.core.util.file.type.BasicConfigurationFile;
 
 /**
@@ -30,6 +31,8 @@ public class NanoArenas extends JavaPlugin {
     @Getter
     private BasicConfigurationFile arenasConfig;
     public Config mainConfig;
+    @Getter
+    private ConfigurationManager configManager;
 
     public static NanoArenas get() {
         return nanoArenas;
@@ -65,6 +68,10 @@ public class NanoArenas extends JavaPlugin {
         Bukkit.getConsoleSender().sendMessage(CC.translate(" &aJoin our discord for support &b&ndsc.gg/resonos"));
         Bukkit.getConsoleSender().sendMessage(CC.CHAT_BAR);
         nanoArenas = this;
+        
+        // Initialize configuration manager first
+        configManager = new ConfigurationManager(this);
+        
         arenasConfig = new BasicConfigurationFile(this, "arenas");
         spiGUI = new SpiGUI(this);
         manager = new AdminAlertManager();
@@ -102,6 +109,17 @@ public class NanoArenas extends JavaPlugin {
     private void registerCommands() {
         CommandHandler.registerCommands("studio.resonos.nano.core.commands.arena", this);
         CommandHandler.registerCommands("studio.resonos.nano.core.commands.dev", this);
+    }
+
+    /**
+     * Reloads the plugin configuration
+     */
+    public void reloadConfiguration() {
+        configManager.reloadConfig();
+        // Reschedule all arena resets with new configuration
+        if (resetScheduler != null) {
+            resetScheduler.scheduleAll();
+        }
     }
 
 }

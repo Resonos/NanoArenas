@@ -3,6 +3,7 @@ package studio.resonos.nano.core.arena.schedule;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scheduler.BukkitRunnable;
+import studio.resonos.nano.NanoArenas;
 import studio.resonos.nano.core.arena.Arena;
 import studio.resonos.nano.core.util.CC;
 
@@ -25,6 +26,12 @@ public class ArenaResetScheduler {
 
     public void scheduleAll() {
         cancelAll();
+        // Check if reset system is enabled
+        if (!NanoArenas.get().getConfigManager().isResetEnabled()) {
+            Bukkit.getConsoleSender().sendMessage(CC.translate("&8[&bNanoArenas&8] &eAuto-reset system is disabled in configuration."));
+            return;
+        }
+        
         for (Arena arena : Arena.getArenas()) {
             schedule(arena);
         }
@@ -42,7 +49,9 @@ public class ArenaResetScheduler {
 
         int resetSeconds = arena.getResetTime();
         if (resetSeconds <= 0) {
-            Bukkit.getConsoleSender().sendMessage(CC.translate("&8[&bNanoArenas&8] &fAuto-reset disabled for arena &b" + arena.getName() + "&f (resetTime=" + resetSeconds + ")"));
+            if (NanoArenas.get().getConfigManager().isDebugMode()) {
+                Bukkit.getConsoleSender().sendMessage(CC.translate("&8[&bNanoArenas&8] &fAuto-reset disabled for arena &b" + arena.getName() + "&f (resetTime=" + resetSeconds + ")"));
+            }
             return;
         }
 
@@ -67,7 +76,9 @@ public class ArenaResetScheduler {
                     int value = rem.decrementAndGet();
                     if (value <= 0) {
                         try {
-                            Bukkit.getConsoleSender().sendMessage(CC.translate("&8[&bNanoArenas&8] &fAuto-resetting arena &b" + arena.getName() + "&f now."));
+                            if (NanoArenas.get().getConfigManager().isDebugMode()) {
+                                Bukkit.getConsoleSender().sendMessage(CC.translate("&8[&bNanoArenas&8] &fAuto-resetting arena &b" + arena.getName() + "&f now."));
+                            }
                             // Arena.reset() handles firing events and measuring duration.
                             arena.reset();
                             // reload the captured configured seconds
@@ -83,7 +94,9 @@ public class ArenaResetScheduler {
                     e.printStackTrace();
                 }
             }
-        }.runTaskTimer(plugin, 20L, 20L).getTaskId(); // tick every second
+        }.runTaskTimer(plugin, 
+            NanoArenas.get().getConfigManager().getResetIntervalTicks(), 
+            NanoArenas.get().getConfigManager().getResetIntervalTicks()).getTaskId();
 
         taskIds.put(arena.getName(), taskId);
     }

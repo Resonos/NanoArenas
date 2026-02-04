@@ -14,7 +14,7 @@ import com.sk89q.worldedit.math.BlockVector3;
 import com.sk89q.worldedit.session.ClipboardHolder;
 import lombok.Getter;
 import org.bukkit.World;
-import studio.resonos.nano.core.arena.impl.StandaloneArena;
+import studio.resonos.nano.NanoArenas;
 
 import java.io.File;
 import java.io.IOException;
@@ -42,13 +42,13 @@ public class Schematic {
 
     public void paste(World world, int x, int y, int z) {
         try (EditSession editSession = WorldEdit.getInstance().getEditSessionFactory().getEditSession(BukkitAdapter.adapt(world), -1)) {
-            editSession.setFastMode(true);
+            editSession.setFastMode(NanoArenas.get().getConfigManager().shouldPasteFastMode());
             Operation operation = new ClipboardHolder(clipBoard)
                     .createPaste(editSession)
                     .to(BlockVector3.at(x, y, z))
-                    .copyEntities(false)
-                    .copyBiomes(true)
-                    .ignoreAirBlocks(false)
+                    .copyEntities(NanoArenas.get().getConfigManager().shouldPasteCopyEntities())
+                    .copyBiomes(NanoArenas.get().getConfigManager().shouldPasteCopyBiomes())
+                    .ignoreAirBlocks(NanoArenas.get().getConfigManager().shouldPasteIgnoreAirBlocks())
                     .build();
             Operations.completeBlindly(operation);
             //Operations.complete(operation);

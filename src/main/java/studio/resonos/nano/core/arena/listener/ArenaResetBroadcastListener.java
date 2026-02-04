@@ -6,6 +6,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
+import studio.resonos.nano.NanoArenas;
 import studio.resonos.nano.api.event.ArenaResetEvent;
 import studio.resonos.nano.core.managers.AdminAlertManager;
 import studio.resonos.nano.core.util.CC;
@@ -20,9 +21,16 @@ public class ArenaResetBroadcastListener implements Listener {
 
     @EventHandler
     public void onJoin(PlayerJoinEvent event) {
-        if (event.getPlayer().hasPermission("nano.alerts")) {
+        // Check if alerts are enabled and if auto-enable is configured
+        if (!NanoArenas.get().getConfigManager().isAlertsEnabled()) {
+            return;
+        }
+        
+        if (NanoArenas.get().getConfigManager().shouldAutoEnableAlertsOnJoin() && 
+            event.getPlayer().hasPermission(NanoArenas.get().getConfigManager().getAlertsPermission())) {
             manager.setEnabled(event.getPlayer(), true);
-            event.getPlayer().sendMessage(CC.translate("&8[&bNanoArenas&8] &aArena alerts enabled."));
+            event.getPlayer().sendMessage(CC.translate(NanoArenas.get().getConfigManager().getMessagePrefix() + 
+                NanoArenas.get().getConfigManager().getSuccessColor() + "Arena alerts enabled."));
         }
     }
 
@@ -35,16 +43,29 @@ public class ArenaResetBroadcastListener implements Listener {
 
     @EventHandler
     public void onArenaReset(ArenaResetEvent event) {
+        // Check if alerts are enabled and if reset messages should be shown
+        if (!NanoArenas.get().getConfigManager().isAlertsEnabled()) {
+            return;
+        }
+
         String arenaName = event.getArena().getName();
         long duration = event.getDurationMillis();
+        long size = event.getSize();
 
-        String message = CC.translate(
-                "&8[&bNanoArenas&8] &fArena &b" + arenaName + "&f has been reset " + "(&e" + event.getSize() + "&f)" +"(&a" + duration + "ms&f).");
+        // Get message template and replace placeholders
+        String messageTemplate = NanoArenas.get().getConfigManager().getResetMessageTemplate();
+        String message = messageTemplate
+                .replace("{arena}", arenaName)
+                .replace("{size}", String.valueOf(size))
+                .replace("{duration}", String.valueOf(duration));
+
+        String finalMessage = CC.translate(
+                NanoArenas.get().getConfigManager().getInfoColor() + message);
 
         for (Player player : Bukkit.getOnlinePlayers()) {
-            if (!player.hasPermission("nano.alerts")) continue;
+            if (!player.hasPermission(NanoArenas.get().getConfigManager().getAlertsPermission())) continue;
             if (!manager.isEnabled(player)) continue;
-            player.sendMessage(message);
+            player.sendMessage(finalMessage);
         }
     }
 }

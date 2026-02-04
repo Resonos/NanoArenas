@@ -1,6 +1,5 @@
 package studio.resonos.nano.core.arena;
 
-import com.fastasyncworldedit.core.FaweAPI;
 import com.sk89q.worldedit.EditSession;
 import com.sk89q.worldedit.WorldEdit;
 import com.sk89q.worldedit.bukkit.BukkitAdapter;
@@ -143,7 +142,7 @@ public class Arena extends Cuboid {
 
 
     public static boolean isIconUnique(Material icon) {
-        // Check if the given icon is unique among all arenas
+        // Check if given icon is unique among all arenas
         for (Arena arena : arenas) {
             if (arena.getIcon().getType() == icon) {
                 return false; // Icon is not unique
@@ -211,20 +210,22 @@ public class Arena extends Cuboid {
             ForwardExtentCopy forwardExtentCopy =
                     new ForwardExtentCopy(editSession, region, clipboard, region.getMinimumPoint());
 
-            forwardExtentCopy.setCopyingEntities(false);
+            forwardExtentCopy.setCopyingEntities(NanoArenas.get().getConfigManager().shouldCopyEntities());
             Operations.completeBlindly(forwardExtentCopy);
         }
 
 
         // ensure schematics directory exists (creates parents as needed)
-        File schematicsDir = new File(NanoArenas.get().getDataFolder(), "data" + File.separator + "arenas");
+        File schematicsDir = new File(NanoArenas.get().getDataFolder(), 
+            NanoArenas.get().getConfigManager().getSchematicDirectory().replace("/", File.separator));
         if (!schematicsDir.exists()) {
             schematicsDir.mkdirs();
         }
 
         File file = new File(schematicsDir, getName() + ".schem");
 
-        try (ClipboardWriter writer = BuiltInClipboardFormat.FAST_V3.getWriter(Files.newOutputStream(file.toPath()))) {
+        try (ClipboardWriter writer = BuiltInClipboardFormat.valueOf(
+            NanoArenas.get().getConfigManager().getSchematicFormat()).getWriter(Files.newOutputStream(file.toPath()))) {
             writer.write(clipboard);
         } catch (IOException e) {
             Bukkit.getConsoleSender().sendMessage(ChatColor.RED + "Failed to save: " + getDisplayName());
@@ -235,7 +236,9 @@ public class Arena extends Cuboid {
     }
 
     public File getSchematicFile() {
-        return new File(NanoArenas.get().getDataFolder(), "data" + File.separator + "arenas" + File.separator + getName() + ".schem");
+        return new File(NanoArenas.get().getDataFolder(), 
+            NanoArenas.get().getConfigManager().getSchematicDirectory().replace("/", File.separator) + 
+            File.separator + getName() + ".schem");
     }
 
     public Schematic getSchematic() throws IOException {
@@ -245,24 +248,74 @@ public class Arena extends Cuboid {
 
     public void reset() {
         if (!isSetup()) {
-            Bukkit.getConsoleSender().sendMessage(CC.translate("&8[&bNanoArenas&8] &cArena " + this.getName() + " is not setup correctly. Cannot reset."));
+            Bukkit.getConsoleSender().sendMessage(CC.translate(NanoArenas.get().getConfigManager().getMessagePrefix() + 
+                NanoArenas.get().getConfigManager().getErrorColor() + "Arena " + this.getName() + " is not setup correctly. Cannot reset."));
             return;
         }
 
         // Check if a reset is already in progress for this arena
         Future<?> existing = resetTasks.get(this.getName());
         if (existing != null && !existing.isDone()) {
-            Bukkit.getConsoleSender().sendMessage(CC.translate("&8[&bNanoArenas&8] &eArena " + this.getName() + " is already being reset. Please wait."));
+            Bukkit.getConsoleSender().sendMessage(CC.translate(NanoArenas.get().getConfigManager().getMessagePrefix() + 
+                NanoArenas.get().getConfigManager().getWarningColor() + "Arena " + this.getName() + " is already being reset. Please wait."));
             return;
         }
 
+        // Clean up entities based on configuration
         for (Entity entity : getWorld().getEntities()) {
             if (entity.getLocation().toVector().isInAABB(getLowerCorner().toVector(), getUpperCorner().toVector())) {
+                boolean shouldRemove = false;
+                
+                // Handle players
                 if (entity instanceof org.bukkit.entity.Player) {
-                    if (spawn != null) entity.teleport(spawn);
-                } else if (entity instanceof Item || entity instanceof Projectile || entity instanceof EnderCrystal
-                        || entity instanceof Minecart || entity instanceof Boat ||
-                        entity instanceof FallingBlock || entity instanceof ExplosiveMinecart) {
+                    if (NanoArenas.get().getConfigManager().shouldTeleportPlayers()) {
+                        if (spawn != null) {
+                            entity.teleport(spawn);
+                        }else {
+                            Bukkit.getConsoleSender().sendMessage(CC.translate(NanoArenas.get().getConfigManager().getMessagePrefix() +
+                                    NanoArenas.get().getConfigManager().getErrorColor() + "Arena " + this.getName() + " does not have a set spawn. Unable to teleport players."));
+                        }
+                    }
+                    continue;
+                }
+                
+                // Check standard entity types
+                if (NanoArenas.get().getConfigManager().shouldRemoveItems() && entity instanceof Item) {
+                    shouldRemove = true;
+                }
+                if (NanoArenas.get().getConfigManager().shouldRemoveProjectiles() && entity instanceof Projectile) {
+                    shouldRemove = true;
+                }
+                if (NanoArenas.get().getConfigManager().shouldRemoveEnderCrystals() && entity instanceof EnderCrystal) {
+                    shouldRemove = true;
+                }
+                if (NanoArenas.get().getConfigManager().shouldRemoveMinecarts() && entity instanceof Minecart) {
+                    shouldRemove = true;
+                }
+                if (NanoArenas.get().getConfigManager().shouldRemoveBoats() && entity instanceof Boat) {
+                    shouldRemove = true;
+                }
+                if (NanoArenas.get().getConfigManager().shouldRemoveFallingBlocks() && entity instanceof FallingBlock) {
+                    shouldRemove = true;
+                }
+                if (NanoArenas.get().getConfigManager().shouldRemoveExplosiveMinecarts() && entity instanceof ExplosiveMinecart) {
+                    shouldRemove = true;
+                }
+                
+                // Check custom entity types
+                for (String customType : NanoArenas.get().getConfigManager().getCustomEntityTypes()) {
+                    try {
+                        EntityType type = EntityType.valueOf(customType);
+                        if (entity.getType() == type) {
+                            shouldRemove = true;
+                            break;
+                        }
+                    } catch (IllegalArgumentException e) {
+                        // Invalid entity type, skip
+                    }
+                }
+                
+                if (shouldRemove) {
                     entity.remove();
                 }
             }
@@ -277,11 +330,15 @@ public class Arena extends Cuboid {
 
                 Bukkit.getServer().getScheduler().runTask(NanoArenas.get(), () -> {
                     Bukkit.getServer().getPluginManager().callEvent(new ArenaResetEvent(this, end - start, schematic.size));
-                    Bukkit.getConsoleSender().sendMessage(CC.translate("&8[&bNanoArenas&8] &aReset arena " + this.getName() + " in " + (end - start) + "ms"));
+                    if (NanoArenas.get().getConfigManager().isDebugMode()) {
+                        Bukkit.getConsoleSender().sendMessage(CC.translate(NanoArenas.get().getConfigManager().getMessagePrefix() + 
+                            NanoArenas.get().getConfigManager().getSuccessColor() + "Reset arena " + this.getName() + " in " + (end - start) + "ms"));
+                    }
                 });
             } catch (Exception e) {
                 e.printStackTrace();
-                Bukkit.getConsoleSender().sendMessage(CC.translate("&8[&bNanoArenas&8] &4Failed to reset arena &e" + this.getName() + ". &4Is the schematic file missing or corrupted?"));
+                Bukkit.getConsoleSender().sendMessage(CC.translate(NanoArenas.get().getConfigManager().getMessagePrefix() + 
+                    NanoArenas.get().getConfigManager().getErrorColor() + "Failed to reset arena " + this.getName() + ". Is schematic file missing or corrupted?"));
             } finally {
                 resetTasks.remove(this.getName());
             }

@@ -1,0 +1,124 @@
+# NanoArenas Configuration File
+# This file contains all configurable options for the NanoArenas plugin
+
+# General Settings
+general:
+  # Enable debug mode for additional logging
+  debug-mode: false
+  # Language file to use (currently only 'en' is supported)
+  language: en
+
+# Reset Settings
+reset:
+  # Enable automatic arena resets
+  enabled: true
+  # Interval in ticks between reset checks (20 ticks = 1 second)
+  interval-ticks: 20
+  # Maximum number of concurrent arena resets
+  max-concurrent-resets: 5
+  # Timeout in seconds before canceling a stuck reset
+  reset-timeout-seconds: 30
+
+# Entity Cleanup Settings
+cleanup:
+  entities:
+    # Remove players from arena during reset (teleports to spawn if available)
+    remove-players: false
+    # Remove dropped items
+    remove-items: true
+    # Remove projectiles (arrows, snowballs, etc.)
+    remove-projectiles: true
+    # Remove ender crystals
+    remove-ender-crystals: true
+    # Remove minecarts
+    remove-minecarts: true
+    # Remove boats
+    remove-boats: true
+    # Remove falling blocks
+    remove-falling-blocks: true
+    # Remove explosive minecarts
+    remove-explosive-minecarts: true
+    # Additional entity types to remove (comma-separated)
+    custom-types:
+      - ARMOR_STAND
+      - ITEM_FRAME
+
+# Schematic Settings
+schematic:
+  # Schematic format to use (FAST_V3, SPONGE_V2, etc.)
+  format: FAST_V3
+  # Directory to store schematic files (relative to plugin data folder)
+  directory: data/arenas
+  # Copy entities when creating schematics
+  copy-entities: false
+  # Automatically create schematic when saving arena
+  auto-create-on-save: true
+  # Schematic paste settings
+  paste:
+    # Copy entities when pasting schematics
+    copy-entities: false
+    # Copy biomes when pasting schematics
+    copy-biomes: true
+    # Ignore air blocks when pasting schematics
+    ignore-air-blocks: false
+    # Allow air placement when pasting schematics
+    allow-air: true
+    # Enable fast mode for schematic pasting
+    fast-mode: true
+
+# Alert System Settings
+alerts:
+  # Enable the alert system
+  enabled: true
+  # Automatically enable alerts for admins when they join
+  auto-enable-on-join: true
+  # Reset message template with placeholders: {arena}, {size}, {duration}
+  reset-message: '&8[&bNanoArenas&8] &fArena &b{arena}&f has been reset&7(&e{size}&f)&7(&a{duration}ms&f)&7.'
+
+# Permission Settings
+permissions:
+  # Permission for admin commands
+  admin: nano.admin
+  # Permission for arena management commands
+  arena: nano.arena
+  # Permission for alert commands
+  alerts: nano.alerts
+  # Permission for kit commands
+  kit: nano.kit
+  # Permission for reload command
+  reload: nano.reload
+
+# Message Settings
+messages:
+  # Message prefix for all plugin messages
+  prefix: '&8[&bNanoArenas&8] '
+  # Color codes for different message types
+  color:
+    success: '&a'
+    error: '&c'
+    info: '&b'
+    warning: '&e'
+
+# GUI Settings
+gui:
+  # Number of rows in GUI menus
+  rows: 6
+  # Auto-refresh interval for GUI menus in ticks
+  auto-refresh-interval-ticks: 20
+  # Close GUI when clicking outside
+  close-on-outside-click: true
+
+# Performance Settings
+performance:
+  # Enable asynchronous arena resets
+  async-resets: true
+  # Thread pool size for reset operations
+  reset-thread-pool-size: 2
+  # Lag detection settings
+  lag-detection:
+    # Enable lag detection
+    enabled: true
+    # Threshold in milliseconds to consider server lagged
+    threshold-ms: 100
+    # Skip reset if server is too lagged (in milliseconds)
+    skip-reset-threshold-ms: 500
